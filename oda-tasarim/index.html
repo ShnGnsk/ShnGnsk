@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>1903 — Çizime Bağlı Tasarım</title>
+  <title>1903 — cm Ölçekli Gerçek Tasarım</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -16,104 +16,122 @@
     <nav class="nav">
       <span class="nav__mark">1903</span>
       <div class="nav__links">
-        <a href="#cizim">Çizim</a>
-        <a href="#ust">Üst bakış</a>
-        <a href="#ic">İç</a>
-        <a href="#urunler">Ürünler</a>
+        <a href="#plan">Ölçekli plan</a>
+        <a href="#matematik">cm hesabı</a>
+        <a href="#urunler">Sipariş</a>
       </div>
     </nav>
     <div class="hero__content">
-      <p class="hero__eyebrow">Sadece senin çizimin · eğik duvar yok · uydurma yok</p>
+      <p class="hero__eyebrow">SVG ölçek · 1.2 px = 1 cm · AI fantazi yok</p>
       <h1 class="hero__brand">1903</h1>
-      <p class="hero__lead">4 duvar + kiriş çıkıntısı. Kapı 2 cm’den. Salon–kiriş 5 cm. Cam sağda ortada.</p>
+      <p class="hero__lead">Çizimdeki sabit cm’ler kilitli. Mobilya gerçek IKEA ölçüleriyle oturtuldu.</p>
       <div class="hero__cta">
-        <a class="btn btn--solid" href="#ust">Üst bakış</a>
-        <a class="btn btn--ghost" href="#urunler">Ürünler</a>
+        <a class="btn btn--solid" href="#plan">Planı gör</a>
+        <a class="btn btn--ghost" href="#urunler">Ne alacaksın</a>
       </div>
     </div>
   </header>
 
   <main>
-    <section class="section" id="cizim">
+    <section class="section" id="plan">
       <div class="section__head">
-        <h2>Çizim (tek kaynak)</h2>
-        <p>Başka geometri yok. Eğik / beşgen duvar yok.</p>
+        <h2>Ölçekli üst bakış (asıl tasarım)</h2>
+        <p>Bu SVG’den üretilmiş plan — eğik duvar / uydurma görsel yok. <code>*</code> = yerinde metre ile doğrula.</p>
       </div>
+
       <aside class="keep">
-        <h3>Bağlı kalınanlar</h3>
+        <h3>Çizimden kilitli (değişmez)</h3>
         <p>
-          ✔ Kapı <strong>2 cm</strong> boşluktan başlar (salon üst, balkon alt)<br>
-          ✔ Salon ↔ Kiriş <strong>5 cm</strong><br>
-          ✔ Kiriş sağa <strong>40 cm</strong>, içe <strong>10 cm</strong> → sonra boş duvar<br>
-          ✔ Cam+Petek sağ duvarda <strong>orta</strong><br>
-          ✔ Sol duvar düz · tek düzensizlik = kiriş çıkıntısı<br>
-          ✖ Eğik köşe / uydurma duvar yok
+          Kapı <strong>2 cm</strong> boşluktan başlar · Salon–kiriş <strong>5 cm</strong> ·
+          Kiriş <strong>40 × 10 cm</strong> · Cam+petek sağda <strong>orta</strong> ·
+          Eğik duvar yok · tek düzensizlik = kiriş çıkıntısı
         </p>
       </aside>
+
       <figure class="gallery__hero" style="margin:0">
-        <img src="assets/guncel-plan.png" alt="Çizim kaynak plan" width="1536" height="1024" loading="eager" />
-        <figcaption>Kaynak çizim</figcaption>
+        <img src="assets/plan-olcekli.png" alt="cm olcekli ust bakis plan" width="1536" height="1024" loading="eager" />
+        <figcaption>Ölçekli plan — mobilya gerçek cm · indir: <a href="plan.svg">plan.svg</a></figcaption>
       </figure>
+
+      <div class="plan-svg" style="margin-top:1.5rem;background:#fff;border:1px solid #ddd;padding:1rem;overflow:auto">
+        <object data="plan.svg" type="image/svg+xml" width="100%" style="min-height:480px">SVG</object>
+      </div>
     </section>
 
-    <section class="section" id="ust">
+    <section class="section" id="matematik">
       <div class="section__head">
-        <h2>Üst bakış — çizime bağlı</h2>
-        <p>Aynı duvar hatları + gerçek ürünler.</p>
+        <h2>cm hesabı (neden bu masa)</h2>
       </div>
-      <figure class="gallery__hero" style="margin:0">
-        <img src="assets/cizime-bagli-ust.png" alt="Çizime bağlı üst bakış" width="1536" height="1024" loading="lazy" />
-        <figcaption>
-          FJÄLLBO 100×36 petek altı · MARKUS · BESTÅ sol orta · oturma balkon sağı
-        </figcaption>
-      </figure>
-    </section>
+      <div class="inventory">
+        <article class="inv">
+          <span class="inv__tag">ÜST HAT</span>
+          <h3>2 + kapı + 5 + 40 + boş = W</h3>
+          <p>Kapı eni yerinde ölç (*şimdilik 80 cm). Örnek W=300 → boş duvar = 300−2−80−5−40 = <strong>173 cm</strong>.</p>
+        </article>
+        <article class="inv">
+          <span class="inv__tag">SAĞ HAT</span>
+          <h3>Cam ortada → iki eşit bant</h3>
+          <p>Örnek D=320, cam*=80 → üst/alt bant = (320−80)/2 = <strong>120 cm</strong>. FJÄLLBO 100 buraya sığar (100+10 pay ≤ 120).</p>
+        </article>
+        <article class="inv">
+          <span class="inv__tag">KRİTİK</span>
+          <h3>Petek önüne masa yok</h3>
+          <p>Masa sağ duvarda, <strong>cam/petek bloğunun altında</strong>, duvara paralel 100×36. Bant &lt; 110 cm çıkarsa 100’lük alma — yaz, dik yerleştiririz.</p>
+        </article>
+        <article class="inv">
+          <span class="inv__tag">SOL</span>
+          <h3>BESTÅ 120 ortada</h3>
+          <p>Kapılar sola açılır → üst/alt köşede salınım. Dolap ortada; salınımdan ~90 cm uzak.</p>
+        </article>
+      </div>
 
-    <section class="section" id="ic">
-      <div class="section__head">
-        <h2>İç — çizime bağlı</h2>
-      </div>
-      <figure class="gallery__hero" style="margin:0">
-        <img src="assets/cizime-bagli-ic.png" alt="Çizime bağlı iç görünüm" width="1536" height="1024" loading="lazy" />
-        <figcaption>Sağda ortada cam+petek · masa petek altında · solda BESTÅ</figcaption>
-      </figure>
+      <aside class="budget">
+        <h3>Senin yapman gereken 4 ölçü</h3>
+        <p>1) Oda eni W (sol–sağ) · 2) Oda boyu D (üst–alt) · 3) Salon + balkon kapı enleri · 4) Cam yüksekliği (sağ duvar boyunca cm). Bunları yazınca SVG’yi milimetrik kilitlerim — * kalkar.</p>
+      </aside>
     </section>
 
     <section class="section" id="urunler">
       <div class="section__head">
-        <h2>Gerçek ürünler</h2>
+        <h2>Sipariş — plandaki ürünler</h2>
       </div>
       <div class="products">
         <article class="product">
-          <div class="product__meta"><span class="product__store">MASA</span><span class="product__price">IKEA</span></div>
-          <h3>FJÄLLBO 100×36 siyah</h3>
-          <p>303.397.35 · Sağ duvar, <strong>petek altı</strong> (cam ortada → önüne değil)</p>
-          <a class="product__link" href="https://www.ikea.com.tr/urun/fjallbo-siyah-100x36-cm-calisma-masasi-30339735" target="_blank" rel="noopener">ikea.com.tr →</a>
+          <div class="product__meta"><span class="product__store">1 MASA</span><span class="product__price">IKEA</span></div>
+          <h3>FJÄLLBO 100 × 36 × 75 cm siyah</h3>
+          <p>Kod <strong>303.397.35</strong><br>Konum: sağ duvar, petek/cam ortasının <strong>altı</strong><br>Şart: alt bant ≥ <strong>110 cm</strong></p>
+          <a class="product__link" href="https://www.ikea.com.tr/urun/fjallbo-siyah-100x36-cm-calisma-masasi-30339735" target="_blank" rel="noopener">Sipariş →</a>
         </article>
         <article class="product">
-          <div class="product__meta"><span class="product__store">SANDALYE</span><span class="product__price">11.999 ₺</span></div>
-          <h3>MARKUS koyu gri</h3>
-          <p>702.611.50</p>
-          <a class="product__link" href="https://www.ikea.com.tr/urun/markus-vissle-koyu-gri-orta-calisma-sandalyesi-70261150" target="_blank" rel="noopener">ikea.com.tr →</a>
+          <div class="product__meta"><span class="product__store">2 SANDALYE</span><span class="product__price">11.999 ₺</span></div>
+          <h3>MARKUS vissle koyu gri</h3>
+          <p>Kod <strong>702.611.50</strong> · Masa önü</p>
+          <a class="product__link" href="https://www.ikea.com.tr/urun/markus-vissle-koyu-gri-orta-calisma-sandalyesi-70261150" target="_blank" rel="noopener">Sipariş →</a>
         </article>
         <article class="product">
-          <div class="product__meta"><span class="product__store">DEPO</span><span class="product__price">27.500 ₺</span></div>
-          <h3>BESTÅ 120×42×193</h3>
-          <p>590.594.61 · Sol duvar ortası</p>
-          <a class="product__link" href="https://www.ikea.com.tr/urun/besta-venge-siyah-seffaf-cam-120x42x193-cm-dolap-kombinasyonu-59059461" target="_blank" rel="noopener">ikea.com.tr →</a>
+          <div class="product__meta"><span class="product__store">3 DEPO</span><span class="product__price">27.500 ₺</span></div>
+          <h3>BESTÅ 120 × 42 × 193</h3>
+          <p>Kod <strong>590.594.61</strong> · Sol duvar ortası · Sabitle</p>
+          <a class="product__link" href="https://www.ikea.com.tr/urun/besta-venge-siyah-seffaf-cam-120x42x193-cm-dolap-kombinasyonu-59059461" target="_blank" rel="noopener">Sipariş →</a>
         </article>
         <article class="product">
-          <div class="product__meta"><span class="product__store">BOYA</span><span class="product__price">Filli</span></div>
-          <h3>Andezit 15 soft mat</h3>
-          <p>Momento Max/Silan · kapılar beyaz</p>
-          <a class="product__link" href="https://www.filliboya.com/renkler" target="_blank" rel="noopener">filliboya.com →</a>
+          <div class="product__meta"><span class="product__store">4 OTURMA</span><span class="product__price">ölçünce</span></div>
+          <h3>≤ 140 cm siyah ikili</h3>
+          <p>Alt duvar, balkonun sağı · Vivense</p>
+          <a class="product__link" href="https://www.vivense.com/ofis-oturma-gruplari.html" target="_blank" rel="noopener">Bak →</a>
+        </article>
+        <article class="product">
+          <div class="product__meta"><span class="product__store">5 BOYA</span><span class="product__price">Filli</span></div>
+          <h3>Andezit 15 · soft mat</h3>
+          <p>Momento Max/Silan · 4 duvar · kiriş aynı veya çıkıntıda mat siyah</p>
+          <a class="product__link" href="https://www.filliboya.com/renkler" target="_blank" rel="noopener">Kartela →</a>
         </article>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <p>1903 — çizime bağlı · eğik duvar yok</p>
+    <p>1903 — cm ölçekli SVG tasarım · çizim sabitleri kilitli</p>
   </footer>
   <script src="main.js"></script>
 </body>

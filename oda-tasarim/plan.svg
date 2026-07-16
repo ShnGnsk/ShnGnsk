@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 560" font-family="Arial, sans-serif">
+  <defs>
+    <pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#666" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <line x1="80" y1="40" x2="80" y2="424" stroke="#111" stroke-width="3"/>
+  <line x1="440" y1="40" x2="440" y2="424" stroke="#111" stroke-width="3"/>
+
+  <line x1="80" y1="40" x2="82.4" y2="40" stroke="#111" stroke-width="4"/>
+  <text x="78" y="28" font-size="10" fill="#8a1f1f" font-weight="700">2cm</text>
+
+  <rect x="82.4" y="36" width="96" height="10" fill="url(#hatch)" stroke="#111"/>
+  <text x="130" y="28" text-anchor="middle" font-size="11" font-weight="700">Salon Kapisi 80*</text>
+  <path d="M82.4 46 A50 50 0 0 0 132 96" fill="none" stroke="#888" stroke-dasharray="3 2"/>
+
+  <line x1="178.4" y1="40" x2="184.4" y2="40" stroke="#111" stroke-width="4"/>
+  <text x="181.4" y="28" text-anchor="middle" font-size="10" fill="#8a1f1f" font-weight="700">5cm</text>
+
+  <rect x="184.4" y="40" width="48" height="12" fill="#111" stroke="#111"/>
+  <text x="208" y="68" text-anchor="middle" font-size="10" font-weight="700">Kiris 40x10</text>
+
+  <line x1="232.4" y1="40" x2="440" y2="40" stroke="#111" stroke-width="3"/>
+  <text x="336" y="28" text-anchor="middle" font-size="9" fill="#555">duvar boslugu 173* cm</text>
+
+  <line x1="80" y1="424" x2="82.4" y2="424" stroke="#111" stroke-width="4"/>
+  <text x="78" y="448" font-size="10" fill="#8a1f1f" font-weight="700">2cm</text>
+  <rect x="82.4" y="420" width="96" height="10" fill="url(#hatch)" stroke="#111"/>
+  <text x="130" y="458" text-anchor="middle" font-size="11" font-weight="700">Balkon Kapisi 80*</text>
+  <path d="M178.4 424 A50 50 0 0 0 128 374" fill="none" stroke="#888" stroke-dasharray="3 2"/>
+  <line x1="178.4" y1="424" x2="440" y2="424" stroke="#111" stroke-width="3"/>
+
+  <rect x="434" y="184" width="12" height="96" fill="url(#hatch)" stroke="#111"/>
+  <text x="458" y="220" font-size="11" font-weight="700">Cam</text>
+  <text x="458" y="234" font-size="9" fill="#8a1f1f">ORTA</text>
+  <rect x="418" y="196" width="16" height="72" fill="#ccc" stroke="#111"/>
+  <text x="410" y="230" text-anchor="end" font-size="9">Petek</text>
+  <text x="455" y="120" font-size="9" fill="#555">~120* cm</text>
+  <text x="455" y="360" font-size="9" fill="#555">~120* cm</text>
+
+  <rect x="80" y="160" width="50.4" height="144" fill="#1a1a1a" stroke="#000"/>
+  <text x="105" y="240" text-anchor="middle" font-size="9" fill="#fff" transform="rotate(-90 105 240)">BESTA 120x42x193</text>
+  <text x="132" y="155" font-size="8" fill="#8a1f1f">590.594.61</text>
+
+  <rect x="396.8" y="292" width="43.2" height="120" fill="#111" stroke="#000"/>
+  <text x="418" y="355" text-anchor="middle" font-size="8" fill="#fff" transform="rotate(-90 418 355)">FJALLBO 100x36</text>
+  <text x="390" y="310" text-anchor="end" font-size="8" fill="#8a1f1f">303.397.35</text>
+
+  <circle cx="370" cy="350" r="18" fill="#333" stroke="#000"/>
+  <text x="370" y="354" text-anchor="middle" font-size="7" fill="#fff">MARKUS</text>
+
+  <rect x="200" y="328" width="168" height="96" fill="#222" stroke="#000"/>
+  <text x="284" y="380" text-anchor="middle" font-size="9" fill="#fff">Oturma max 140 cm</text>
+  <text x="284" y="394" text-anchor="middle" font-size="8" fill="#aaa">Vivense siyah</text>
+
+  <text x="260" y="490" text-anchor="middle" font-size="11" font-weight="700">OLCEK 1.2 px = 1 cm | * = yerinde dogrula</text>
+  <text x="260" y="508" text-anchor="middle" font-size="10" fill="#555">W=300* cm | D=320* cm | kapi 80* | cam 80* orta</text>
+  <text x="260" y="526" text-anchor="middle" font-size="10" fill="#8a1f1f">SABIT: 2cm kapi | 5cm | kiris 40x10 | cam orta | egik duvar YOK</text>
+</svg>

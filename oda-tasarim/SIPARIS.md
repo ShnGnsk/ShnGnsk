@@ -1,18 +1,25 @@
-# 1903 — Çizime bağlı
+# 1903 — cm ölçekli tasarım
 
-## Çizim
-- 4 duvar + kiriş çıkıntısı (eğik duvar yok)
-- Kapı **2 cm** boşluktan başlar
-- Salon ↔ Kiriş **5 cm**
-- Kiriş **40×10** sağa → boş duvar
-- Cam+Petek sağda **orta**
+## Asıl dosya
+`plan.svg` / `assets/plan-olcekli.png` (AI görsel değil, ölçekli çizim)
 
-## Ürün
-| Yer | Ürün | Kod |
-|-----|------|-----|
-| Sağ, petek altı | FJÄLLBO 100×36 | 303.397.35 |
-| Masa önü | MARKUS | 702.611.50 |
-| Sol orta | BESTÅ 120×193 | 590.594.61 |
-| Duvar | Andezit 15 soft mat | Filli Boya |
+## Çizim sabitleri
+| Sabit | cm |
+|-------|-----|
+| Kapı başlangıç (sol duvardan) | **2** |
+| Salon – kiriş arası | **5** |
+| Kiriş | **40 × 10** (içe) |
+| Cam+petek | sağ duvar **orta** |
 
-Görseller: `cizime-bagli-ust.png` · `cizime-bagli-ic.png`
+## Çalışma varsayımları (*)
+Yerinde ölçülünce düzeltilir: W≈300, D≈320, kapı≈80, cam≈80
+
+## Ürün (plandaki)
+1. FJÄLLBO 100×36 — 303.397.35 — sağ, petek altı (bant ≥110)
+2. MARKUS — 702.611.50
+3. BESTÅ 120×193 — 590.594.61 — sol orta
+4. Oturma ≤140 — balkon sağı
+5. Boya Andezit 15 soft mat
+
+## Kritik
+Cam ortada ve D küçükse alt bant &lt;110 olur → 100’lük masayı **alma**, yaz.
