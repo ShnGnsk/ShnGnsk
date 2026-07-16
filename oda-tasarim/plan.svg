@@ -9,59 +9,61 @@
 </pattern>
 </defs>
 <rect x="80.0" y="50.0" width="360.0" height="384.0" fill="#fafafa" stroke="#111" stroke-width="3"/>
-<rect x="82.4" y="50.0" width="96.0" height="96.0" fill="#c0392b" fill-opacity="0.18" stroke="#c0392b" stroke-dasharray="4 2"/>
-<text x="130.4" y="98.0" text-anchor="middle" font-size="8" fill="#8a1f1f">salon_salinim</text>
-<rect x="82.4" y="338.0" width="96.0" height="96.0" fill="#c0392b" fill-opacity="0.18" stroke="#c0392b" stroke-dasharray="4 2"/>
-<text x="130.4" y="386.0" text-anchor="middle" font-size="8" fill="#8a1f1f">balkon_salinim</text>
-<rect x="184.39999999999998" y="50.0" width="48.0" height="12.0" fill="#c0392b" fill-opacity="0.18" stroke="#c0392b" stroke-dasharray="4 2"/>
-<text x="208.4" y="56.0" text-anchor="middle" font-size="8" fill="#8a1f1f">kiris</text>
-<rect x="410.0" y="194.0" width="30.0" height="96.0" fill="#c0392b" fill-opacity="0.18" stroke="#c0392b" stroke-dasharray="4 2"/>
+<rect x="82.4" y="50.0" width="108.0" height="108.0" fill="#c0392b" fill-opacity="0.18" stroke="#c0392b" stroke-dasharray="4 2"/>
+<text x="136.4" y="104.0" text-anchor="middle" font-size="8" fill="#8a1f1f">salon_salinim</text>
+<rect x="82.4" y="326.0" width="108.0" height="108.0" fill="#c0392b" fill-opacity="0.18" stroke="#c0392b" stroke-dasharray="4 2"/>
+<text x="136.4" y="380.0" text-anchor="middle" font-size="8" fill="#8a1f1f">balkon_salinim</text>
+<rect x="196.39999999999998" y="50.0" width="48.0" height="12.0" fill="#c0392b" fill-opacity="0.18" stroke="#c0392b" stroke-dasharray="4 2"/>
+<text x="220.4" y="56.0" text-anchor="middle" font-size="8" fill="#8a1f1f">kiris</text>
+<rect x="410.0" y="158.0" width="30.0" height="168.0" fill="#c0392b" fill-opacity="0.18" stroke="#c0392b" stroke-dasharray="4 2"/>
 <text x="425.0" y="242.0" text-anchor="middle" font-size="8" fill="#8a1f1f">petek_onu</text>
-<rect x="232.4" y="50.0" width="207.6" height="108.0" fill="#1e8449" fill-opacity="0.10" stroke="#1e8449" stroke-dasharray="3 3"/>
-<rect x="190.39999999999998" y="320.0" width="249.6" height="114.0" fill="#1e8449" fill-opacity="0.10" stroke="#1e8449" stroke-dasharray="3 3"/>
-<rect x="296.0" y="50.0" width="144.0" height="144.0" fill="#1e8449" fill-opacity="0.10" stroke="#1e8449" stroke-dasharray="3 3"/>
-<rect x="296.0" y="290.0" width="144.0" height="144.0" fill="#1e8449" fill-opacity="0.10" stroke="#1e8449" stroke-dasharray="3 3"/>
-<rect x="80.0" y="158.0" width="108.0" height="168.0" fill="#1e8449" fill-opacity="0.10" stroke="#1e8449" stroke-dasharray="3 3"/>
-<rect x="82.4" y="44.0" width="96.0" height="12" fill="url(#hatch)" stroke="#111"/>
-<text x="130.4" y="38.0" text-anchor="middle" font-size="11" font-weight="700">Salon Kapisi</text>
-<path d="M82.4 50.0 A96.0 96.0 0 0 1 82.4 146.0" fill="none" stroke="#888" stroke-dasharray="3 2"/>
-<rect x="82.4" y="428.0" width="96.0" height="12" fill="url(#hatch)" stroke="#111"/>
-<text x="130.4" y="456.0" text-anchor="middle" font-size="11" font-weight="700">Balkon Kapisi</text>
-<path d="M82.4 434.0 A96.0 96.0 0 0 0 82.4 338.0" fill="none" stroke="#888" stroke-dasharray="3 2"/>
-<rect x="184.39999999999998" y="50.0" width="48.0" height="12.0" fill="#111"/>
-<text x="208.4" y="76.0" text-anchor="middle" font-size="10" fill="#8a1f1f" font-weight="700">Kiris 40x10</text>
-<rect x="434.0" y="194.0" width="12" height="96.0" fill="url(#hatch)" stroke="#111"/>
-<rect x="422.0" y="206.0" width="14.399999999999999" height="72.0" fill="#c8c8c8" stroke="#111"/>
-<text x="448.0" y="242.0" font-size="11" font-weight="700">Cam ORTA</text>
-<text x="448.0" y="256.0" font-size="10" fill="#8a1f1f">Petek</text>
-<text x="448.0" y="122.0" font-size="10" fill="#8a1f1f" font-weight="700">120*</text>
-<text x="448.0" y="362.0" font-size="10" fill="#8a1f1f" font-weight="700">120*</text>
+<rect x="244.4" y="50.0" width="195.6" height="108.0" fill="#1e8449" fill-opacity="0.10" stroke="#1e8449" stroke-dasharray="3 3"/>
+<rect x="202.39999999999998" y="320.0" width="237.6" height="114.0" fill="#1e8449" fill-opacity="0.10" stroke="#1e8449" stroke-dasharray="3 3"/>
+<rect x="296.0" y="50.0" width="144.0" height="108.0" fill="#1e8449" fill-opacity="0.10" stroke="#1e8449" stroke-dasharray="3 3"/>
+<rect x="296.0" y="326.0" width="144.0" height="108.0" fill="#1e8449" fill-opacity="0.10" stroke="#1e8449" stroke-dasharray="3 3"/>
+<rect x="80.0" y="170.0" width="108.0" height="144.0" fill="#1e8449" fill-opacity="0.10" stroke="#1e8449" stroke-dasharray="3 3"/>
+<rect x="82.4" y="44.0" width="108.0" height="12" fill="url(#hatch)" stroke="#111"/>
+<text x="136.4" y="38.0" text-anchor="middle" font-size="11" font-weight="700">Salon Kapisi 90</text>
+<path d="M82.4 50.0 A108.0 108.0 0 0 1 82.4 158.0" fill="none" stroke="#888" stroke-dasharray="3 2"/>
+<rect x="82.4" y="428.0" width="108.0" height="12" fill="url(#hatch)" stroke="#111"/>
+<text x="136.4" y="456.0" text-anchor="middle" font-size="11" font-weight="700">Balkon Kapisi 90</text>
+<path d="M82.4 434.0 A108.0 108.0 0 0 0 82.4 326.0" fill="none" stroke="#888" stroke-dasharray="3 2"/>
+<rect x="196.39999999999998" y="50.0" width="48.0" height="12.0" fill="#111"/>
+<text x="220.4" y="76.0" text-anchor="middle" font-size="10" fill="#8a1f1f" font-weight="700">Kiris 40x10</text>
+<rect x="434.0" y="158.0" width="12" height="168.0" fill="url(#hatch)" stroke="#111"/>
+<rect x="422.0" y="170.0" width="14.399999999999999" height="144.0" fill="#c8c8c8" stroke="#111"/>
+<text x="448.0" y="242.0" font-size="11" font-weight="700">2li Cam</text>
+<text x="448.0" y="256.0" font-size="10" fill="#8a1f1f">ORTA 140cm</text>
+<text x="448.0" y="270.0" font-size="10" fill="#333">Petek</text>
+<text x="448.0" y="104.0" font-size="10" fill="#8a1f1f" font-weight="700">90*</text>
+<text x="448.0" y="380.0" font-size="10" fill="#8a1f1f" font-weight="700">90*</text>
 <text x="81.2" y="38.0" font-size="10" fill="#8a1f1f" font-weight="700">2</text>
-<text x="181.39999999999998" y="38.0" font-size="10" fill="#8a1f1f" font-weight="700">5cm</text>
-<rect x="368.0" y="59.6" width="72.0" height="120.0" fill="#111" stroke="#8a1f1f" stroke-width="1.5"/>
-<text x="404.0" y="119.6" text-anchor="middle" font-size="8" fill="#fff">masa 100x60</text>
-<circle cx="326.0" cy="221.6" r="33.6" fill="#333" stroke="#8a1f1f" stroke-width="1.5"/>
-<text x="326.0" y="224.6" text-anchor="middle" font-size="7" fill="#fff">sandalye</text>
-<rect x="242.0" y="50.0" width="114.0" height="50.4" fill="#111" stroke="#8a1f1f" stroke-width="1.5"/>
-<text x="299.0" y="75.2" text-anchor="middle" font-size="8" fill="#fff">tv_BESTA 95x42</text>
-<rect x="190.39999999999998" y="344.0" width="156.0" height="90.0" fill="#222" stroke="#8a1f1f" stroke-width="1.5"/>
-<text x="268.4" y="389.0" text-anchor="middle" font-size="8" fill="#fff">oturma 130x75</text>
-<rect x="80.0" y="182.0" width="46.8" height="120.0" fill="#1a1a1a" stroke="#8a1f1f" stroke-width="1.5"/>
-<text x="103.4" y="242.0" text-anchor="middle" font-size="8" fill="#fff">kitaplik 100x39</text>
-<rect x="138.8" y="118.39999999999999" width="168.0" height="144.0" fill="url(#rug)" stroke="#111"/>
-<text x="222.79999999999998" y="190.4" text-anchor="middle" font-size="9">hali 140x120</text>
-<circle cx="87.2" cy="177.2" r="9" fill="#fff" stroke="#8a1f1f" stroke-width="2"/>
-<text x="87.2" y="179.6" text-anchor="middle" font-size="7" fill="#8a1f1f" font-weight="700">BJK</text>
-<text x="237.2" y="64.4" font-size="9" fill="#1e8449" font-weight="700">Z1 TV</text>
-<text x="195.2" y="334.4" font-size="9" fill="#1e8449" font-weight="700">Z2 oturma</text>
+<text x="193.39999999999998" y="38.0" font-size="10" fill="#8a1f1f" font-weight="700">5cm</text>
+<rect x="320.0" y="57.2" width="120.0" height="72.0" fill="#111" stroke="#8a1f1f" stroke-width="1.5"/>
+<text x="380.0" y="93.19999999999999" text-anchor="middle" font-size="8" fill="#fff">masa 100x60</text>
+<circle cx="368.0" cy="171.2" r="33.6" fill="#333" stroke="#8a1f1f" stroke-width="1.5"/>
+<text x="368.0" y="174.2" text-anchor="middle" font-size="7" fill="#fff">sandalye</text>
+<rect x="80.0" y="170.0" width="50.4" height="144.0" fill="#111" stroke="#8a1f1f" stroke-width="1.5"/>
+<text x="105.2" y="242.0" text-anchor="middle" font-size="8" fill="#fff">tv_BESTA 120x42</text>
+<rect x="202.39999999999998" y="344.0" width="156.0" height="90.0" fill="#222" stroke="#8a1f1f" stroke-width="1.5"/>
+<text x="280.4" y="389.0" text-anchor="middle" font-size="8" fill="#fff">oturma 130x75</text>
+<rect x="140.0" y="110.0" width="168.0" height="144.0" fill="url(#rug)" stroke="#111"/>
+<text x="224.0" y="182.0" text-anchor="middle" font-size="9">hali 140x120</text>
+<circle cx="87.2" cy="162.8" r="9" fill="#fff" stroke="#8a1f1f" stroke-width="2"/>
+<text x="87.2" y="165.2" text-anchor="middle" font-size="7" fill="#8a1f1f" font-weight="700">BJK</text>
+<text x="249.2" y="64.4" font-size="9" fill="#1e8449" font-weight="700">Z1 TV</text>
+<text x="207.2" y="334.4" font-size="9" fill="#1e8449" font-weight="700">Z2 oturma</text>
 <text x="300.79999999999995" y="64.4" font-size="9" fill="#1e8449" font-weight="700">Z3a masa</text>
-<text x="300.79999999999995" y="304.4" font-size="9" fill="#1e8449" font-weight="700">Z3b yedek</text>
-<text x="84.8" y="172.39999999999998" font-size="9" fill="#1e8449" font-weight="700">Z4 kitaplik</text>
+<text x="300.79999999999995" y="340.4" font-size="9" fill="#1e8449" font-weight="700">Z3b yedek</text>
+<text x="84.8" y="184.4" font-size="9" fill="#1e8449" font-weight="700">Z4 kitaplik</text>
 <text x="260.0" y="484.0" text-anchor="middle" font-size="13" font-weight="700">ALGORITMA PLAN — bos alanlara yerlesim</text>
 <text x="260.0" y="500.0" text-anchor="middle" font-size="10" fill="#555">yesil=bos bolge | kirmizi=yasak (kapi/kiris/petek) | * yerinde olc | olcek 1.2px=1cm</text>
-<text x="260.0" y="514.0" text-anchor="middle" font-size="9" fill="#8a1f1f">STRATEJI B masa UST bant</text>
-<text x="260.0" y="526.0" text-anchor="middle" font-size="9" fill="#8a1f1f">MASA: xDrive Ruzgar 100x60</text>
-<text x="260.0" y="538.0" text-anchor="middle" font-size="9" fill="#8a1f1f">Oturma 130cm | TV 95cm | masa 100x60</text>
-<text x="260.0" y="550.0" text-anchor="middle" font-size="9" fill="#8a1f1f">Masa petek UST bandinda — petek onu bos; alt duvar oturmaya acik</text>
-<text x="260.0" y="562.0" text-anchor="middle" font-size="9" fill="#8a1f1f">ÖZET W=300* D=320* kapı=80* cam=80* → sağ bant=120cm | üst boş=173cm | alt boş≈208cm</text>
+<text x="260.0" y="514.0" text-anchor="middle" font-size="9" fill="#8a1f1f">Kilit: standart kapi=90cm | 2li cam=140cm | bant=(D-cam)/2=90cm</text>
+<text x="260.0" y="526.0" text-anchor="middle" font-size="9" fill="#8a1f1f">STRATEJI B ust | endon</text>
+<text x="260.0" y="538.0" text-anchor="middle" font-size="9" fill="#8a1f1f">MASA: xDrive Ruzgar 100x60 end-on (kisa kenar duvarda) (duvarda 60 / ice 100)</text>
+<text x="260.0" y="550.0" text-anchor="middle" font-size="9" fill="#8a1f1f">TV: sol duvar | oturma 130cm</text>
+<text x="260.0" y="562.0" text-anchor="middle" font-size="9" fill="#8a1f1f">TV_ON_LEFT</text>
+<text x="260.0" y="574.0" text-anchor="middle" font-size="9" fill="#8a1f1f">Kitaplar TV unitesinde (sol) — ayri kitaplik yok</text>
+<text x="260.0" y="586.0" text-anchor="middle" font-size="9" fill="#8a1f1f">Masa petek UST bandinda — petek onu bos</text>
+<text x="260.0" y="598.0" text-anchor="middle" font-size="9" fill="#8a1f1f">2li cam sonucu: bant 90cm — end-on / kisa kenar duvarda</text>
 </svg>

@@ -14,11 +14,12 @@ GAP_KIRIS = 5  # cm, salon kapısı – kiriş
 KIRIS_W = 40
 KIRIS_D = 10  # odaya içe
 
-# --- Yerinde ölçülünce güncellenecek varsayımlar ---
+# --- Kullanıcı: standart kapı + 2'li cam | W/D hâlâ yerinde ölç (*) ---
 W = 300  # *
 D = 320  # *
-DOOR = 80  # *
-CAM = 80  # *
+DOOR = 90  # standart oda/salon kapısı (duvar boşluğu ~90 cm, kanat ~80)
+CAM = 140  # 2'li (çift kanat) cam — sağ duvar boyunca tipik genişlik
+# Not: cam büyüyünce bant=(D-CAM)/2 küçülür → 100'lük masa sığmayabilir; algoritma kısaltır.
 
 # Petek önü ısı payı (mobilya yapışmaz)
 PETEK_CLEAR = 25
@@ -124,8 +125,7 @@ def architecture() -> dict:
 def place_furniture(arch: dict) -> tuple[list[Rect], list[str]]:
     """Öncelik: dolaşım > (masa+TV+oturma birlikte sığsın) > kitaplık > halı.
 
-    STRATEJİ B (tercih): masa sağ ÜST bantta (petek üstü) → alt duvar tamamen oturmaya kalır.
-    STRATEJİ A (yedek): masa sağ ALT bantta → oturma otomatik kısalır.
+    2'li cam → bant daralır. Bant < masa boyu ise masa KISA KENARI duvarda (end-on).
     """
     notes: list[str] = []
     items: list[Rect] = []
@@ -133,26 +133,46 @@ def place_furniture(arch: dict) -> tuple[list[Rect], list[str]]:
     kiris_x0, kiris_x1 = arch["kiris"]
     seat_x0 = arch["balkon"][1] + DOOR_MARGIN
     chair_w, chair_d = 60.0, 60.0
+    petek = next(f for f in arch["forbid"] if f.name == "petek_onu")
 
-    # Masa adayları — TR'de satılan: xDrive 100x60 önce (üst bantta oturmayı bozmaz)
-    desk_candidates = [
+    notes.append(
+        f"Kilit: standart kapi={DOOR}cm | 2li cam={CAM}cm | bant=(D-cam)/2={band:.0f}cm"
+    )
+
+    # (duvar_boyu, oda_icine, etiket, orient) — parallel veya end-on
+    desk_candidates: list[tuple[float, float, str, str]] = []
+    for length, depth, label in [
         (100.0, 60.0, "xDrive Ruzgar 100x60"),
         (100.0, 50.0, "oyuncu masa 100x50"),
-        (100.0, 45.0, "oyuncu masa 100x45 / Retodesign"),
+        (90.0, 50.0, "oyuncu masa 90x50"),
+        (80.0, 60.0, "oyuncu masa 80x60"),
+        (100.0, 45.0, "oyuncu masa 100x45"),
         (100.0, 36.0, "IKEA FJALLBO 100x36"),
-    ]
+    ]:
+        # paralel: uzun kenar duvarda
+        desk_candidates.append((length, depth, f"{label} paralel", "parallel"))
+        # end-on: kisa kenar duvarda (dar bant / 2li cam)
+        desk_candidates.append((depth, length, f"{label} end-on (kisa kenar duvarda)", "endon"))
 
-    def try_pack(strategy: str):
-        """strategy: 'above' | 'below' → (ok, desk, chair, tv, seat, note_list)"""
-        local: list[str] = []
-        for length, depth, label in desk_candidates:
-            if band < length + 8:
-                continue
-            if strategy == "above":
-                desk = Rect("masa", W - depth, 8, depth, length, "item")
-                if desk.y2 > band - 5:
-                    desk.h = band - 5 - desk.y
-                # sandalye masanın altına (oda ortasına), petek önüne yapışmadan
+    def place_desk(strategy: str, along: float, into: float, orient: str):
+        """along = sağ duvar boyunca, into = odaya. Sandalye uzun kenarda (oturmayı yemez)."""
+        if band < along + 6:
+            return None, None
+        if strategy == "above":
+            y0 = 6.0
+            if y0 + along > band - 4:
+                return None, None
+            desk = Rect("masa", W - into, y0, into, along, "item")
+            if orient == "endon":
+                # uzun kenarın altına otur — x masa ile hizalı kalır, alt oturma kurtulur
+                cx = desk.x + max(0.0, (desk.w - chair_w) / 2)
+                cy = desk.y2 + 5
+                chair = Rect("oyuncu_sandalye", cx, cy, chair_w, chair_d, "item")
+                if chair.overlaps(petek, gap=2):
+                    chair.x = min(chair.x, petek.x - chair_w - 5)
+                    if chair.overlaps(petek, gap=2):
+                        return None, None
+            else:
                 chair = Rect(
                     "oyuncu_sandalye",
                     desk.x - chair_w - 5,
@@ -161,104 +181,166 @@ def place_furniture(arch: dict) -> tuple[list[Rect], list[str]]:
                     chair_d,
                     "item",
                 )
-                # sandalye petek önü yasak bölgesine girerse kaydır
-                petek = next(f for f in arch["forbid"] if f.name == "petek_onu")
-                if chair.overlaps(petek, gap=0):
-                    chair.x = min(chair.x, petek.x - chair_w - 5)
+                if chair.overlaps(petek, gap=2):
+                    chair.x = petek.x - chair_w - 5
+        else:
+            y0 = band + CAM + 6
+            if y0 + along > D - 6:
+                return None, None
+            desk = Rect("masa", W - into, y0, into, along, "item")
+            if orient == "endon":
+                # uzun kenarın üstüne (petekten uzak içe) otur
+                cx = desk.x + max(0.0, (desk.w - chair_w) / 2)
+                cy = desk.y - chair_d - 5
+                if cy < band + CAM + PETEK_CLEAR:
+                    # petek bandına giriyorsa batı kısa uca ama masa dibine yakın
+                    cx = desk.x - chair_w - 5
+                    cy = desk.y + max(0.0, (desk.h - chair_d) / 2)
+                chair = Rect("oyuncu_sandalye", cx, cy, chair_w, chair_d, "item")
+                if chair.overlaps(petek, gap=2):
+                    return None, None
             else:
-                desk = Rect("masa", W - depth, band + CAM + 8, depth, length, "item")
-                if desk.y2 > D - 8:
-                    desk.h = D - 8 - desk.y
                 chair = Rect(
                     "oyuncu_sandalye",
                     desk.x - chair_w - 5,
-                    desk.y + max(0, (desk.h - chair_d) / 2),
+                    desk.y + max(0.0, (desk.h - chair_d) / 2),
                     chair_w,
                     chair_d,
                     "item",
                 )
+        if chair.x < 40 or chair.y < 0 or chair.y2 > D:
+            return None, None
+        return desk, chair
 
-            # TV üst boş — masa üstteyse TV sola, masa ile 10cm pay
+    def place_tv_seat(strategy: str, desk: Rect, chair: Rect, tv_on_left: bool):
+        seat_depth = 75.0
+        # oturma sağ sınırı: SE köşedeki masa/sandalye
+        blockers = [desk.x - 8]
+        if chair.y2 > D - seat_depth - 20:  # sandalye alt bölgedeyse
+            blockers.append(chair.x - 8)
+        if strategy == "below" or chair.y > band:
+            blockers.append(chair.x - 8)
+            blockers.append(desk.x - 8)
+
+        if tv_on_left:
+            left_y0 = DOOR + DOOR_MARGIN
+            left_clear = D - 2 * (DOOR + DOOR_MARGIN)
+            tv_h = min(120.0, left_clear)
+            tv_y = left_y0 + (left_clear - tv_h) / 2
+            tv = Rect("tv_BESTA", 0, tv_y, 42.0, tv_h, "item")
+            # üst strateji + sandalye üstteyse alt duvar neredeyse tam boş
+            if strategy == "above" and chair.y2 < D - seat_depth - 30:
+                seat_x1 = W - 15
+            else:
+                seat_x1 = min(blockers + [W - 15])
+        else:
             tv_w, tv_d = 120.0, 42.0
             tv_x = kiris_x1 + 8
-            tv_max = (desk.x - 10) if strategy == "above" else (W - 10)
+            tv_max = W - 10
+            if strategy == "above":
+                tv_max = min(tv_max, desk.x - 10)
+                if chair.y < 80:
+                    tv_max = min(tv_max, chair.x - 5)
             if tv_x + tv_w > tv_max:
                 tv_w = tv_max - tv_x
             if tv_w < 80:
-                local.append(f"{label}: TV icin ust bos yetersiz")
-                continue
+                return None, None
             tv = Rect("tv_BESTA", tv_x, 0, tv_w, tv_d, "item")
-
-            # Oturma alt boş — üst stratejide sandalye SE'yi yemez
-            seat_depth = 75.0
-            if strategy == "above":
-                seat_x1 = W - 15  # sağ alt köşe boş
+            if strategy == "above" and chair.y2 < D - seat_depth - 30:
+                seat_x1 = W - 15
             else:
-                seat_x1 = chair.x - 10
-            seat_w = seat_x1 - seat_x0
-            if seat_w < 70:
-                local.append(f"{label}/{strategy}: oturma {seat_w:.0f}cm yetmez")
-                continue
-            seat_w = min(seat_w, 130.0)
-            seat = Rect("oturma", seat_x0, D - seat_depth, seat_w, seat_depth, "item")
+                seat_x1 = min(blockers + [W - 15])
 
-            # çakışma
-            clash = False
-            for a, b in ((desk, tv), (desk, seat), (chair, seat), (chair, tv), (desk, chair)):
-                if a.overlaps(b, gap=3):
-                    clash = True
-                    break
-            if clash:
-                local.append(f"{label}/{strategy}: cakisma")
-                continue
+        seat_w = seat_x1 - seat_x0
+        if seat_w < 70:
+            return None, None
+        seat_w = min(130.0, seat_w)
+        seat = Rect("oturma", seat_x0, D - seat_depth, seat_w, seat_depth, "item")
+        return tv, seat
 
-            score = seat_w + tv_w + desk.w  # büyük oturma + TV tercih
-            return True, desk, chair, tv, seat, [
-                f"STRATEJI {'B masa UST bant' if strategy=='above' else 'A masa ALT bant'}",
-                f"MASA: {label}",
-                f"Oturma {seat_w:.0f}cm | TV {tv_w:.0f}cm | masa {length:.0f}x{depth:.0f}",
-            ], score
-        return False, None, None, None, None, local, -1
+    def clashes(desk, chair, tv, seat) -> bool:
+        pairs = ((desk, tv), (desk, seat), (chair, seat), (chair, tv), (desk, chair))
+        return any(a.overlaps(b, gap=3) for a, b in pairs)
 
-    # Önce B (üst), olmazsa A (alt)
     best = None
-    for strat in ("above", "below"):
-        ok, desk, chair, tv, seat, msg, score = try_pack(strat)
-        if ok and (best is None or score > best[0]):
-            best = (score, desk, chair, tv, seat, msg)
-            if strat == "above" and seat.w >= 110:
-                break  # iyi paket
+    fail_notes: list[str] = []
+    # 2'li cam dar bant: önce end-on + gerekirse TV solda
+    for strategy in ("above", "below"):
+        for along, into, label, orient in desk_candidates:
+            desk, chair = place_desk(strategy, along, into, orient)
+            if desk is None:
+                continue
+            # end-on üst + derin → TV genelde sol; paralel / alt → TV üst dene
+            if orient == "endon" and strategy == "above" and into >= 80:
+                tv_options = (True, False)
+            else:
+                tv_options = (False, True)
+            for use_left in tv_options:
+                tv, seat = place_tv_seat(strategy, desk, chair, use_left)
+                if tv is None or seat is None:
+                    continue
+                if clashes(desk, chair, tv, seat):
+                    continue
+                score = seat.w + (tv.w if tv.h < 50 else tv.h) + min(along, into)
+                if not use_left:
+                    score += 40
+                if strategy == "above":
+                    score += 20
+                if orient == "parallel":
+                    score += 15
+                # 2'li cam: bant dar → 100'luk masa ancak end-on; bunu ödüllendir
+                if band < 100 and orient == "endon" and into >= 100:
+                    score += 55
+                if "xDrive" in label and into >= 100:
+                    score += 25
+                msg = [
+                    f"STRATEJI {'B ust' if strategy=='above' else 'A alt'} | {orient}",
+                    f"MASA: {label} (duvarda {along:.0f} / ice {into:.0f})",
+                    f"TV: {'sol duvar' if use_left else 'ust bos duvar'} | oturma {seat.w:.0f}cm",
+                ]
+                if best is None or score > best[0]:
+                    best = (score, desk, chair, tv, seat, msg, use_left)
 
     if not best:
-        notes.append("RED: hicbir masa+tv+oturma paketi sigmadi — W/D/cam olc")
+        notes.append(
+            f"RED: paket sigmadi. Bant={band:.0f}cm (2li cam {CAM}). "
+            "D olc; cam duvar boyu olc; daha kisa masa gerekebilir."
+        )
+        notes.extend(fail_notes[:5])
         return items, notes
 
-    _, desk, chair, tv, seat, msg = best
+    _, desk, chair, tv, seat, msg, tv_on_left = best
     notes.extend(msg)
     items.extend([desk, chair, tv, seat])
+    # kitaplık bayrağı: TV soldaysa kitap TV ile birlikte
+    notes.append("TV_ON_LEFT" if tv_on_left else "TV_ON_TOP")
 
-    # --- Kitaplık: sol orta ---
-    book_d = 39.0
-    book_h = 100.0
-    book_y = 90.0
-    left_y0 = DOOR + DOOR_MARGIN
-    left_y1 = D - DOOR - DOOR_MARGIN
-    if left_y1 - left_y0 >= book_h:
-        book_y = left_y0 + (left_y1 - left_y0 - book_h) / 2
-        book = Rect("kitaplik", 0, book_y, book_d, book_h, "item")
-        if not any(book.overlaps(it, gap=3) for it in items if it.name != "hali"):
-            items.append(book)
-        else:
-            notes.append("Kitaplik cakisti — kitaplar TV unitesinde")
-            book_d = 0
+    # --- Kitaplık: TV soldaysa kitap TV ünitesinde; değilse sol orta ---
+    book_d = 0.0
+    book_y = tv.y if tv_on_left else 90.0
+    if tv_on_left:
+        notes.append("Kitaplar TV unitesinde (sol) — ayri kitaplik yok")
     else:
-        notes.append("Kitaplik sol orta sigmadi — kitaplar TV unitesinde")
-        book_d = 0
+        book_d = 39.0
+        book_h = 100.0
+        left_y0 = DOOR + DOOR_MARGIN
+        left_y1 = D - DOOR - DOOR_MARGIN
+        if left_y1 - left_y0 >= book_h:
+            book_y = left_y0 + (left_y1 - left_y0 - book_h) / 2
+            book = Rect("kitaplik", 0, book_y, book_d, book_h, "item")
+            if not any(book.overlaps(it, gap=3) for it in items if it.name != "hali"):
+                items.append(book)
+            else:
+                notes.append("Kitaplik cakisti — kitaplar TV unitesinde")
+                book_d = 0
+        else:
+            notes.append("Kitaplik sol orta sigmadi — kitaplar TV unitesinde")
+            book_d = 0
 
     # --- Halı ---
-    rug_x = (book_d + 10) if book_d else 50
-    rug_x2 = min(desk.x - 5, W - 80)
-    rug_y = tv.h + 15
+    rug_x = max(50.0, (tv.x2 + 8) if tv_on_left else (book_d + 10 if book_d else 50))
+    rug_x2 = min(desk.x - 5, chair.x - 5, W - 60)
+    rug_y = 50.0 if tv_on_left else (tv.h + 15)
     rug_y2 = seat.y - 10
     if rug_x2 - rug_x >= 80 and rug_y2 - rug_y >= 60:
         items.append(
@@ -273,13 +355,17 @@ def place_furniture(arch: dict) -> tuple[list[Rect], list[str]]:
         )
 
     # --- Saat (duvar) ---
-    items.append(Rect("bjk_saat_duvar", 2, max(20, book_y - 8), 8, 8, "item"))
+    saat_y = (tv.y - 10) if tv_on_left else max(20.0, book_y - 8)
+    items.append(Rect("bjk_saat_duvar", 2, max(15.0, saat_y), 8, 8, "item"))
 
-    # Zone Z3 label note
     if desk.y < band:
-        notes.append("Masa petek UST bandinda — petek onu bos; alt duvar oturmaya acik")
+        notes.append("Masa petek UST bandinda — petek onu bos")
     else:
         notes.append("Masa petek ALT bandinda")
+    notes.append(
+        f"2li cam sonucu: bant {band:.0f}cm — "
+        + ("paralel masa sigdi" if desk.h >= 90 or desk.w <= 50 else "end-on / kisa kenar duvarda")
+    )
 
     # global overlap raporu
     for i, a in enumerate(items):
@@ -306,7 +392,7 @@ def place_furniture(arch: dict) -> tuple[list[Rect], list[str]]:
                 notes.append(f"UYARI: {it.name} orta koridora taşıyor")
 
     notes.append(
-        f"ÖZET W={W}* D={D}* kapı={DOOR}* cam={CAM}* → sağ bant={band:.0f}cm | "
+        f"ÖZET W={W}* D={D}* | standart kapi={DOOR} | 2li cam={CAM} → bant={band:.0f}cm | "
         f"üst boş={W - kiris_x1:.0f}cm | alt boş≈{W - DOOR - GAP_START - DOOR_MARGIN:.0f}cm"
     )
     return items, notes
@@ -370,7 +456,7 @@ def emit_svg(arch: dict, items: list[Rect], notes: list[str], path: Path) -> Non
         f'<rect x="{X(salon0)}" y="{Y(0)-6}" width="{cm_to_px(DOOR)}" height="12" fill="url(#hatch)" stroke="#111"/>'
     )
     parts.append(
-        f'<text x="{X((salon0+salon1)/2)}" y="{Y(0)-12}" text-anchor="middle" font-size="11" font-weight="700">Salon Kapisi</text>'
+        f'<text x="{X((salon0+salon1)/2)}" y="{Y(0)-12}" text-anchor="middle" font-size="11" font-weight="700">Salon Kapisi {DOOR:.0f}</text>'
     )
     parts.append(
         f'<path d="M{X(salon0)} {Y(0)} A{cm_to_px(DOOR)} {cm_to_px(DOOR)} 0 0 1 {X(salon0)} {Y(DOOR)}" '
@@ -381,7 +467,7 @@ def emit_svg(arch: dict, items: list[Rect], notes: list[str], path: Path) -> Non
         f'<rect x="{X(bal0)}" y="{Y(D)-6}" width="{cm_to_px(DOOR)}" height="12" fill="url(#hatch)" stroke="#111"/>'
     )
     parts.append(
-        f'<text x="{X((bal0+bal1)/2)}" y="{Y(D)+22}" text-anchor="middle" font-size="11" font-weight="700">Balkon Kapisi</text>'
+        f'<text x="{X((bal0+bal1)/2)}" y="{Y(D)+22}" text-anchor="middle" font-size="11" font-weight="700">Balkon Kapisi {DOOR:.0f}</text>'
     )
     parts.append(
         f'<path d="M{X(bal0)} {Y(D)} A{cm_to_px(DOOR)} {cm_to_px(DOOR)} 0 0 0 {X(bal0)} {Y(D-DOOR)}" '
@@ -404,10 +490,13 @@ def emit_svg(arch: dict, items: list[Rect], notes: list[str], path: Path) -> Non
         f'<rect x="{X(W-15)}" y="{Y(band+10)}" width="{cm_to_px(12)}" height="{cm_to_px(CAM-20)}" fill="#c8c8c8" stroke="#111"/>'
     )
     parts.append(
-        f'<text x="{X(W)+8}" y="{Y(band + CAM/2)}" font-size="11" font-weight="700">Cam ORTA</text>'
+        f'<text x="{X(W)+8}" y="{Y(band + CAM/2)}" font-size="11" font-weight="700">2li Cam</text>'
     )
     parts.append(
-        f'<text x="{X(W)+8}" y="{Y(band + CAM/2)+14}" font-size="10" fill="#8a1f1f">Petek</text>'
+        f'<text x="{X(W)+8}" y="{Y(band + CAM/2)+14}" font-size="10" fill="#8a1f1f">ORTA {CAM:.0f}cm</text>'
+    )
+    parts.append(
+        f'<text x="{X(W)+8}" y="{Y(band + CAM/2)+28}" font-size="10" fill="#333">Petek</text>'
     )
     parts.append(
         f'<text x="{X(W)+8}" y="{Y(band/2)}" font-size="10" fill="#8a1f1f" font-weight="700">{band:.0f}*</text>'
@@ -516,7 +605,9 @@ def emit_report(arch: dict, items: list[Rect], notes: list[str], path: Path) -> 
         "# Yerleşim analizi (algoritma)",
         "",
         "## 1) Mimari kilit",
-        f"- W={W}* D={D}* kapı={DOOR}* cam={CAM}*",
+        f"- W={W}* D={D}* (oda hâlâ yerinde ölç)",
+        f"- Kapı = **{DOOR} cm** (standart oda/salon duvar boşluğu)",
+        f"- Cam = **{CAM} cm** (2'li / çift kanat, sağ duvar boyunca)",
         f"- Üst: 2 + kapı + 5 + kiriş40 → üst boş duvar = **{W - kiris_x1:.0f} cm**",
         f"- Sağ: cam ortada → bant = **{band:.0f} cm** (petek önü +{PETEK_CLEAR}cm yasak)",
         f"- Alt: balkon sonrası boş ≈ **{W - DOOR - GAP_START - DOOR_MARGIN:.0f} cm**",
@@ -525,11 +616,11 @@ def emit_report(arch: dict, items: list[Rect], notes: list[str], path: Path) -> 
         "## 2) Boş bölgeler → fonksiyon",
         "| Bölge | Duvar | Fonksiyon | Neden |",
         "|-------|-------|-----------|-------|",
-        "| Z1 | Üst, kiriş sonrası | TV ünitesi | En uzun boş duvar; koltuğa bakar |",
-        "| Z2 | Alt, balkon sağı | Oturma | İkinci uzun boş duvar; TV’ye bakar |",
-        "| Z3a | Sağ, petek üstü | Masa+PC+sandalye (tercih) | Alt duvarı oturmaya bırakır |",
-        "| Z3b | Sağ, petek altı | Masa yedek | Üst sığmazsa; oturma kısalır |",
-        "| Z4 | Sol orta | Kitaplık | Kapı salınımlarının arasında |",
+        "| Z1 | Üst, kiriş sonrası | TV veya boş | 2li cam + end-on masa üstteyse TV sola kayar |",
+        "| Z2 | Alt, balkon sağı | Oturma ≤130 | TV’ye / odaya bakar |",
+        "| Z3a | Sağ, petek üstü | Masa (tercih) | Bant dar → kısa kenar duvarda (end-on) |",
+        "| Z3b | Sağ, petek altı | Masa yedek | |",
+        "| Z4 | Sol orta | TV+kitap veya kitaplık | 2li cam paketinde genelde TV burada |",
         "",
         "## 3) Yerleşen ürünler (cm)",
     ]
@@ -542,9 +633,10 @@ def emit_report(arch: dict, items: list[Rect], notes: list[str], path: Path) -> 
     lines += [
         "",
         "## 5) Mantık özeti",
-        "- AI perspektif fotoğraf duvar/kapı uydurabilir → **sipariş gerçeği bu plan + cm**.",
-        "- 300×320 odada **100×60 masa + 140 ikili koltuk aynı anda sığmaz**; algoritma oturmayı otomatik kısar.",
-        "- Ayrı uzun kitaplık + geniş TV + derin masa seçilirse birini küçült.",
+        "- Standart kapı **90** + 2li cam **140** → sağ bant ≈90 cm → **100 cm masa duvara paralel sığmaz**.",
+        "- Çözüm: xDrive 100×60 **kısa kenarı duvarda** (end-on), petek üst bandında.",
+        "- TV sol duvarda (masa üst sağı doldurduğu için); oturma altta ≤130.",
+        "- W ve D hâlâ yerinde ölç (*). Cam tam cm farklıysa `CAM` değerini layout.py’de güncelle.",
         "",
     ]
     path.write_text("\n".join(lines), encoding="utf-8")

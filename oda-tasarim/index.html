@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>1903 — Boş alan algoritması</title>
+  <title>1903 — Standart kapı + 2’li cam</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -22,12 +22,12 @@
       </div>
     </nav>
     <div class="hero__content">
-      <p class="hero__eyebrow">Çizim kilitli · boş bölge hesabı · AI foto yok</p>
+      <p class="hero__eyebrow">Standart kapı 90 · 2’li cam 140 · boş alan hesabı</p>
       <h1 class="hero__brand">1903</h1>
-      <p class="hero__lead">Mobilya, proje çizimindeki boş duvarlara cm ile oturtuldu. Perspektif uydurma görseller tasarım sayılmaz.</p>
+      <p class="hero__lead">Kapı ve cam netleşti. Daralan sağ banta göre masa kısa kenarı duvarda; TV sol duvarda.</p>
       <div class="hero__cta">
         <a class="btn btn--solid" href="#plan">Ölçekli plan</a>
-        <a class="btn btn--ghost" href="ANALIZ.md">Analiz metni</a>
+        <a class="btn btn--ghost" href="ANALIZ.md">Analiz</a>
       </div>
     </div>
   </header>
@@ -35,64 +35,51 @@
   <main>
     <section class="section" id="algoritma">
       <div class="section__head">
-        <h2>Algoritma — nasıl yerleştirildi</h2>
-        <p><code>layout.py</code> önce yasak bölgeleri, sonra boş dikdörtgenleri hesaplar; mobilya sığmazsa boyutu kısar veya strateji değiştirir.</p>
+        <h2>Güncel kilitler</h2>
+        <p>Çizim sabitleri + senin verdiğin kapı/cam tipi.</p>
       </div>
 
       <div class="inventory">
         <article class="inv">
-          <span class="inv__tag">YASAK</span>
-          <h3>Kırmızı bölgeler</h3>
-          <p>Salon salınımı · balkon salınımı · kiriş 40×10 · petek önü 25 cm. Bunlara mobilya yok.</p>
+          <span class="inv__tag">KAPI</span>
+          <h3>Standart 90 cm</h3>
+          <p>Salon ve balkon duvar boşluğu (TR standart oda/salon). Salınım buna göre.</p>
         </article>
         <article class="inv">
-          <span class="inv__tag">Z1</span>
-          <h3>Üst boş duvar → TV</h3>
-          <p>Kirişten sonra ≈173 cm. Koltuk alta bakıyor → TV buraya. Sol duvara TV koyarsak koltuk TV’ye bakmaz.</p>
+          <span class="inv__tag">CAM</span>
+          <h3>2’li cam 140 cm</h3>
+          <p>Sağ duvarda ortada. Bant = (D−140)/2 ≈ <strong>90 cm</strong> (D=320* iken).</p>
         </article>
         <article class="inv">
-          <span class="inv__tag">Z2</span>
-          <h3>Alt boş duvar → oturma</h3>
-          <p>Balkon sağında ≈208 cm. TV’ye bakar. Max ≈130 cm (140 ikili + derin masa altta çakışır).</p>
+          <span class="inv__tag">SONUÇ</span>
+          <h3>100’lük masa paralel sığmaz</h3>
+          <p>xDrive 100×60 → <strong>kısa kenar duvarda</strong> (60 duvar / 100 oda), petek üst bandı.</p>
         </article>
         <article class="inv">
-          <span class="inv__tag">Z3</span>
-          <h3>Sağ bantlar → masa</h3>
-          <p><strong>B (seçilen):</strong> petek üstü → alt oturma kurtulur.<br>
-          <strong>A (yedek):</strong> petek altı → oturma kısalır.<br>
-          Petek önüne masa yok.</p>
-        </article>
-        <article class="inv">
-          <span class="inv__tag">Z4</span>
-          <h3>Sol orta → kitaplık</h3>
-          <p>İki kapı salınımı arası. Dar raf (~39 cm derinlik).</p>
-        </article>
-        <article class="inv">
-          <span class="inv__tag">MANTIK</span>
-          <h3>Küçük oda gerçeği</h3>
-          <p>300×320’de her şeyi “büyük” almak imkânsız. Algoritma: önce dolaşım, sonra masa+TV+oturma birlikte sığacak paketi seçer.</p>
+          <span class="inv__tag">TV</span>
+          <h3>Sol duvar</h3>
+          <p>Masa üst sağı doldurduğu için TV+kitap sola; oturma altta ≤130.</p>
         </article>
       </div>
 
       <aside class="keep">
-        <h3>Çizim sabitleri (değişmez)</h3>
-        <p>2 cm → salon → 5 cm → kiriş 40×10 sağa · cam+petek sağda orta · eğik duvar yok · kapılar içe</p>
+        <h3>Çizim (değişmez)</h3>
+        <p>2 cm → salon → 5 cm → kiriş 40×10 sağa · cam+petek sağda orta · eğik duvar yok</p>
       </aside>
     </section>
 
     <section class="section" id="plan">
       <div class="section__head">
-        <h2>Ölçekli plan (tek gerçek tasarım)</h2>
-        <p>Yeşil = boş bölge · kırmızı = yasak · siyah = yerleşen ürün. Üretmek için: <code>python3 layout.py</code></p>
+        <h2>Ölçekli plan</h2>
+        <p><code>python3 layout.py</code> · yeşil boş / kırmızı yasak / siyah ürün</p>
       </div>
 
       <figure class="gallery__hero" style="margin:0">
-        <img src="assets/plan-olcekli.png" alt="Algoritma olcekli yerlesim plani" width="1200" height="1200" loading="eager" />
+        <img src="assets/plan-olcekli.png" alt="Standart kapi ve 2li cam yerlesim plani" width="1200" height="1200" loading="eager" />
         <figcaption>
           <a href="plan.svg">plan.svg</a> ·
           <a href="ANALIZ.md">ANALIZ.md</a> ·
-          <a href="SIPARIS.md">SIPARIS.md</a> ·
-          <a href="layout.py">layout.py</a>
+          <a href="SIPARIS.md">SIPARIS.md</a>
         </figcaption>
       </figure>
 
@@ -101,78 +88,56 @@
       </div>
 
       <aside class="budget">
-        <h3>Yerinde 4 ölçü</h3>
-        <p>W, D, iki kapı eni, cam’ın sağ duvardaki cm boyu. Yaz → <code>layout.py</code> içindeki W/D/DOOR/CAM güncellenir, plan yeniden üretilir.</p>
+        <h3>Kalan *</h3>
+        <p>W ve D yerinde ölç. Cam tam cm 120/150 ise <code>layout.py</code> içinde <code>CAM</code> güncelle → plan yeniden üretilir.</p>
       </aside>
     </section>
 
     <section class="section" id="urunler">
       <div class="section__head">
-        <h2>Sipariş — plana uyan TR ürünler</h2>
-        <p>Ölçüler algoritma çıktısına göre. Stok/fiyat sende kontrol.</p>
+        <h2>Sipariş</h2>
       </div>
       <div class="products">
         <article class="product">
-          <div class="product__meta"><span class="product__store">1 MASA</span><span class="product__price">Z3a</span></div>
-          <h3>xDrive Rüzgar 100×60 siyah</h3>
-          <p>Sağ duvar, <strong>petek üst bandı</strong><br>Petek önü boş · alt bant oturmaya bırakıldı</p>
+          <div class="product__meta"><span class="product__store">1 MASA</span><span class="product__price">end-on</span></div>
+          <h3>xDrive Rüzgar 100×60</h3>
+          <p>Petek <strong>üstü</strong> · kısa kenar (60) duvarda · 100 cm odaya</p>
           <a class="product__link" href="https://www.trendyol.com/xdrive/ruzgar-oyuncu-masasi-siyah-100x60-p-993862707" target="_blank" rel="noopener">Sipariş →</a>
         </article>
         <article class="product">
-          <div class="product__meta"><span class="product__store">2 SANDALYE</span><span class="product__price">masa önü</span></div>
-          <h3>xDrive Akdeniz oyuncu koltuğu siyah</h3>
-          <p>Masanın oda içine bakan yüzü</p>
+          <div class="product__meta"><span class="product__store">2 SANDALYE</span><span class="product__price">uzun kenar</span></div>
+          <h3>xDrive Akdeniz siyah</h3>
+          <p>Masanın uzun kenarı · petek önüne değil</p>
           <a class="product__link" href="https://www.trendyol.com/xdrive/akdeniz-kumas-profesyonel-oyuncu-koltugu-siyah-siyah-p-140003157" target="_blank" rel="noopener">Sipariş →</a>
         </article>
         <article class="product">
-          <div class="product__meta"><span class="product__store">3 PC</span><span class="product__price">masa</span></div>
-          <h3>Siyah kasa</h3>
-          <p>Masa üstü veya yanı</p>
-          <a class="product__link" href="https://www.trendyol.com/sr?q=oyuncu%20bilgisayar%20siyah" target="_blank" rel="noopener">Bak →</a>
+          <div class="product__meta"><span class="product__store">3 TV + KİTAP</span><span class="product__price">sol</span></div>
+          <h3>BESTÅ / TV banko ~120×42</h3>
+          <p>Sol orta · kitap aynı ünitede</p>
+          <a class="product__link" href="https://www.ikea.com.tr/urun/besta-venge-siyah-seffaf-cam-120x42x193-cm-dolap-kombinasyonu-59059461" target="_blank" rel="noopener">IKEA →</a>
         </article>
         <article class="product">
-          <div class="product__meta"><span class="product__store">4 TV ÜNİTESİ</span><span class="product__price">Z1</span></div>
-          <h3>BESTÅ ~105–120 × 42 (alçak banko tercih)</h3>
-          <p>Üst boş duvar, kiriş sonrası · koltuğa bakar</p>
-          <a class="product__link" href="https://www.ikea.com.tr/urun/besta-venge-siyah-seffaf-cam-120x42x193-cm-dolap-kombinasyonu-59059461" target="_blank" rel="noopener">IKEA BESTÅ →</a>
-        </article>
-        <article class="product">
-          <div class="product__meta"><span class="product__store">5 TV</span><span class="product__price">50–55"</span></div>
-          <h3>Siyah çerçeve TV</h3>
-          <p>Ünite üstü / duvar</p>
-          <a class="product__link" href="https://www.trendyol.com/sr?q=55%20inç%20televizyon" target="_blank" rel="noopener">Bak →</a>
-        </article>
-        <article class="product">
-          <div class="product__meta"><span class="product__store">6 OTURMA</span><span class="product__price">Z2 ≤130</span></div>
-          <h3>Siyah koltuk ≤130 × 75</h3>
-          <p>Balkon sağı · TV’ye bakar · 140 ikili alma</p>
+          <div class="product__meta"><span class="product__store">4 OTURMA</span><span class="product__price">≤130</span></div>
+          <h3>Siyah koltuk ≤130×75</h3>
+          <p>Balkon sağı · 140 ikili alma</p>
           <a class="product__link" href="https://www.vivense.com/ofis-oturma-gruplari.html" target="_blank" rel="noopener">Vivense →</a>
         </article>
         <article class="product">
-          <div class="product__meta"><span class="product__store">7 KİTAPLIK</span><span class="product__price">Z4</span></div>
-          <h3>Dar raf ~39 cm derinlik</h3>
-          <p>Sol orta · salınım dışı</p>
-          <a class="product__link" href="https://www.ikea.com.tr/urun/kallax-beyaz-77x147-cm-acik-raf-unitesi-59425916" target="_blank" rel="noopener">KALLAX bak →</a>
+          <div class="product__meta"><span class="product__store">5 TV</span><span class="product__price">50–55"</span></div>
+          <h3>Siyah çerçeve</h3>
+          <a class="product__link" href="https://www.trendyol.com/sr?q=55%20inç%20televizyon" target="_blank" rel="noopener">Bak →</a>
         </article>
         <article class="product">
-          <div class="product__meta"><span class="product__store">8 HALI</span><span class="product__price">orta</span></div>
-          <h3>Geometrik S/B ~140×120</h3>
-          <p>Kapı salınımına basmadan</p>
-          <a class="product__link" href="https://www.trendyol.com/sr?q=geometrik%20halı%20siyah%20beyaz" target="_blank" rel="noopener">Bak →</a>
-        </article>
-        <article class="product">
-          <div class="product__meta"><span class="product__store">9 SAAT + BJK</span><span class="product__price">duvar</span></div>
-          <h3>Lisanslı saat, yastık, forma</h3>
-          <p>Sol duvar + oturma yastığı</p>
+          <div class="product__meta"><span class="product__store">6 HALI + BJK</span><span class="product__price">aksesuar</span></div>
+          <h3>Geometrik halı + lisanslı saat</h3>
           <a class="product__link" href="https://www.trendyol.com/besiktas-duvar-saati-x-b146-c35" target="_blank" rel="noopener">Saat →</a>
-          <a class="product__link" href="https://www.kartalyuvasi.com.tr/" target="_blank" rel="noopener">Kartal Yuvası →</a>
         </article>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <p>1903 — boş alan algoritması · çizim kilitli · AI foto tasarım değil</p>
+    <p>1903 — standart kapı 90 · 2’li cam 140 · algoritma planı</p>
   </footer>
   <script src="main.js"></script>
 </body>
