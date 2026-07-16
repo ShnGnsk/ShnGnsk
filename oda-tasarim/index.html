@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>1903 — Net kroki tasarım + alışveriş</title>
+  <title>1903 — Net cm oda çizimi + alışveriş</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -16,114 +16,68 @@
     <nav class="nav">
       <span class="nav__mark">1903</span>
       <div class="nav__links">
-        <a href="#canli">Canlı</a>
-        <a href="#pano">Plan</a>
+        <a href="#cizim">Çizim</a>
         <a href="#olcu">Ölçü</a>
         <a href="#alisveris">Alışveriş</a>
       </div>
     </nav>
     <div class="hero__content">
-      <p class="hero__eyebrow">295 × 295,5 × 255 · kapı 106 · cam 97 · kiriş 64,5×15</p>
+      <p class="hero__eyebrow">295 × 295,5 × 255 · kapı 106 · cam 97 · kiriş 64,5×15 · balkon 93,5</p>
       <h1 class="hero__brand">1903</h1>
-      <p class="hero__lead">Krokindeki net cm’lere kilitli Beşiktaş odası. Canlı oda görselleri + TR alışveriş listesi.</p>
+      <p class="hero__lead">Önce boş oda cm cm. Sonra mobilya. Fotoreal AI yok — ölçü uydurma yok.</p>
       <div class="hero__cta">
-        <a class="btn btn--solid" href="#canli">Canlı odaları gör</a>
+        <a class="btn btn--solid" href="#cizim">Çizimi gör</a>
         <a class="btn btn--ghost" href="1903-oda-mobil.zip">Zip indir</a>
       </div>
     </div>
   </header>
 
   <main>
-    <section class="section" id="canli">
+    <section class="section" id="cizim">
       <div class="section__head">
-        <h2>Canlı oda görselleri</h2>
-        <p>Kroki ölçülerine göre fotoreal · kesin cm için alttaki plan</p>
+        <h2>1) Boş oda — net cm</h2>
+        <p>Kapı · cam · kiriş · girinti · balkon — senin krokinden</p>
       </div>
       <figure class="gallery__hero" style="margin:0">
-        <img src="assets/canli/01-masa-cam.png" alt="Masa ve cam duvar" loading="eager" />
-        <figcaption>Cam duvar — 107 · Cam 97 · 91 · masa petek solu</figcaption>
+        <img src="assets/net-oda-bos.png" alt="Bos oda net cm" loading="eager" />
+        <figcaption>Boş oda — tüm açıklıklar cm etiketli</figcaption>
+      </figure>
+
+      <div class="section__head" style="margin-top:2.5rem">
+        <h2>2) Mobilyalı oda — aynı cm</h2>
+        <p>Masa · sandalye · raf/kütüphane · TV · koltuk · halı · perde</p>
+      </div>
+      <figure class="gallery__hero">
+        <img src="assets/net-oda-dolu.png" alt="Mobilyali oda" loading="lazy" />
+        <figcaption>Mobilya yerleşimi — petek önü boş · girinti koltuk · cam solu masa</figcaption>
       </figure>
       <figure class="gallery__hero">
-        <img src="assets/canli/02-genel-kapi.png" alt="Genel oda kapidan" loading="lazy" />
-        <figcaption>Genel — kapı + kiriş + oturma + TV + masa</figcaption>
+        <img src="assets/net-4-duvar.png" alt="4 duvar" loading="lazy" />
+        <figcaption>4 duvar görünüşü — net cm + mobilya</figcaption>
       </figure>
-      <div class="gallery__pair">
-        <figure>
-          <img src="assets/canli/03-tv-duvar.png" alt="TV duvari" loading="lazy" />
-          <figcaption>Sol — BESTÅ + TV + BJK saat</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/canli/04-oturma-girinti.png" alt="Oturma girinti" loading="lazy" />
-          <figcaption>Sağ — girinti oturma, TV’ye bakar</figcaption>
-        </figure>
-      </div>
-      <div class="gallery__pair">
-        <figure>
-          <img src="assets/canli/05-seyir.png" alt="Seyir acisi" loading="lazy" />
-          <figcaption>Seyir — koltuktan TV</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/canli/06-genel.png" alt="Genel bakis" loading="lazy" />
-          <figcaption>Genel bakış</figcaption>
-        </figure>
-      </div>
+      <figure class="gallery__hero">
+        <img src="assets/izometrik.png" alt="Izometrik" loading="lazy" />
+        <figcaption>İzometrik — AI değil, cm blok</figcaption>
+      </figure>
     </section>
 
     <section class="section" id="olcu">
       <div class="section__head">
-        <h2>Net ölçüler</h2>
-        <p>Detay: <a href="OLCULER.md">OLCULER.md</a></p>
+        <h2>Net ölçüler (kilit)</h2>
+        <p><a href="OLCULER.md">OLCULER.md</a> · <a href="CIZIM.md">CIZIM.md</a></p>
       </div>
       <div class="inventory">
         <article class="inv"><span class="inv__tag">W</span><h3>295 cm</h3><p>107 + cam 97 + 91</p></article>
         <article class="inv"><span class="inv__tag">D</span><h3>295,5 cm</h3><p>Kapı 106 + kiriş 64,5 + girinti 125</p></article>
         <article class="inv"><span class="inv__tag">H</span><h3>255 cm</h3><p>Tavan yerden</p></article>
-        <article class="inv"><span class="inv__tag">CAM</span><h3>97 cm</h3><p>Altında petek · önü boş</p></article>
-      </div>
-    </section>
-
-    <section class="section" id="pano">
-      <div class="section__head">
-        <h2>Ölçekli plan</h2>
-      </div>
-      <figure class="gallery__hero" style="margin:0">
-        <img src="assets/tasarim-pano.png" alt="Tasarim panosu" loading="eager" />
-        <figcaption>Tasarım panosu</figcaption>
-      </figure>
-      <figure class="gallery__hero">
-        <img src="assets/plan-olcekli.png" alt="Net plan" loading="lazy" />
-        <figcaption>cm plan</figcaption>
-      </figure>
-      <figure class="gallery__hero">
-        <img src="assets/izometrik.png" alt="Izometrik" loading="lazy" />
-        <figcaption>İzometrik</figcaption>
-      </figure>
-      <div class="gallery__pair">
-        <figure>
-          <img src="assets/gorus-alt.png" alt="Alt duvar cam" loading="lazy" />
-          <figcaption>Alt — cam + masa solu</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/gorus-sag.png" alt="Sag kapi kiris" loading="lazy" />
-          <figcaption>Sağ — kapı + kiriş + girinti</figcaption>
-        </figure>
-      </div>
-      <div class="gallery__pair">
-        <figure>
-          <img src="assets/gorus-sol.png" alt="Sol TV" loading="lazy" />
-          <figcaption>Sol — balkon + TV</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/gorus-ust.png" alt="Ust duvar" loading="lazy" />
-          <figcaption>Üst — 295 düz</figcaption>
-        </figure>
+        <article class="inv"><span class="inv__tag">KİRİŞ</span><h3>64,5×15</h3><p>Sağ · içe çıkıntı</p></article>
       </div>
     </section>
 
     <section class="section" id="alisveris">
       <div class="section__head">
         <h2>Alışveriş listesi</h2>
-        <p>Tam tablo: <a href="SIPARIS.md">SIPARIS.md</a> · fiyatlar değişebilir, linkte kontrol et</p>
+        <p>Tam tablo: <a href="SIPARIS.md">SIPARIS.md</a></p>
       </div>
       <div class="products">
         <article class="product">
@@ -145,13 +99,12 @@
         <article class="product">
           <div class="product__meta"><span class="product__store">4 TV ÜNİTE</span><span class="product__price">11.150₺</span></div>
           <h3>IKEA BESTÅ TV 120×42×48</h3>
-          <p>991.882.63 · sol duvar</p>
           <a class="product__link" href="https://www.ikea.com.tr/urun/besta-venge-parlak-cila-siyah-120x42x48-cm-tv-sehpasi-99188263" target="_blank" rel="noopener">IKEA →</a>
         </article>
         <article class="product">
-          <div class="product__meta"><span class="product__store">5 TV</span><span class="product__price">modele göre</span></div>
-          <h3>50–55" siyah</h3>
-          <a class="product__link" href="https://www.trendyol.com/sr?q=55%20inç%20televizyon" target="_blank" rel="noopener">Trendyol →</a>
+          <div class="product__meta"><span class="product__store">5 RAF</span><span class="product__price">27.500₺ opsiyon</span></div>
+          <h3>IKEA BESTÅ dolap 120×42×193 (kütüphane)</h3>
+          <a class="product__link" href="https://www.ikea.com.tr/urun/besta-venge-siyah-seffaf-cam-120x42x193-cm-dolap-kombinasyonu-59059461" target="_blank" rel="noopener">IKEA →</a>
         </article>
         <article class="product">
           <div class="product__meta"><span class="product__store">6 OTURMA</span><span class="product__price">~15.638₺</span></div>
@@ -160,9 +113,10 @@
           <a class="product__link" href="https://www.vivense.com/jazz-tekli-koltuk-kumas-degisimli-modeli.html" target="_blank" rel="noopener">Vivense →</a>
         </article>
         <article class="product">
-          <div class="product__meta"><span class="product__store">7 HALI</span><span class="product__price">~1.5–4k</span></div>
-          <h3>Geometrik S/B ~140×120</h3>
-          <a class="product__link" href="https://www.trendyol.com/sr?q=geometrik%20halı%20siyah%20beyaz" target="_blank" rel="noopener">Trendyol →</a>
+          <div class="product__meta"><span class="product__store">7 HALI+PERDE</span><span class="product__price">~2–6k</span></div>
+          <h3>Geometrik S/B halı + stor (cam 97)</h3>
+          <a class="product__link" href="https://www.trendyol.com/sr?q=geometrik%20halı%20siyah%20beyaz" target="_blank" rel="noopener">Halı →</a>
+          <a class="product__link" href="https://www.trendyol.com/sr?q=stor%20perde%20siyah" target="_blank" rel="noopener">Stor →</a>
         </article>
         <article class="product">
           <div class="product__meta"><span class="product__store">8 BJK</span><span class="product__price">saat+aksesuar</span></div>
@@ -174,7 +128,7 @@
     </section>
   </main>
 
-  <footer class="footer"><p>1903 — net kroki · SIPARIS.md</p></footer>
+  <footer class="footer"><p>1903 — net kroki cm · fotoreal AI arşivde (ölçü tutmaz)</p></footer>
   <script src="main.js"></script>
 </body>
 </html>
