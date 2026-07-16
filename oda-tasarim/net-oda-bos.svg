@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 747 668" font-family="Arial,Helvetica,sans-serif">
+<defs>
+<pattern id="hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+<line x1="0" y1="0" x2="0" y2="7" stroke="#666" stroke-width="1.2"/>
+</pattern>
+<pattern id="rug" width="14" height="14" patternUnits="userSpaceOnUse">
+<rect width="14" height="14" fill="#eee"/>
+<path d="M0 0L14 14M14 0L0 14" stroke="#222" stroke-width="0.8"/>
+</pattern>
+</defs>
+<rect x="90.0" y="70.0" width="457.25" height="458.02500000000003" fill="#fafafa" stroke="#111" stroke-width="4"/>
+<text x="318.625" y="42" text-anchor="middle" font-size="20" font-weight="800">1) BOŞ ODA — NET CM (doğaçlama yok)</text>
+<text x="318.625" y="62" text-anchor="middle" font-size="13" fill="#444">W=295 · D=295.5 · H=255</text>
+<text x="318.625" y="60.0" text-anchor="middle" font-size="14" font-weight="700">ÜST DUVAR 295 cm — düz (kapı YOK)</text>
+<rect x="539.25" y="70.0" width="16" height="164.3" fill="#fff" stroke="#111" stroke-width="2"/>
+<rect x="539.25" y="70.0" width="16" height="164.3" fill="url(#hatch)"/>
+<text x="569.25" y="156.15" font-size="14" font-weight="800">Kapı 106 cm</text>
+<rect x="524.0" y="234.3" width="23.25" height="99.97500000000001" fill="#1a1a1a" stroke="#000"/>
+<text x="569.25" y="288.2875" font-size="13" font-weight="800" fill="#8a1f1f">Kiriş 64.5×15.0 cm</text>
+<text x="569.25" y="304.2875" font-size="11" fill="#8a1f1f">(içe çıkıntı)</text>
+<text x="569.25" y="435.15000000000003" font-size="14" font-weight="800" fill="#1e8449">Girinti duvar 125 cm</text>
+<line x1="602.25" y1="70.0" x2="602.25" y2="528.0250000000001" stroke="#111" stroke-width="1.2"/>
+<line x1="596.25" y1="70.0" x2="608.25" y2="70.0" stroke="#111"/>
+<line x1="596.25" y1="528.0250000000001" x2="608.25" y2="528.0250000000001" stroke="#111"/>
+<text x="612.25" y="303.01250000000005" font-size="13" font-weight="700" fill="#111">295.5 cm</text>
+<rect x="255.85" y="520.0250000000001" width="150.35" height="16" fill="#9fd3f0" stroke="#111" stroke-width="2"/>
+<rect x="265.15" y="493.925" width="131.75" height="24.8" fill="#c8c8c8" stroke="#111"/>
+<text x="331.025" y="562.0250000000001" text-anchor="middle" font-size="14" font-weight="800">Cam 97 cm · altında petek</text>
+<line x1="90.0" y1="556.0250000000001" x2="255.85" y2="556.0250000000001" stroke="#8a1f1f" stroke-width="1.2"/>
+<line x1="90.0" y1="550.0250000000001" x2="90.0" y2="562.0250000000001" stroke="#8a1f1f"/>
+<line x1="255.85" y1="550.0250000000001" x2="255.85" y2="562.0250000000001" stroke="#8a1f1f"/>
+<text x="172.925" y="548.0250000000001" text-anchor="middle" font-size="13" font-weight="700" fill="#8a1f1f">107</text>
+<line x1="255.85" y1="576.025" x2="406.2" y2="576.025" stroke="#1565c0" stroke-width="1.2"/>
+<line x1="255.85" y1="570.025" x2="255.85" y2="582.025" stroke="#1565c0"/>
+<line x1="406.2" y1="570.025" x2="406.2" y2="582.025" stroke="#1565c0"/>
+<text x="331.025" y="568.025" text-anchor="middle" font-size="13" font-weight="700" fill="#1565c0">Cam 97</text>
+<line x1="406.2" y1="556.0250000000001" x2="547.25" y2="556.0250000000001" stroke="#8a1f1f" stroke-width="1.2"/>
+<line x1="406.2" y1="550.0250000000001" x2="406.2" y2="562.0250000000001" stroke="#8a1f1f"/>
+<line x1="547.25" y1="550.0250000000001" x2="547.25" y2="562.0250000000001" stroke="#8a1f1f"/>
+<text x="476.725" y="548.0250000000001" text-anchor="middle" font-size="13" font-weight="700" fill="#8a1f1f">91</text>
+<line x1="90.0" y1="598.025" x2="547.25" y2="598.025" stroke="#111" stroke-width="1.2"/>
+<line x1="90.0" y1="592.025" x2="90.0" y2="604.025" stroke="#111"/>
+<line x1="547.25" y1="592.025" x2="547.25" y2="604.025" stroke="#111"/>
+<text x="318.625" y="590.025" text-anchor="middle" font-size="13" font-weight="700" fill="#111">ALT = 295 cm</text>
+<rect x="82.0" y="70.0" width="16" height="144.925" fill="#fff" stroke="#111" stroke-width="2"/>
+<rect x="82.0" y="70.0" width="16" height="144.925" fill="url(#hatch)"/>
+<text x="76.0" y="146.4625" text-anchor="end" font-size="14" font-weight="800">Balkon kapısı 93.5 cm</text>
+<text x="76.0" y="371.475" text-anchor="end" font-size="13" font-weight="700" fill="#555">Düz duvar 202 cm</text>
+<line x1="55.0" y1="70.0" x2="55.0" y2="214.925" stroke="#1565c0" stroke-width="1.2"/>
+<line x1="49.0" y1="70.0" x2="61.0" y2="70.0" stroke="#1565c0"/>
+<line x1="49.0" y1="214.925" x2="61.0" y2="214.925" stroke="#1565c0"/>
+<text x="65.0" y="146.4625" font-size="13" font-weight="700" fill="#1565c0">93.5</text>
+<line x1="55.0" y1="214.925" x2="55.0" y2="528.0250000000001" stroke="#555" stroke-width="1.2"/>
+<line x1="49.0" y1="214.925" x2="61.0" y2="214.925" stroke="#555"/>
+<line x1="49.0" y1="528.0250000000001" x2="61.0" y2="528.0250000000001" stroke="#555"/>
+<text x="65.0" y="375.475" font-size="13" font-weight="700" fill="#555">202</text>
+<line x1="575.25" y1="70.0" x2="575.25" y2="234.3" stroke="#1565c0" stroke-width="1.2"/>
+<line x1="569.25" y1="70.0" x2="581.25" y2="70.0" stroke="#1565c0"/>
+<line x1="569.25" y1="234.3" x2="581.25" y2="234.3" stroke="#1565c0"/>
+<text x="585.25" y="156.15" font-size="13" font-weight="700" fill="#1565c0">106</text>
+<line x1="575.25" y1="234.3" x2="575.25" y2="334.27500000000003" stroke="#8a1f1f" stroke-width="1.2"/>
+<line x1="569.25" y1="234.3" x2="581.25" y2="234.3" stroke="#8a1f1f"/>
+<line x1="569.25" y1="334.27500000000003" x2="581.25" y2="334.27500000000003" stroke="#8a1f1f"/>
+<text x="585.25" y="288.2875" font-size="13" font-weight="700" fill="#8a1f1f">64.5</text>
+<line x1="575.25" y1="334.27500000000003" x2="575.25" y2="528.0250000000001" stroke="#1e8449" stroke-width="1.2"/>
+<line x1="569.25" y1="334.27500000000003" x2="581.25" y2="334.27500000000003" stroke="#1e8449"/>
+<line x1="569.25" y1="528.0250000000001" x2="581.25" y2="528.0250000000001" stroke="#1e8449"/>
+<text x="585.25" y="435.15000000000003" font-size="13" font-weight="700" fill="#1e8449">125</text>
+<circle cx="90.0" cy="70.0" r="5" fill="#8a1f1f"/><text x="98.0" y="86.0" font-size="11" fill="#8a1f1f">orijin (0,0) sol-üst iç köşe</text>
+<text x="318.625" y="628.0250000000001" text-anchor="middle" font-size="12" fill="#555">Sağ: Kapı 106 + Kiriş 64.5 + Girinti 125 = 295.5 · Alt: 107+97+91=295</text>
+</svg>
