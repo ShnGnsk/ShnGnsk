@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>1903 — Net Kroki</title>
+  <title>1903 — Düzeltilmiş Kroki</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -23,12 +23,12 @@
       </div>
     </nav>
     <div class="hero__content">
-      <p class="hero__eyebrow">Son çizimin · dört duvar doğru</p>
+      <p class="hero__eyebrow">İki kapı sol duvardan 2 cm · kiriş = sadece çıkıntı</p>
       <h1 class="hero__brand">1903</h1>
-      <p class="hero__lead">Üstte salon kapısı + kiriş. Sağda cam + petek. Altta balkon kapısı. Sol duvar düz boş.</p>
+      <p class="hero__lead">Salon ve balkon kapısı soldan 2 cm boşlukla başlar. Kirişte girinti yok — odaya 10 cm × 40 cm çıkıntı.</p>
       <div class="hero__cta">
         <a class="btn btn--solid" href="#kroki">Plan</a>
-        <a class="btn btn--ghost" href="#yerlesim">Yerleşim</a>
+        <a class="btn btn--ghost" href="#duvarlar">Ölçüler</a>
       </div>
     </div>
   </header>
@@ -36,59 +36,74 @@
   <main>
     <section class="section" id="kroki">
       <div class="section__head">
-        <h2>Senin çizimin</h2>
-        <p>Önceki yanlış okumalar iptal. Kapılar karşılıklı duvarlarda değil — salon üstte, balkon altta; cam sağda.</p>
+        <h2>Düzeltilmiş kroki</h2>
+        <p>Kapı hizası ve kiriş netleşti. Uydurma girinti kaldırıldı.</p>
       </div>
 
-      <div class="sketch-legend">
-        <div class="sketch-legend__item"><strong>ÜST</strong><span>Salon Kapısı → kısa duvar → Kiriş (odaya çıkıntı) → duvar</span></div>
-        <div class="sketch-legend__item"><strong>SAĞ</strong><span>Duvar → Cam → Petek (içeride) → uzun duvar</span></div>
-        <div class="sketch-legend__item"><strong>ALT</strong><span>Uzun duvar → Balkon Kapısı (sola yakın) → kısa köşe</span></div>
-        <div class="sketch-legend__item"><strong>SOL</strong><span>Düz duvar — kapı / cam / kiriş yok</span></div>
-      </div>
+      <aside class="keep">
+        <h3>Bu turda düzelenler</h3>
+        <p>✔ Salon kapısı: sol duvardan <strong>2 cm</strong> sonra başlar.<br>
+        ✔ Balkon kapısı: sol duvardan <strong>2 cm</strong> sonra başlar (aynı hiza).<br>
+        ✔ Kiriş: <strong>girinti değil</strong> — duvar boyunca 40 cm, odaya 10 cm çıkıntı.<br>
+        ✖ Ayrı “girinti / kuytu niş” yok.</p>
+      </aside>
 
       <div class="plan-grid">
         <figure class="plan-card">
           <figcaption>
             <strong>Şema</strong>
-            <span>Kroki yönüyle aynı</span>
+            <span>2 cm · kapılar · kiriş 40×10</span>
           </figcaption>
           <div class="plan-svg">
-            <svg viewBox="0 0 440 480" role="img" aria-label="Net kroki planı">
-              <!-- Room -->
-              <rect x="70" y="50" width="300" height="360" fill="none" stroke="currentColor" stroke-width="2.5"/>
+            <!--
+              Scale ~1.1 px/cm for readability on small stubs
+              Left wall x=80
+              Top y=50, bottom y=410, right x=380
+              2cm ≈ 8px (slightly exaggerated for visibility, labeled)
+            -->
+            <svg viewBox="0 0 460 480" role="img" aria-label="Düzeltilmiş kroki">
+              <rect x="80" y="50" width="300" height="360" fill="none" stroke="currentColor" stroke-width="2.5"/>
 
-              <!-- TOP wall: short | Salon Kapısı | short | Kiriş into room | wall -->
-              <line x1="70" y1="50" x2="95" y2="50" stroke="currentColor" stroke-width="3"/>
-              <!-- Salon door opening -->
-              <rect x="95" y="46" width="70" height="12" fill="#bbb" stroke="currentColor"/>
-              <text x="130" y="36" text-anchor="middle" class="svg-label">Salon Kapısı</text>
-              <path d="M95 58 A40 40 0 0 0 135 98" fill="none" stroke="#888" stroke-dasharray="3 3"/>
-              <line x1="165" y1="50" x2="185" y2="50" stroke="currentColor" stroke-width="3"/>
-              <!-- Kiriş protruding into room (down) -->
-              <rect x="185" y="50" width="72" height="28" fill="#111" stroke="currentColor" stroke-width="2"/>
-              <text x="221" y="68" text-anchor="middle" class="svg-label svg-label--light">Kiriş</text>
-              <line x1="257" y1="50" x2="370" y2="50" stroke="currentColor" stroke-width="3"/>
+              <!-- LEFT wall empty -->
+              <text x="55" y="230" text-anchor="middle" class="svg-dim" transform="rotate(-90 55 230)">sol duvar (düz)</text>
 
-              <!-- RIGHT wall: wall | Cam | Petek | wall -->
-              <line x1="370" y1="50" x2="370" y2="130" stroke="currentColor" stroke-width="3"/>
-              <rect x="364" y="130" width="12" height="90" fill="#bbb" stroke="currentColor"/>
-              <text x="400" y="175" class="svg-label">Cam</text>
-              <!-- Petek inside -->
-              <rect x="340" y="145" width="22" height="60" fill="#ccc" stroke="currentColor"/>
-              <text x="318" y="180" text-anchor="end" class="svg-dim">Petek</text>
-              <line x1="370" y1="220" x2="370" y2="410" stroke="currentColor" stroke-width="3"/>
+              <!-- TOP: 2cm | Salon kapı | 5cm | Kiriş 40×10 | rest -->
+              <!-- 2cm stub -->
+              <line x1="80" y1="50" x2="90" y2="50" stroke="currentColor" stroke-width="4"/>
+              <text x="85" y="38" text-anchor="middle" class="svg-dim">2cm</text>
+              <!-- Salon door ~70cm shown -->
+              <rect x="90" y="44" width="78" height="14" fill="#bbb" stroke="currentColor"/>
+              <text x="129" y="28" text-anchor="middle" class="svg-label">Salon Kapısı</text>
+              <path d="M90 58 A45 45 0 0 0 135 103" fill="none" stroke="#888" stroke-dasharray="3 3"/>
+              <!-- 5cm after door before kiriş -->
+              <line x1="168" y1="50" x2="178" y2="50" stroke="currentColor" stroke-width="4"/>
+              <text x="173" y="38" text-anchor="middle" class="svg-dim">5</text>
+              <!-- Kiriş: 40cm along (~44px), 10cm into room (~14px) — protrusion ONLY -->
+              <rect x="178" y="50" width="44" height="14" fill="#111" stroke="currentColor" stroke-width="2"/>
+              <text x="200" y="78" text-anchor="middle" class="svg-dim">Kiriş 40×10</text>
+              <text x="200" y="92" text-anchor="middle" class="svg-dim">(çıkıntı · girinti yok)</text>
+              <!-- rest of top wall -->
+              <line x1="222" y1="50" x2="380" y2="50" stroke="currentColor" stroke-width="3"/>
 
-              <!-- BOTTOM wall: long | Balkon near left | short -->
-              <line x1="370" y1="410" x2="160" y2="410" stroke="currentColor" stroke-width="3"/>
-              <rect x="95" y="404" width="65" height="12" fill="#bbb" stroke="currentColor"/>
-              <text x="128" y="440" text-anchor="middle" class="svg-label">Balkon Kapısı</text>
-              <path d="M160 410 A40 40 0 0 0 120 370" fill="none" stroke="#888" stroke-dasharray="3 3"/>
-              <line x1="95" y1="410" x2="70" y2="410" stroke="currentColor" stroke-width="3"/>
+              <!-- RIGHT: Cam + Petek -->
+              <line x1="380" y1="50" x2="380" y2="140" stroke="currentColor" stroke-width="3"/>
+              <rect x="374" y="140" width="12" height="88" fill="#bbb" stroke="currentColor"/>
+              <text x="408" y="185" class="svg-label">Cam</text>
+              <rect x="350" y="155" width="22" height="58" fill="#ccc" stroke="currentColor"/>
+              <text x="340" y="188" text-anchor="end" class="svg-dim">Petek</text>
+              <line x1="380" y1="228" x2="380" y2="410" stroke="currentColor" stroke-width="3"/>
 
-              <!-- LEFT wall: straight empty -->
-              <line x1="70" y1="410" x2="70" y2="50" stroke="currentColor" stroke-width="3"/>
-              <text x="48" y="230" text-anchor="middle" class="svg-dim" transform="rotate(-90 48 230)">düz boş duvar</text>
+              <!-- BOTTOM: 2cm | Balkon kapı | rest -->
+              <line x1="80" y1="410" x2="90" y2="410" stroke="currentColor" stroke-width="4"/>
+              <text x="85" y="432" text-anchor="middle" class="svg-dim">2cm</text>
+              <rect x="90" y="404" width="70" height="14" fill="#bbb" stroke="currentColor"/>
+              <text x="125" y="448" text-anchor="middle" class="svg-label">Balkon Kapısı</text>
+              <path d="M160 410 A45 45 0 0 0 115 365" fill="none" stroke="#888" stroke-dasharray="3 3"/>
+              <line x1="160" y1="410" x2="380" y2="410" stroke="currentColor" stroke-width="3"/>
+
+              <!-- alignment guide -->
+              <line x1="90" y1="64" x2="90" y2="400" stroke="#8a1f1f" stroke-width="1" stroke-dasharray="2 4" opacity=".5"/>
+              <text x="105" y="240" class="svg-dim">kapı başlangıç hizası</text>
             </svg>
           </div>
         </figure>
@@ -96,66 +111,65 @@
         <figure class="plan-card plan-card--photo">
           <figcaption>
             <strong>Plan görseli</strong>
-            <span>Senin son çizimin</span>
+            <span>2 cm hiza · kiriş çıkıntı</span>
           </figcaption>
-          <img src="assets/kroki-net.png" alt="Net kroki planı" width="1536" height="1024" loading="lazy" />
+          <img src="assets/kroki-duzeltilmis.png" alt="Düzeltilmiş kroki" width="1536" height="1024" loading="lazy" />
         </figure>
       </div>
     </section>
 
     <section class="section" id="duvarlar">
       <div class="section__head">
-        <h2>Dört duvar</h2>
-        <p>Çizimdeki sıra. Cm’leri bu duvarlara sonra yapıştırırız — önce şekil doğru.</p>
+        <h2>Duvarlar (güncel)</h2>
       </div>
       <div class="inventory">
         <article class="inv">
           <span class="inv__tag">ÜST</span>
-          <h3>Salon Kapısı + Kiriş</h3>
-          <p>Soldan: kısa duvar → <strong>Salon Kapısı</strong> (içeri) → kısa duvar → <strong>Kiriş</strong> odaya çıkıntı → köşeye duvar.</p>
+          <h3>2 cm → Salon → 5 cm → Kiriş</h3>
+          <p>Sol duvardan <strong>2 cm</strong> sonra salon kapısı. Kapıdan sonra <strong>5 cm</strong>, sonra kiriş: duvar boyunca <strong>40 cm</strong>, odaya <strong>10 cm</strong> çıkıntı. Girinti yok.</p>
+        </article>
+        <article class="inv">
+          <span class="inv__tag">ALT</span>
+          <h3>2 cm → Balkon</h3>
+          <p>Sol duvardan <strong>2 cm</strong> sonra balkon kapısı — salon ile aynı sol hiza. Sonra düz duvar sağa.</p>
         </article>
         <article class="inv">
           <span class="inv__tag">SAĞ</span>
           <h3>Cam + Petek</h3>
-          <p>Duvar → <strong>Cam</strong> → içeride <strong>Petek</strong> → aşağı uzun duvar → sağ-alt köşe.</p>
-        </article>
-        <article class="inv">
-          <span class="inv__tag">ALT</span>
-          <h3>Balkon Kapısı</h3>
-          <p>Sağdan sola uzun duvar → <strong>Balkon Kapısı</strong> (sol-alta yakın) → kısa köşe payı.</p>
+          <p>Cam açıklığı; petek odanın içinde cama bitişik.</p>
         </article>
         <article class="inv">
           <span class="inv__tag">SOL</span>
           <h3>Düz duvar</h3>
-          <p>Hiç açıklık yok. Sadece düz duvar.</p>
+          <p>Boş. İki kapı bu duvardan 2 cm içeride başlar.</p>
         </article>
       </div>
     </section>
 
     <section class="section" id="yerlesim">
       <div class="section__head">
-        <h2>Yerleşim (bu krokiye göre)</h2>
+        <h2>Yerleşim</h2>
       </div>
       <div class="zones">
         <article class="zone">
           <div class="zone__num">01</div>
-          <h3>Cam + petek (sağ) → çalışma</h3>
-          <p>Masa peteğin önünü kapatmadan, cama paralel veya hafif ofset. FJÄLLBO dar model.</p>
+          <h3>Cam + petek → masa</h3>
+          <p>Dar masa; petek önü açık.</p>
         </article>
         <article class="zone">
           <div class="zone__num">02</div>
           <h3>Sol düz duvar → depo / oturma</h3>
-          <p>En temiz uzun yüzey: BESTÅ veya kanepe. Kapı salınımı yok.</p>
+          <p>Kapı yok; BESTÅ veya kanepe.</p>
         </article>
         <article class="zone">
           <div class="zone__num">03</div>
-          <h3>Kiriş (üst) → çevresi boş</h3>
-          <p>Odaya çıkan kirişe mobilya yaslama; altında/yanında geçiş payı.</p>
+          <h3>Kiriş 40×10</h3>
+          <p>Sadece çıkıntı — altına/yanına yaslanma; girinti deposu yok.</p>
         </article>
         <article class="zone">
           <div class="zone__num">04</div>
-          <h3>İki kapı salınımı</h3>
-          <p>Üstte salon, altta balkon — ikisinin de iç açılım yayları boş.</p>
+          <h3>Sol 2 cm pay + kapı salınımları</h3>
+          <p>İki kapının iç açılım yayları boş kalır.</p>
         </article>
       </div>
     </section>
@@ -167,7 +181,7 @@
       <div class="products">
         <article class="product">
           <div class="product__meta"><span class="product__store">IKEA</span><span class="product__price">dar</span></div>
-          <h3>FJÄLLBO 100×36 — cam/petek yanı</h3>
+          <h3>FJÄLLBO 100×36 — cam yanı</h3>
           <a class="product__link" href="https://www.ikea.com.tr/urun/fjallbo-siyah-100x36-cm-calisma-masasi-30339735" target="_blank" rel="noopener">ikea.com.tr →</a>
         </article>
         <article class="product">
@@ -190,7 +204,7 @@
   </main>
 
   <footer class="footer">
-    <p>1903 — üst: Salon+Kiriş · sağ: Cam+Petek · alt: Balkon · sol: düz</p>
+    <p>1903 — salon &amp; balkon: sol duvardan 2 cm · kiriş 40×10 çıkıntı · girinti yok</p>
   </footer>
   <script src="main.js"></script>
 </body>

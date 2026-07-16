@@ -1,13 +1,9 @@
-# 1903 — Net kroki
+# 1903 — Düzeltilmiş kroki
 
-Senin son çizimin:
-
-| Duvar | Ne var |
-|-------|--------|
-| **Üst** | Salon Kapısı → Kiriş (odaya çıkıntı) |
-| **Sağ** | Cam + Petek |
-| **Alt** | Balkon Kapısı (sola yakın) |
-| **Sol** | Düz boş duvar |
+- **Salon kapısı** ve **Balkon kapısı**: sol duvardan **2 cm** boşlukla başlar (aynı hiza)
+- **Kiriş**: 40 cm × odaya 10 cm **çıkıntı** — girinti / niş yok
+- **Sağ**: Cam + Petek
+- **Sol**: düz boş duvar
 
 ```bash
 cd oda-tasarim && python3 -m http.server 4173
