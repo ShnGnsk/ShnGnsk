@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1680" font-family="Arial,sans-serif">
+<rect width="1200" height="1680" fill="#0d0d0d"/>
+<text x="60" y="70" fill="#fff" font-size="42" font-weight="700" font-family="Georgia,serif">1903</text>
+<text x="60" y="105" fill="#ccc" font-size="18">Net kroki · Beşiktaş oyuncu odası · doğaçlama yok</text>
+<text x="60" y="130" fill="#8a1f1f" font-size="15" font-weight="700">W=295 · D=295.5 · H=255 · Kapı 106 · Balkon 93.5 · Cam 97</text>
+
+<rect x="60" y="160" width="1080" height="210" fill="#1a1a1a" stroke="#333"/>
+<text x="80" y="195" fill="#fff" font-size="20" font-weight="700">Kroki ölçüleri (kilit)</text>
+<text x="80" y="230" fill="#ddd" font-size="15">ÜST: 295 cm düz duvar</text>
+<text x="80" y="258" fill="#ddd" font-size="15">SAĞ: Kapı 106 + Kiriş 64.5×15 + Girinti 125 = 295.5</text>
+<text x="80" y="286" fill="#ddd" font-size="15">ALT: 107 + Cam 97 (altında petek) + 91 = 295</text>
+<text x="80" y="314" fill="#ddd" font-size="15">SOL: Balkon 93.5 + düz duvar 202</text>
+<text x="80" y="348" fill="#aaa" font-size="14">Yasak: petek önü · kapı salınımı · kiriş hacmi · uydurma eğik duvar</text>
+
+<text x="60" y="405" fill="#fff" font-size="20" font-weight="700">Yerleşim</text>
+<rect x="70" y="420" width="265.5" height="265.95" fill="#f7f7f7" stroke="#fff" stroke-width="3"/>
+<rect x="327.5" y="420" width="10" height="95.4" fill="#999"/><rect x="62" y="420" width="10" height="84.15" fill="#999"/><rect x="322.0" y="515.4" width="13.5" height="58.050000000000004" fill="#111"/><rect x="166.3" y="677.95" width="87.3" height="10" fill="#8ab"/><rect x="73.6" y="630.15" width="90.0" height="54.0" fill="#1a1a1a" stroke="#8a1f1f"/><text x="118.6" y="657.15" text-anchor="middle" fill="#fff" font-size="10">masa</text><circle cx="146.5" cy="607.65" r="19.8" fill="#333" stroke="#8a1f1f"/><rect x="70.0" y="520.35" width="37.800000000000004" height="108.0" fill="#1a1a1a" stroke="#8a1f1f"/><text x="88.9" y="574.35" text-anchor="middle" fill="#fff" font-size="10">tv_BESTA</text><rect x="261.70000000000005" y="577.95" width="72.0" height="76.5" fill="#1a1a1a" stroke="#8a1f1f"/><text x="297.70000000000005" y="616.2" text-anchor="middle" fill="#fff" font-size="10">oturma</text><rect x="119.5" y="510.0" width="126.0" height="108.0" fill="#ddd" stroke="#111"/><circle cx="76.3" cy="511.35" r="9" fill="#fff" stroke="#8a1f1f" stroke-width="2"/><text x="375.5" y="440" fill="#fff" font-size="16" font-weight="700">Alışveriş (TR)</text><text x="375.5" y="470" fill="#ddd" font-size="14">1 Boya Andezit / antrasit soft mat</text><text x="375.5" y="492" fill="#ddd" font-size="14">2 xDrive masa 100x60 ~6650₺</text><text x="375.5" y="514" fill="#ddd" font-size="14">3 xDrive Akdeniz koltuk ~13-15k₺</text><text x="375.5" y="536" fill="#ddd" font-size="14">4 PC siyah kasa</text><text x="375.5" y="558" fill="#ddd" font-size="14">5 IKEA BESTÅ TV 120×42×48 = 11150₺</text><text x="375.5" y="580" fill="#ddd" font-size="14">6 TV 50-55"</text><text x="375.5" y="602" fill="#ddd" font-size="14">7 Vivense Jazz 85×80 ~15638₺</text><text x="375.5" y="624" fill="#ddd" font-size="14">8 Halı geometrik S/B</text><text x="375.5" y="646" fill="#ddd" font-size="14">9 BJK lisanslı saat</text><text x="375.5" y="668" fill="#ddd" font-size="14">10 BJK yastık/forma</text><text x="375.5" y="690" fill="#ddd" font-size="14"></text><text x="375.5" y="712" fill="#ddd" font-size="14">Detay + link: SIPARIS.md</text>
+<rect x="60" y="820" width="1080" height="100" fill="#1a1a1a" stroke="#333"/>
+<text x="80" y="855" fill="#fff" font-size="16" font-weight="700">Neden bu yerleşim?</text>
+<text x="80" y="885" fill="#ccc" font-size="14">Cam sol payı 107cm → 100lik masa sığar (petek yanına). Sol uzun duvar → TV. Sağ girinti 125cm → oturma TV'ye bakar.</text>
+<text x="80" y="905" fill="#aaa" font-size="13">Üretim: python3 layout.py &amp;&amp; python3 gorusler.py &amp;&amp; python3 tasarim_pano.py</text>
+
+<text x="60" y="960" fill="#fff" font-size="18" font-weight="700">Koordinat</text>
+<text x="80" y="990" fill="#ddd" font-size="14">masa: (4,234) 100×60 cm</text><text x="80" y="1014" fill="#ddd" font-size="14">sandalye: (55,178) 60×60 cm</text><text x="80" y="1038" fill="#ddd" font-size="14">tv_BESTA: (0,112) 42×120 cm</text><text x="80" y="1062" fill="#ddd" font-size="14">oturma: (213,176) 80×85 cm</text><text x="80" y="1086" fill="#ddd" font-size="14">hali: (55,100) 140×120 cm</text><text x="600" y="1640" text-anchor="middle" fill="#444" font-size="12">1903 · net kroki tasarım panosu</text></svg>

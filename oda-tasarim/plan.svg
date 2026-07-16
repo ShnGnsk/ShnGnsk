@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 643 664" font-family="Arial,sans-serif">
+<defs>
+<pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+<line x1="0" y1="0" x2="0" y2="6" stroke="#666" stroke-width="1"/>
+</pattern>
+<pattern id="rug" width="10" height="10" patternUnits="userSpaceOnUse">
+<rect width="10" height="10" fill="#eee"/>
+<path d="M0 0L10 10M10 0L0 10" stroke="#222" stroke-width="0.7"/>
+</pattern>
+</defs>
+<rect x="70.0" y="50.0" width="413.0" height="413.7" fill="#fafafa" stroke="#111" stroke-width="3"/>
+<text x="276.5" y="28" text-anchor="middle" font-size="16" font-weight="700">NET PLAN — W=295 · D=295.5 · H=255</text>
+<rect x="334.59999999999997" y="50.0" width="148.39999999999998" height="148.39999999999998" fill="#c0392b" fill-opacity="0.15" stroke="#c0392b" stroke-dasharray="4 2"/>
+<rect x="70.0" y="50.0" width="130.9" height="130.9" fill="#c0392b" fill-opacity="0.15" stroke="#c0392b" stroke-dasharray="4 2"/>
+<rect x="462.0" y="198.39999999999998" width="21.0" height="90.3" fill="#c0392b" fill-opacity="0.15" stroke="#c0392b" stroke-dasharray="4 2"/>
+<rect x="219.79999999999998" y="428.7" width="135.79999999999998" height="35.0" fill="#c0392b" fill-opacity="0.15" stroke="#c0392b" stroke-dasharray="4 2"/>
+<text x="276.5" y="42.0" text-anchor="middle" font-size="12" font-weight="700">ÜST DUVAR 295cm (düz)</text>
+<rect x="477.0" y="50.0" width="12" height="148.39999999999998" fill="url(#hatch)" stroke="#111"/>
+<text x="493.0" y="124.19999999999999" font-size="12" font-weight="700">Kapı 106</text>
+<rect x="462.0" y="198.39999999999998" width="21.0" height="90.3" fill="#111"/>
+<text x="493.0" y="243.54999999999998" font-size="11" fill="#8a1f1f" font-weight="700">Kiriş 64.5×15.0</text>
+<text x="493.0" y="376.2" font-size="11" fill="#1e8449" font-weight="700">Girinti 125</text>
+<rect x="219.79999999999998" y="457.7" width="135.79999999999998" height="12" fill="url(#hatch)" stroke="#111"/>
+<rect x="231.0" y="438.5" width="113.39999999999999" height="19.599999999999998" fill="#c8c8c8" stroke="#111"/>
+<text x="287.7" y="491.7" text-anchor="middle" font-size="12" font-weight="700">Cam 97 · altında petek</text>
+<text x="144.89999999999998" y="491.7" text-anchor="middle" font-size="11" fill="#8a1f1f">107</text>
+<text x="419.29999999999995" y="491.7" text-anchor="middle" font-size="11" fill="#8a1f1f">91</text>
+<rect x="64.0" y="50.0" width="12" height="130.9" fill="url(#hatch)" stroke="#111"/>
+<text x="58.0" y="115.45" text-anchor="end" font-size="11" font-weight="700">Balkon 93.5</text>
+<rect x="75.6" y="376.9" width="140.0" height="84.0" fill="#1a1a1a" stroke="#8a1f1f" stroke-width="1.5"/>
+<text x="145.6" y="418.9" text-anchor="middle" font-size="10" fill="#fff">masa</text>
+<circle cx="189.0" cy="341.9" r="28.0" fill="#333" stroke="#8a1f1f"/>
+<text x="189.0" y="345.9" text-anchor="middle" font-size="9" fill="#fff">sandalye</text>
+<rect x="70.0" y="206.1" width="58.8" height="168.0" fill="#1a1a1a" stroke="#8a1f1f" stroke-width="1.5"/>
+<text x="99.4" y="290.1" text-anchor="middle" font-size="10" fill="#fff">tv_BESTA</text>
+<rect x="368.2" y="295.7" width="112.0" height="118.99999999999999" fill="#1a1a1a" stroke="#8a1f1f" stroke-width="1.5"/>
+<text x="424.2" y="355.2" text-anchor="middle" font-size="10" fill="#fff">oturma</text>
+<rect x="147.0" y="190.0" width="196.0" height="168.0" fill="url(#rug)" stroke="#111"/>
+<text x="245.0" y="274.0" text-anchor="middle" font-size="11">halı</text>
+<circle cx="79.8" cy="192.1" r="12" fill="#fff" stroke="#8a1f1f" stroke-width="2"/>
+<text x="79.8" y="196.1" text-anchor="middle" font-size="8" fill="#8a1f1f" font-weight="700">BJK</text>
+<text x="276.5" y="518.7" text-anchor="middle" font-size="13" font-weight="700">Beşiktaş oyuncu odası — kroki cm kilitli</text>
+<text x="276.5" y="536.7" text-anchor="middle" font-size="10" fill="#8a1f1f">NET: W=295.0 D=295.5 H=255.0 | kapı=106.0 balkon=93.5 cam=97.0</text>
+<text x="276.5" y="550.7" text-anchor="middle" font-size="10" fill="#8a1f1f">Kiriş 64.5×15.0 | girinti duvar 125.0 | cam pay 107.0|97.0|91.0</text>
+<text x="276.5" y="564.7" text-anchor="middle" font-size="10" fill="#8a1f1f">MASA: alt-sol cam yanı · 100×60 · petek ÖNÜNE değil YANINA</text>
+<text x="276.5" y="578.7" text-anchor="middle" font-size="10" fill="#8a1f1f">TV: sol duvar · BESTÅ ayak izi 42×120 · balkon salınımı altında</text>
+<text x="276.5" y="592.7" text-anchor="middle" font-size="10" fill="#8a1f1f">OTURMA: sağ girinti · 85×80 (duvar boyunca×derinlik) · TV'ye bakar</text>
+</svg>
