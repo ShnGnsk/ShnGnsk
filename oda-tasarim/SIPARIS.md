@@ -1,62 +1,42 @@
-# 1903 — Beşiktaş oyuncu odası (cm ölçekli)
+# 1903 — sipariş (algoritma çıktısı)
 
-## Asıl dosya
-`plan.svg` / `assets/plan-olcekli.png` — AI fotolar yardımcı; sipariş gerçeği ölçekli plan + aşağıdaki linkler.
+Asıl dosyalar: `layout.py` → `plan.svg` / `ANALIZ.md`  
+AI perspektif fotolar **kullanma** (duvar/kapı kaydırıyor).
 
-## Çizim sabitleri (kayma yok)
+## Çizim kilidi
 | Sabit | cm |
 |-------|-----|
-| Kapı başlangıç (sol duvardan) | **2** |
-| Salon – kiriş arası | **5** |
-| Kiriş | **40 × 10** (sağa + içe) |
+| Kapı başlangıç | **2** |
+| Salon–kiriş | **5** |
+| Kiriş | **40 × 10** sağa+içe |
 | Cam+petek | sağ duvar **orta** |
-| Eğik duvar | **yok** |
 
-## Çalışma varsayımları (*)
-Yerinde ölç: W≈300, D≈320, kapı≈80, cam≈80. Alt bant = (D−cam)/2; **≥110 cm** olmadan 100’lük masa alma.
+\* W≈300 D≈320 kapı≈80 cam≈80 — yerinde ölç.
 
-## Yerleşim
-| Bölge | Ürün |
-|-------|------|
-| Sağ, petek altı | Oyuncu masası 100×60 + sandalye + PC |
-| Sol orta | BESTÅ TV + kitap / forma |
-| Sol duvar üstü | Lisanslı BJK duvar saati |
-| Alt, balkon sağı | Oturma ≤140 + BJK yastık |
-| Orta zemin | Geometrik halı ~120×160 |
+## Algoritma sonucu (W/D varsayılan)
+**Strateji B:** masa sağ **üst** bant (petek üstü) → alt duvar oturmaya açık.
 
-## Sipariş listesi (TR satış)
+| Ürün | cm / konum | Link |
+|------|------------|------|
+| Masa | **100×60** xDrive — sağ üst bant, petek ÖNÜNE değil | [Trendyol](https://www.trendyol.com/xdrive/ruzgar-oyuncu-masasi-siyah-100x60-p-993862707) |
+| Sandalye | oyuncu koltuğu siyah — masanın odanın içine bakan yüzü | [xDrive Akdeniz](https://www.trendyol.com/xdrive/akdeniz-kumas-profesyonel-oyuncu-koltugu-siyah-siyah-p-140003157) |
+| PC | siyah kasa — masa üstü/yanı | Trendyol gaming PC |
+| TV ünitesi | Alçak banko **≤95×42** (bu pakette) — üst boş duvar, koltuğa bakar | IKEA BESTÅ TV banko / Trendyol 100cm siyah TV ünitesi |
+| TV | 50–55" | Trendyol |
+| Oturma | **≤130×75** — balkon sağı, TV’ye bakar | Vivense / Trendyol siyah |
+| Kitaplık | **~39×100** taban — sol orta (salınım dışı) | IKEA KALLAX 42 / dar raf |
+| Halı | ~140×120 orta | Trendyol geometrik S/B |
+| Saat | BJK lisanslı — sol duvar | [Trendyol BJK saat](https://www.trendyol.com/besiktas-duvar-saati-x-b146-c35) |
+| Aksesuar | yastık/forma | Kartal Yuvası / Trendyol |
 
-1. **Masa** — xDrive Rüzgar Oyuncu Masası Siyah **100×60**  
-   https://www.trendyol.com/xdrive/ruzgar-oyuncu-masasi-siyah-100x60-p-993862707  
-   Şart: sağ alt bant ≥110 cm. Bant küçükse yaz — dik yerleştirme.
+## Neden böyle?
+1. Üstte kirişten sonra **173 cm boş duvar** → TV  
+2. Altta balkon sonrası **~208 cm boş** → oturma (TV’ye bakar)  
+3. Sağda cam ortada → masa **petek üst veya alt bantta**; petek önü yasak  
+4. Masa **alt** banda konursa 100×60 + 130 oturma **çakışır** → algoritma masayı üste alır  
+5. Sol orta → kitaplık (kapılar sola açılır, köşeler salınım)
 
-2. **Sandalye** — xDrive Akdeniz Kumaş Oyuncu Koltuğu Siyah  
-   https://www.trendyol.com/xdrive/akdeniz-kumas-profesyonel-oyuncu-koltugu-siyah-siyah-p-140003157
-
-3. **PC** — kendi kule / Trendyol gaming PC (siyah kasa, masa üstü veya yanında)  
-   https://www.trendyol.com/sr?q=oyuncu%20bilgisayar%20siyah
-
-4. **TV ünitesi + kitaplık** — BESTÅ 120×42×193 venge/siyah  
-   https://www.ikea.com.tr/urun/besta-venge-siyah-seffaf-cam-120x42x193-cm-dolap-kombinasyonu-59059461  
-   Sol duvar ortası (kapı salınımı dışında).
-
-5. **TV** — 50–55" siyah çerçeve  
-   https://www.trendyol.com/sr?q=55%20inç%20televizyon
-
-6. **Oturma** — ≤140 cm siyah/antrasit ikili (balkon kapısı sağı)  
-   https://www.vivense.com/ofis-oturma-gruplari.html
-
-7. **Halı** — geometrik siyah-beyaz ~120×160  
-   https://www.trendyol.com/sr?q=geometrik%20halı%20siyah%20beyaz
-
-8. **Saat** — lisanslı Beşiktaş duvar saati  
-   https://www.trendyol.com/besiktas-duvar-saati-x-b146-c35
-
-9. **Aksesuar** — BJK yastık, forma, atkı (Kartal Yuvası / Trendyol)  
-   https://www.trendyol.com/sr?q=beşiktaş%20lisanslı%20yastık  
-   https://www.kartalyuvasi.com.tr/
-
-10. **Boya** — Filli Boya Andezit 15 soft mat (Momento Max/Silan)
-
-## Kritik
-Cam ortada ve D küçük → alt bant &lt;110 → **100×60 masayı alma**, ölçüyü yaz.
+## Alma
+- 140+ ikili + 100×60 masa **alt bantta birlikte** → alma  
+- Petek önüne masa → alma  
+- Kapı salınımına dolap → alma  
