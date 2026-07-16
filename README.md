@@ -1,24 +1,13 @@
-# 1903 Atölye — Ölçülü oda analizi
+# 1903 Atölye — Çizime göre plan
 
-Beşiktaş (siyah-beyaz) konsept · milimetrik duvar hattı · satılabilir mobilya.
+Elindeki krokiye kilitli Beşiktaş (siyah-beyaz) oda düzeni.
 
-## Duvar hattı (soldan sağa)
+## Geometri (kroki)
 
-| Segment | Ölçü |
-|---------|------|
-| Sol kapı | ? cm (eksik) · içeri açılır |
-| Duvar | 5 cm |
-| Kiriş | 40 cm · içeri 10 cm |
-| Girinti duvar | 75 cm · içeri 10 cm |
-| Duvar | 50 cm |
-| Cam | 60 cm |
-| Duvar | 60 cm |
-| Duvar | 110 cm |
-| Kapı | 50 cm · içeri açılır |
-| Düz duvar | 170 cm |
-
-**Bilinen toplam:** 620 cm + sol kapı  
-**Cam duvarı (eni):** 170 cm · **Sağ hat (derinlik):** 330 cm
+- **Alt duvar:** Salon kapı (sol) + Balkon kapı 50 cm (sağ bitim) — ikisi de içeri açılır
+- **Üst duvar:** 50 + 60 cam + 60 = **170 cm** en
+- **Sol duvar:** Kiriş 40×10 cm + **kuytu** (75 cm hat, derin niş — sığ girinti değil)
+- **Sağ duvar:** Düz → balkon köşesinde biter → **sağa dönüp** 170 cm düz duvar
 
 ## Görüntüle
 

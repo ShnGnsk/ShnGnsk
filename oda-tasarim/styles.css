@@ -210,6 +210,33 @@ a {
   margin: 0 auto;
 }
 
+.sketch-legend {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 1.75rem;
+}
+
+.sketch-legend__item {
+  padding: 1rem 1.1rem;
+  background: #fff;
+  border-left: 3px solid var(--ink);
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.sketch-legend__item strong {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  letter-spacing: 0.04em;
+}
+
+.sketch-legend__item span {
+  font-size: 0.9rem;
+  color: rgba(10, 10, 10, 0.72);
+}
+
 .section__head {
   max-width: 38rem;
   margin-bottom: clamp(2rem, 4vw, 3rem);
@@ -804,7 +831,8 @@ a {
   .concept-grid,
   .plan-grid,
   .gallery__pair,
-  .totals {
+  .totals,
+  .sketch-legend {
     grid-template-columns: 1fr 1fr;
   }
 
@@ -832,7 +860,9 @@ a {
     grid-template-columns: 1fr;
   }
 
-  .swatches {
-    grid-template-columns: 1fr 1fr;
+  .swatches,
+  .sketch-legend,
+  .totals {
+    grid-template-columns: 1fr;
   }
 }
