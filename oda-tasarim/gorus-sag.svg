@@ -6,7 +6,7 @@
 <rect x="219.60000000000002" y="50" width="103.2" height="64.0" fill="#111"/>
 <text x="271.20000000000005" y="90.0" text-anchor="middle" font-size="12" fill="#fff">Kiriş 64.5×15.0</text>
 <text x="422.8" y="254.0" text-anchor="middle" font-size="13" fill="#1e8449" font-weight="700">Girinti duvar 125</text>
-<rect x="330.8" y="330.0" width="184.0" height="128.0" fill="#222" stroke="#000"/>
-<text x="422.8" y="394.0" text-anchor="middle" font-size="12" fill="#fff">oturma</text>
+<rect x="330.8" y="330.0" width="136.0" height="128.0" fill="#222" stroke="#000"/>
+<text x="398.8" y="394.0" text-anchor="middle" font-size="12" fill="#fff">oturma</text>
 <text x="286.4" y="493.0" text-anchor="middle" font-size="12" fill="#555">106 + 64,5 + 125 = 295,5 · kiriş içe 15cm</text>
 </svg>

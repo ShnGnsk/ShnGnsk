@@ -167,7 +167,7 @@ def iso(path: Path) -> None:
     parts += box(W - KIRIS_ICE, KAPI, KIRIS_ICE, KIRIS_ALONG, 40, "#111")
     # cam mark
     parts += box(CAM_SOL_PAY, D - 4, CAM, 4, 110, "#9ec9e0")
-    heights = {"masa": 75, "sandalye": 110, "tv_BESTA": 80, "oturma": 80, "hali": 2}
+    heights = {"masa": 75, "sandalye": 110, "tv_BESTA": 48, "oturma": 90, "hali": 2}
     colors = {"masa": "#1a1a1a", "sandalye": "#333", "tv_BESTA": "#1a1a1a", "oturma": "#222", "hali": "#ccc"}
     for it in items:
         if it.name.startswith("bjk"):

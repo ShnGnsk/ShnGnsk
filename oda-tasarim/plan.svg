@@ -31,10 +31,10 @@
 <text x="145.6" y="418.9" text-anchor="middle" font-size="10" fill="#fff">masa</text>
 <circle cx="189.0" cy="341.9" r="28.0" fill="#333" stroke="#8a1f1f"/>
 <text x="189.0" y="345.9" text-anchor="middle" font-size="9" fill="#fff">sandalye</text>
-<rect x="70.0" y="206.1" width="58.8" height="112.0" fill="#1a1a1a" stroke="#8a1f1f" stroke-width="1.5"/>
-<text x="99.4" y="262.1" text-anchor="middle" font-size="10" fill="#fff">tv_BESTA</text>
-<rect x="375.2" y="295.7" width="105.0" height="161.0" fill="#1a1a1a" stroke="#8a1f1f" stroke-width="1.5"/>
-<text x="427.7" y="376.2" text-anchor="middle" font-size="10" fill="#fff">oturma</text>
+<rect x="70.0" y="206.1" width="58.8" height="168.0" fill="#1a1a1a" stroke="#8a1f1f" stroke-width="1.5"/>
+<text x="99.4" y="290.1" text-anchor="middle" font-size="10" fill="#fff">tv_BESTA</text>
+<rect x="368.2" y="295.7" width="112.0" height="118.99999999999999" fill="#1a1a1a" stroke="#8a1f1f" stroke-width="1.5"/>
+<text x="424.2" y="355.2" text-anchor="middle" font-size="10" fill="#fff">oturma</text>
 <rect x="147.0" y="190.0" width="196.0" height="168.0" fill="url(#rug)" stroke="#111"/>
 <text x="245.0" y="274.0" text-anchor="middle" font-size="11">halı</text>
 <circle cx="79.8" cy="192.1" r="12" fill="#fff" stroke="#8a1f1f" stroke-width="2"/>
@@ -43,6 +43,6 @@
 <text x="276.5" y="536.7" text-anchor="middle" font-size="10" fill="#8a1f1f">NET: W=295.0 D=295.5 H=255.0 | kapı=106.0 balkon=93.5 cam=97.0</text>
 <text x="276.5" y="550.7" text-anchor="middle" font-size="10" fill="#8a1f1f">Kiriş 64.5×15.0 | girinti duvar 125.0 | cam pay 107.0|97.0|91.0</text>
 <text x="276.5" y="564.7" text-anchor="middle" font-size="10" fill="#8a1f1f">MASA: alt-sol cam yanı · 100×60 · petek ÖNÜNE değil YANINA</text>
-<text x="276.5" y="578.7" text-anchor="middle" font-size="10" fill="#8a1f1f">TV: sol duvar · BESTÅ 80×42 · balkon salınımı altında</text>
-<text x="276.5" y="592.7" text-anchor="middle" font-size="10" fill="#8a1f1f">OTURMA: sağ girinti · 115×75 (duvar boyunca×derinlik) · TV'ye bakar</text>
+<text x="276.5" y="578.7" text-anchor="middle" font-size="10" fill="#8a1f1f">TV: sol duvar · BESTÅ ayak izi 42×120 · balkon salınımı altında</text>
+<text x="276.5" y="592.7" text-anchor="middle" font-size="10" fill="#8a1f1f">OTURMA: sağ girinti · 85×80 (duvar boyunca×derinlik) · TV'ye bakar</text>
 </svg>

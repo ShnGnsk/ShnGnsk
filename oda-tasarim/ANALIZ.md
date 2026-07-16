@@ -15,8 +15,8 @@
 ## Ürünler (cm)
 - **masa**: (4,234) 100×60
 - **sandalye**: (55,178) 60×60
-- **tv_BESTA**: (0,112) 42×80
-- **oturma**: (218,176) 75×115
+- **tv_BESTA**: (0,112) 42×120
+- **oturma**: (213,176) 80×85
 - **hali**: (55,100) 140×120
 - **bjk_saat**: (2,96) 10×10
 
@@ -24,5 +24,5 @@
 - NET: W=295.0 D=295.5 H=255.0 | kapı=106.0 balkon=93.5 cam=97.0
 - Kiriş 64.5×15.0 | girinti duvar 125.0 | cam pay 107.0|97.0|91.0
 - MASA: alt-sol cam yanı · 100×60 · petek ÖNÜNE değil YANINA
-- TV: sol duvar · BESTÅ 80×42 · balkon salınımı altında
-- OTURMA: sağ girinti · 115×75 (duvar boyunca×derinlik) · TV'ye bakar
+- TV: sol duvar · BESTÅ ayak izi 42×120 · balkon salınımı altında
+- OTURMA: sağ girinti · 85×80 (duvar boyunca×derinlik) · TV'ye bakar

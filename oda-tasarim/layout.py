@@ -107,30 +107,29 @@ def place_furniture(arch: dict) -> tuple[list[Rect], list[str]]:
     items.append(desk)
     notes.append(f"MASA: alt-sol cam yanı · {desk.w:.0f}×{desk.h:.0f} · petek ÖNÜNE değil YANINA")
 
-    # sandalye: masanın oda içi yüzünde, sol duvardaki TV'den uzak (x≥50)
-    chair = Rect("sandalye", max(50.0, desk.x + 35), desk.y - 65, 60, 60, "item")
+    # sandalye: masa önü (oda içi), BESTÅ (x≤42) ile çakışmasın → x≥50
+    chair = Rect("sandalye", max(55.0, desk.x + 40), desk.y - 55, 60, 60, "item")
     items.append(chair)
 
-    # 2) TV — sol duvar, balkon altında; sandalye ile çakışmasın
-    tv_y0 = BALKON + DOOR_MARGIN + 10
-    tv_y1_max = chair.y - 8  # sandalye öncesi bitsin
-    tv_h = min(120.0, tv_y1_max - tv_y0)
-    if tv_h < 80:
-        # sandalyeyi biraz aşağı/sağa kaydırıp TV'ye yer aç
-        chair.y = desk.y - 55
-        chair.x = max(55.0, desk.x + 40)
-        tv_y1_max = chair.y - 8
-        tv_h = min(120.0, tv_y1_max - tv_y0)
-    tv = Rect("tv_BESTA", 0, tv_y0, 42, max(80.0, tv_h), "item")
+    # 2) TV ünitesi — sol duvar, balkon altında
+    # IKEA BESTÅ / TV sehpası net ayak izi: derinlik 42 × duvar boyunca 120
+    tv_y0 = BALKON + DOOR_MARGIN + 10  # 111.5
+    tv_along = 120.0
+    tv_end = tv_y0 + tv_along
+    if tv_end > desk.y - 2:
+        tv_along = desk.y - 2 - tv_y0
+        notes.append(f"BESTÅ duvar boyu {tv_along:.0f}cm (masa payı)")
+    tv = Rect("tv_BESTA", 0, tv_y0, 42, tv_along, "item")
     if tv.overlaps(chair, gap=3):
-        tv.h = chair.y - 8 - tv.y
-        notes.append(f"TV yüksekliği sandalyeye göre {tv.h:.0f}cm")
+        chair.x = max(chair.x, tv.x2 + 8)
+        notes.append(f"Sandalye BESTÅ'dan uzaklaştırıldı x={chair.x:.0f}")
     items.append(tv)
-    notes.append(f"TV: sol duvar · BESTÅ {tv.h:.0f}×42 · balkon salınımı altında")
+    notes.append(f"TV: sol duvar · BESTÅ ayak izi 42×{tv.h:.0f} · balkon salınımı altında")
 
     # 3) OTURMA — sağ girinti duvar boyunca, TV'ye (sola) bakar
-    seat_depth = 75.0
-    seat_w = min(120.0, GIRINTI - 10)
+    # Vivense Jazz tekli ~85×80 sığar; max GIRINTI-10
+    seat_depth = 80.0
+    seat_w = min(85.0, GIRINTI - 10)
     seat = Rect(
         "oturma",
         W - seat_depth - 2,
