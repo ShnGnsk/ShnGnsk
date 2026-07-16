@@ -295,6 +295,128 @@ a {
   color: var(--steel);
 }
 
+.strip {
+  display: grid;
+  grid-template-columns: repeat(10, minmax(72px, 1fr));
+  gap: 0.35rem;
+  margin-bottom: 1.5rem;
+  overflow-x: auto;
+  padding-bottom: 0.35rem;
+}
+
+.strip__item {
+  min-width: 72px;
+  min-height: 120px;
+  padding: 0.65rem 0.4rem;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--ink);
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.strip__item--door {
+  border-top-color: var(--red);
+  background: #111;
+  color: #f4f4f4;
+}
+
+.strip__item--beam {
+  border-top-color: #444;
+  background: #2b2b2b;
+  color: #f4f4f4;
+}
+
+.strip__item--recess {
+  border-top-color: #666;
+  background: #1a1a1a;
+  color: #f4f4f4;
+}
+
+.strip__item--glass {
+  border-top-color: #7eb8c9;
+  background: linear-gradient(180deg, #d8eef4, #fff);
+}
+
+.strip__item--long {
+  border-top-color: var(--red);
+  background: #fff8f8;
+}
+
+.strip__len {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  letter-spacing: 0.04em;
+  line-height: 1;
+}
+
+.strip__item strong {
+  font-size: 0.72rem;
+  line-height: 1.25;
+}
+
+.strip__item em {
+  font-size: 0.65rem;
+  font-style: normal;
+  opacity: 0.7;
+}
+
+.totals {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.65rem;
+  margin-bottom: 2rem;
+}
+
+.total {
+  padding: 1rem 0.85rem;
+  background: #fff;
+  border: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.total span {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--steel);
+}
+
+.total strong {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  letter-spacing: 0.03em;
+  line-height: 1;
+}
+
+.total em {
+  font-size: 0.78rem;
+  font-style: normal;
+  color: var(--steel);
+}
+
+.total--warn {
+  background: #111;
+  color: #f4f4f4;
+  border-color: #111;
+}
+
+.total--warn span,
+.total--warn em {
+  color: rgba(244, 244, 244, 0.65);
+}
+
+.svg-dim {
+  font-family: var(--font-body);
+  font-size: 9px;
+  font-weight: 700;
+  fill: var(--red);
+}
+
 .inventory {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
@@ -681,8 +803,9 @@ a {
 
   .concept-grid,
   .plan-grid,
-  .gallery__pair {
-    grid-template-columns: 1fr;
+  .gallery__pair,
+  .totals {
+    grid-template-columns: 1fr 1fr;
   }
 
   .swatches {

@@ -1,5 +1,5 @@
 const revealTargets = document.querySelectorAll(
-  ".inv, .plan-card, .zone, .gallery figure, .swatch, .steps li, .keep, .budget, .product, .concept-grid > div, .arch-map > div"
+  ".inv, .plan-card, .zone, .gallery figure, .swatch, .steps li, .keep, .budget, .product, .concept-grid > div, .arch-map > div, .strip__item, .total"
 );
 
 revealTargets.forEach((el) => el.classList.add("reveal"));
