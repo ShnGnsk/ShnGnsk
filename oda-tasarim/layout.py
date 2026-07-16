@@ -100,7 +100,6 @@ def place_furniture(arch: dict) -> tuple[list[Rect], list[str]]:
         desk_len = CAM_SOL_PAY - 6
         notes.append(f"Masa boyu {desk_len:.0f}cm'ye kırpıldı (cam sol pay {CAM_SOL_PAY})")
     desk = Rect("masa", 4.0, D - desk_dep - 2, desk_len, desk_dep, "item")
-    # petek ile çakışma kontrol
     petek = next(f for f in arch["forbid"] if f.name == "petek_onu")
     if desk.overlaps(petek, gap=2):
         desk.w = min(desk.w, x_cam0 - 6 - desk.x)
@@ -108,16 +107,24 @@ def place_furniture(arch: dict) -> tuple[list[Rect], list[str]]:
     items.append(desk)
     notes.append(f"MASA: alt-sol cam yanı · {desk.w:.0f}×{desk.h:.0f} · petek ÖNÜNE değil YANINA")
 
-    # sandalye masanın üstünde (oda içine)
-    chair = Rect("sandalye", desk.x + 20, desk.y - 65, 60, 60, "item")
+    # sandalye: masanın oda içi yüzünde, sol duvardaki TV'den uzak (x≥50)
+    chair = Rect("sandalye", max(50.0, desk.x + 35), desk.y - 65, 60, 60, "item")
     items.append(chair)
 
-    # 2) TV — sol duvar, balkon altında
-    tv_h = 120.0
+    # 2) TV — sol duvar, balkon altında; sandalye ile çakışmasın
     tv_y0 = BALKON + DOOR_MARGIN + 10
-    if tv_y0 + tv_h > D - 30:
-        tv_h = D - 30 - tv_y0
-    tv = Rect("tv_BESTA", 0, tv_y0, 42, tv_h, "item")
+    tv_y1_max = chair.y - 8  # sandalye öncesi bitsin
+    tv_h = min(120.0, tv_y1_max - tv_y0)
+    if tv_h < 80:
+        # sandalyeyi biraz aşağı/sağa kaydırıp TV'ye yer aç
+        chair.y = desk.y - 55
+        chair.x = max(55.0, desk.x + 40)
+        tv_y1_max = chair.y - 8
+        tv_h = min(120.0, tv_y1_max - tv_y0)
+    tv = Rect("tv_BESTA", 0, tv_y0, 42, max(80.0, tv_h), "item")
+    if tv.overlaps(chair, gap=3):
+        tv.h = chair.y - 8 - tv.y
+        notes.append(f"TV yüksekliği sandalyeye göre {tv.h:.0f}cm")
     items.append(tv)
     notes.append(f"TV: sol duvar · BESTÅ {tv.h:.0f}×42 · balkon salınımı altında")
 
