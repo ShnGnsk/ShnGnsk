@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 620" font-family="Arial,sans-serif">
+<rect width="700" height="620" fill="#fafafa"/>
+<text x="350" y="28" text-anchor="middle" font-size="16" font-weight="700">IZOMETRIK — cizim koordinatlari (AI degil)</text>
+<polygon points="200.0,420.0 485.8,585.0 180.9,761.0 -104.8,596.0" fill="#eee" stroke="#111" stroke-width="2"/>
+<polygon points="282.9,478.9 321.0,500.9 321.0,456.9 282.9,434.9" fill="#111" stroke="#000" opacity="0.95"/>
+<polygon points="330.5,495.4 321.0,500.9 321.0,456.9 330.5,451.4" fill="#111" stroke="#000" opacity="0.85"/>
+<polygon points="292.4,429.4 330.5,451.4 321.0,456.9 282.9,434.9" fill="#111" stroke="#000"/>
+<polygon points="262.9,709.3 266.7,711.5 266.7,579.5 262.9,577.3" fill="#9ec9e0" stroke="#000" opacity="0.95"/>
+<polygon points="400.1,634.5 266.7,711.5 266.7,579.5 400.1,502.5" fill="#9ec9e0" stroke="#000" opacity="0.85"/>
+<polygon points="396.2,500.3 400.1,502.5 266.7,579.5 262.9,577.3" fill="#9ec9e0" stroke="#000"/>
+<polygon points="327.7,566.3 422.9,621.3 422.9,538.8 327.7,483.8" fill="#1a1a1a" stroke="#000" opacity="0.95"/>
+<polygon points="480.1,588.3 422.9,621.3 422.9,538.8 480.1,505.8" fill="#1a1a1a" stroke="#000" opacity="0.85"/>
+<polygon points="384.8,450.8 480.1,505.8 422.9,538.8 327.7,483.8" fill="#1a1a1a" stroke="#000"/>
+<polygon points="275.3,607.5 332.4,640.5 332.4,519.5 275.3,486.5" fill="#333" stroke="#000" opacity="0.95"/>
+<polygon points="389.6,607.5 332.4,640.5 332.4,519.5 389.6,486.5" fill="#333" stroke="#000" opacity="0.85"/>
+<polygon points="332.4,453.5 389.6,486.5 332.4,519.5 275.3,486.5" fill="#333" stroke="#000"/>
+<polygon points="-9.6,541.0 30.4,564.1 30.4,476.1 -9.6,453.0" fill="#1a1a1a" stroke="#000" opacity="0.95"/>
+<polygon points="144.7,498.1 30.4,564.1 30.4,476.1 144.7,410.1" fill="#1a1a1a" stroke="#000" opacity="0.85"/>
+<polygon points="104.7,387.0 144.7,410.1 30.4,476.1 -9.6,453.0" fill="#1a1a1a" stroke="#000"/>
+<polygon points="-7.7,652.1 116.2,723.6 116.2,635.6 -7.7,564.1" fill="#222" stroke="#000" opacity="0.95"/>
+<polygon points="187.6,682.3 116.2,723.6 116.2,635.6 187.6,594.3" fill="#222" stroke="#000" opacity="0.85"/>
+<polygon points="63.8,522.9 187.6,594.3 116.2,635.6 -7.7,564.1" fill="#222" stroke="#000"/>
+<polygon points="85.7,541.0 219.1,618.0 219.1,615.8 85.7,538.8" fill="#ccc" stroke="#000" opacity="0.95"/>
+<polygon points="333.4,552.0 219.1,618.0 219.1,615.8 333.4,549.8" fill="#ccc" stroke="#000" opacity="0.85"/>
+<polygon points="200.0,472.8 333.4,549.8 219.1,615.8 85.7,538.8" fill="#ccc" stroke="#000"/>
+<text x="350" y="580" text-anchor="middle" font-size="12" fill="#555">W=300* D=320* · kapi=90 · 2li cam=140 · ayni layout.py</text>
+<text x="350" y="600" text-anchor="middle" font-size="11" fill="#8a1f1f">Sol=TV · Sag ust=masa end-on · Alt=oturma · Cam sag ORTA</text>
+</svg>
