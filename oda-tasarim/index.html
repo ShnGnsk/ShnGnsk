@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>1903 — Düzeltilmiş Kroki</title>
+  <title>1903 Atölye — Oda Tasarımı</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -16,194 +16,217 @@
     <nav class="nav">
       <span class="nav__mark">1903</span>
       <div class="nav__links">
-        <a href="#kroki">Kroki</a>
-        <a href="#duvarlar">Duvarlar</a>
-        <a href="#yerlesim">Yerleşim</a>
+        <a href="#plan">Plan</a>
+        <a href="#tasarim">Tasarım</a>
         <a href="#urunler">Ürünler</a>
+        <a href="#uygulama">Uygulama</a>
       </div>
     </nav>
     <div class="hero__content">
-      <p class="hero__eyebrow">Kapılar soldan 2 cm · Kiriş 40 cm × içe 10 cm</p>
+      <p class="hero__eyebrow">Beşiktaş siyah-beyaz · ölçülü kroki · satılabilir mobilya</p>
       <h1 class="hero__brand">1903</h1>
-      <p class="hero__lead">Salon ve balkon kapısı sol duvardan 2 cm ile aynı hizada. Kiriş duvarda 40 cm, odaya 10 cm — girinti yok.</p>
+      <p class="hero__lead">Doğru plana kilitli atölye: cam yanında çalışma, sol duvarda depo, kapı salınımları ve kiriş boş.</p>
       <div class="hero__cta">
-        <a class="btn btn--solid" href="#kroki">Plan</a>
-        <a class="btn btn--ghost" href="#duvarlar">Ölçüler</a>
+        <a class="btn btn--solid" href="#tasarim">Tasarımı gör</a>
+        <a class="btn btn--ghost" href="#urunler">Alışveriş listesi</a>
       </div>
     </div>
   </header>
 
   <main>
-    <section class="section" id="kroki">
+    <section class="section" id="plan">
       <div class="section__head">
-        <h2>Düzeltilmiş kroki</h2>
-        <p>Kapı hizası ve kiriş netleşti. Uydurma girinti kaldırıldı.</p>
+        <h2>Sabit plan</h2>
+        <p>Tasarım bu geometriye göre — kapı ve kiriş yerleri değişmez.</p>
       </div>
 
-      <aside class="keep">
-        <h3>Ölçü kilidi</h3>
-        <p>✔ Her iki kapı: sol duvardan <strong>2 cm</strong> — aynı düşey hiza.<br>
-        ✔ Kiriş: duvarda <strong>40 cm</strong>, içe <strong>10 cm</strong> (oran 4:1, sığ çıkıntı).<br>
-        ✔ Salon kapısı ↔ Kiriş arası: <strong>5 cm</strong> boşluk.<br>
-        ✖ Girinti / niş yok.</p>
-      </aside>
+      <div class="sketch-legend">
+        <div class="sketch-legend__item"><strong>ÜST</strong><span>2 cm → Salon Kapısı → 5 cm → Kiriş 40×10 cm → duvar</span></div>
+        <div class="sketch-legend__item"><strong>SAĞ</strong><span>Cam + Petek (içeride)</span></div>
+        <div class="sketch-legend__item"><strong>ALT</strong><span>2 cm → Balkon Kapısı → düz duvar</span></div>
+        <div class="sketch-legend__item"><strong>SOL</strong><span>Düz boş duvar — ana mobilya bandı</span></div>
+      </div>
 
       <div class="plan-grid">
-        <figure class="plan-card">
-          <figcaption>
-            <strong>Şema (ölçekli)</strong>
-            <span>1.2 px ≈ 1 cm · kiriş 40×10</span>
-          </figcaption>
-          <div class="plan-svg">
-            <!-- Scale S=1.2 px/cm. Left=70, Top=50. Room W=280cm→336, D=260cm→312 -->
-            <svg viewBox="0 0 460 420" role="img" aria-label="Ölçekli kroki 40x10">
-              <!-- room -->
-              <rect x="70" y="50" width="336" height="312" fill="none" stroke="currentColor" stroke-width="2"/>
-
-              <!-- TOP wall segments -->
-              <!-- 2cm stub -->
-              <line x1="70" y1="50" x2="72.4" y2="50" stroke="currentColor" stroke-width="5"/>
-              <text x="78" y="38" class="svg-dim">2cm</text>
-              <!-- Salon door 80cm (eni henüz net değil; hiza için 80) -->
-              <rect x="72.4" y="45" width="96" height="12" fill="#c8c8c8" stroke="currentColor"/>
-              <text x="120" y="28" text-anchor="middle" class="svg-label">Salon Kapısı</text>
-              <path d="M72.4 57 A50 50 0 0 0 122 107" fill="none" stroke="#888" stroke-dasharray="3 3"/>
-              <!-- 5cm gap between salon door and kiriş (S=1.2 → 6px) -->
-              <line x1="168.4" y1="50" x2="174.4" y2="50" stroke="currentColor" stroke-width="5"/>
-              <line x1="168.4" y1="32" x2="174.4" y2="32" stroke="#8a1f1f" stroke-width="1.5"/>
-              <line x1="168.4" y1="28" x2="168.4" y2="36" stroke="#8a1f1f" stroke-width="1.5"/>
-              <line x1="174.4" y1="28" x2="174.4" y2="36" stroke="#8a1f1f" stroke-width="1.5"/>
-              <text x="171.4" y="26" text-anchor="middle" class="svg-dim">5cm</text>
-              <!-- Kiriş 40cm wide = 48px, 10cm deep = 12px -->
-              <rect x="174.4" y="50" width="48" height="12" fill="#111" stroke="currentColor" stroke-width="1.5"/>
-              <text x="198" y="78" text-anchor="middle" class="svg-dim">Kiriş</text>
-              <text x="198" y="92" text-anchor="middle" class="svg-dim">40cm × içe 10cm</text>
-              <!-- rest top -->
-              <line x1="222.4" y1="50" x2="406" y2="50" stroke="currentColor" stroke-width="2.5"/>
-
-              <!-- RIGHT: Cam + Petek -->
-              <line x1="406" y1="50" x2="406" y2="130" stroke="currentColor" stroke-width="2.5"/>
-              <rect x="400" y="130" width="12" height="72" fill="#c8c8c8" stroke="currentColor"/>
-              <text x="422" y="168" class="svg-label">Cam</text>
-              <rect x="378" y="142" width="20" height="48" fill="#d0d0d0" stroke="currentColor"/>
-              <text x="370" y="170" text-anchor="end" class="svg-dim">Petek</text>
-              <line x1="406" y1="202" x2="406" y2="362" stroke="currentColor" stroke-width="2.5"/>
-
-              <!-- BOTTOM: 2cm + Balkon (50cm) aligned under salon start -->
-              <line x1="70" y1="362" x2="72.4" y2="362" stroke="currentColor" stroke-width="5"/>
-              <text x="78" y="386" class="svg-dim">2cm</text>
-              <rect x="72.4" y="357" width="60" height="12" fill="#c8c8c8" stroke="currentColor"/>
-              <text x="102" y="400" text-anchor="middle" class="svg-label">Balkon Kapısı</text>
-              <path d="M132.4 362 A45 45 0 0 0 90 320" fill="none" stroke="#888" stroke-dasharray="3 3"/>
-              <line x1="132.4" y1="362" x2="406" y2="362" stroke="currentColor" stroke-width="2.5"/>
-
-              <!-- LEFT empty -->
-              <text x="48" y="206" text-anchor="middle" class="svg-dim" transform="rotate(-90 48 206)">sol duvar</text>
-
-              <!-- vertical alignment at door starts (x=72.4) -->
-              <line x1="72.4" y1="62" x2="72.4" y2="352" stroke="#8a1f1f" stroke-width="1" stroke-dasharray="2 3" opacity=".55"/>
-              <text x="88" y="210" class="svg-dim">2cm hiza</text>
-            </svg>
-          </div>
-        </figure>
-
         <figure class="plan-card plan-card--photo">
-          <figcaption>
-            <strong>Plan görseli</strong>
-            <span>Kiriş 40×10 · kapılar solda 2 cm</span>
-          </figcaption>
-          <img src="assets/guncel-plan.png" alt="Güncel plan" width="1536" height="1024" loading="lazy" />
+          <figcaption><strong>Ölçülü kroki</strong><span>Kaynak plan</span></figcaption>
+          <img src="assets/guncel-plan.png" alt="Ölçülü kroki" width="1536" height="1024" loading="lazy" />
+        </figure>
+        <figure class="plan-card plan-card--photo">
+          <figcaption><strong>Mobilyalı yerleşim</strong><span>1903 düzen</span></figcaption>
+          <img src="assets/tasarim-yerlesim.png" alt="Mobilyalı yerleşim planı" width="1536" height="1024" loading="lazy" />
         </figure>
       </div>
     </section>
 
-    <section class="section" id="duvarlar">
+    <section class="section section--concept">
       <div class="section__head">
-        <h2>Duvarlar (güncel)</h2>
+        <h2>Konsept: Beşiktaş 1903</h2>
+        <p>Siyah, beyaz, antrasit. Forma dekoru değil — kartal kimliğinin mimari dili.</p>
       </div>
-      <div class="inventory">
-        <article class="inv">
-          <span class="inv__tag">ÜST</span>
-          <h3>2 cm → Salon → 5 cm → Kiriş 40×10</h3>
-          <p>Sol duvardan <strong>2 cm</strong> → salon kapısı → <strong>5 cm</strong> → kiriş <strong>40 cm</strong> (içe <strong>10 cm</strong>). Sığ çıkıntı; girinti değil.</p>
-        </article>
-        <article class="inv">
-          <span class="inv__tag">ALT</span>
-          <h3>2 cm → Balkon</h3>
-          <p>Sol duvardan <strong>2 cm</strong> → balkon kapısı (salon ile aynı hiza). Kapılar doğru yere çekildi.</p>
-        </article>
-        <article class="inv">
-          <span class="inv__tag">SAĞ</span>
-          <h3>Cam + Petek</h3>
-          <p>Cam açıklığı; petek odanın içinde cama bitişik.</p>
-        </article>
-        <article class="inv">
-          <span class="inv__tag">SOL</span>
-          <h3>Düz duvar</h3>
-          <p>Boş. İki kapı bu duvardan 2 cm içeride başlar.</p>
-        </article>
+      <div class="swatches" role="list">
+        <div class="swatch" style="--c:#0a0a0a" role="listitem"><span>Siyah</span></div>
+        <div class="swatch" style="--c:#f4f4f4" role="listitem"><span>Beyaz</span></div>
+        <div class="swatch" style="--c:#2b2b2b" role="listitem"><span>Antrasit</span></div>
+        <div class="swatch" style="--c:#6e6e6e" role="listitem"><span>Çelik</span></div>
+        <div class="swatch" style="--c:#8a1f1f" role="listitem"><span>Kırmızı nokta</span></div>
+        <div class="swatch" style="--c:#c8c8c8" role="listitem"><span>Petek / metal</span></div>
       </div>
     </section>
 
-    <section class="section" id="yerlesim">
+    <section class="section" id="tasarim">
       <div class="section__head">
-        <h2>Yerleşim</h2>
+        <h2>Dört bölge</h2>
+        <p>Her duvarın tek işi. Kiriş ve kapı salınımlarına dokunulmaz.</p>
       </div>
+
       <div class="zones">
         <article class="zone">
           <div class="zone__num">01</div>
-          <h3>Cam + petek → masa</h3>
-          <p>Dar masa; petek önü açık.</p>
+          <h3>Sağ — Cam + Petek → çalışma</h3>
+          <p><strong>FJÄLLBO 100×36</strong> siyah masa, peteğin önünü kapatmadan yanına / ofset. <strong>MARKUS</strong> koyu gri sandalye. Kablo kanalı masa altında. Beyaz tül + siyah stor.</p>
         </article>
         <article class="zone">
           <div class="zone__num">02</div>
-          <h3>Sol düz duvar → depo / oturma</h3>
-          <p>Kapı yok; BESTÅ veya kanepe.</p>
+          <h3>Sol — düz duvar → depo + oturma</h3>
+          <p>En temiz uzun yüzey. <strong>BESTÅ 120×42×193</strong> venge-siyah (elektronik, kablo, yazıcı). Yanında veya yerine ≤160 cm siyah/antrasit oturma. Kapı salınımı yok — güvenli bant.</p>
         </article>
         <article class="zone">
           <div class="zone__num">03</div>
-          <h3>Kiriş 40×10</h3>
-          <p>Sadece çıkıntı — altına/yanına yaslanma; girinti deposu yok.</p>
+          <h3>Üst — Salon + Kiriş → boş bırak</h3>
+          <p>Salon kapısı salınımı açık. Kiriş 40×10 cm çıkıntıya mobilya yaslanmaz. İnce askı / tek raf kirişten uzağa.</p>
         </article>
         <article class="zone">
           <div class="zone__num">04</div>
-          <h3>Sol 2 cm pay + kapı salınımları</h3>
-          <p>İki kapının iç açılım yayları boş kalır.</p>
+          <h3>Alt — Balkon → geçiş</h3>
+          <p>Balkon kapısı soldan 2 cm; iç açılım boş. Ayakkabı/sepet salınım dışına, sağa doğru duvara yanaşık.</p>
         </article>
+      </div>
+
+      <div class="gallery">
+        <figure class="gallery__hero">
+          <img src="assets/tasarim-genel.png" alt="1903 genel tasarım görünümü" width="1536" height="1024" loading="lazy" />
+          <figcaption>Genel — cam/petek çalışma hattı + siyah depo</figcaption>
+        </figure>
+        <div class="gallery__pair">
+          <figure>
+            <img src="assets/tasarim-sol-duvar.png" alt="Sol duvar depo ve oturma" width="1536" height="1024" loading="lazy" />
+            <figcaption>Sol düz duvar — BESTÅ / oturma</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/besiktas-cam-petek.png" alt="Cam ve petek çalışma" width="1536" height="1024" loading="lazy" />
+            <figcaption>Cam + petek — masa ofset</figcaption>
+          </figure>
+        </div>
       </div>
     </section>
 
     <section class="section" id="urunler">
       <div class="section__head">
-        <h2>Ürünler · Beşiktaş siyah-beyaz</h2>
+        <h2>Alışveriş listesi</h2>
+        <p>İnternette satılan ürünler · fiyatlar IKEA TR (Temmuz 2026, değişebilir).</p>
       </div>
+
       <div class="products">
         <article class="product">
-          <div class="product__meta"><span class="product__store">IKEA</span><span class="product__price">dar</span></div>
-          <h3>FJÄLLBO 100×36 — cam yanı</h3>
+          <div class="product__meta"><span class="product__store">IKEA</span><span class="product__price">önerilen masa</span></div>
+          <h3>FJÄLLBO çalışma masası, siyah — 100×36 cm</h3>
+          <p>Cam/petek yanına sığar, peteği kapatmaz. Kod: 303.397.35</p>
           <a class="product__link" href="https://www.ikea.com.tr/urun/fjallbo-siyah-100x36-cm-calisma-masasi-30339735" target="_blank" rel="noopener">ikea.com.tr →</a>
         </article>
+
+        <article class="product">
+          <div class="product__meta"><span class="product__store">IKEA</span><span class="product__price">14.999 ₺</span></div>
+          <h3>FJÄLLBO 140×70 — alternatif</h3>
+          <p>Yer varsa; yine petek önünü kapatmadan ofset. 905.876.90</p>
+          <a class="product__link" href="https://www.ikea.com.tr/urun/fjallbo-siyah-140x70-cm-calisma-masasi-90587690" target="_blank" rel="noopener">ikea.com.tr →</a>
+        </article>
+
         <article class="product">
           <div class="product__meta"><span class="product__store">IKEA</span><span class="product__price">11.999 ₺</span></div>
-          <h3>MARKUS koyu gri</h3>
+          <h3>MARKUS vissle koyu gri</h3>
+          <p>Baş/kol dayama, 10 yıl garanti. 702.611.50</p>
           <a class="product__link" href="https://www.ikea.com.tr/urun/markus-vissle-koyu-gri-orta-calisma-sandalyesi-70261150" target="_blank" rel="noopener">ikea.com.tr →</a>
         </article>
+
         <article class="product">
           <div class="product__meta"><span class="product__store">IKEA</span><span class="product__price">27.500 ₺</span></div>
-          <h3>BESTÅ 120 — sol düz duvar</h3>
+          <h3>BESTÅ 120×42×193 venge-siyah</h3>
+          <p>Sol düz duvara — kablo, kutu, yazıcı. 590.594.61</p>
           <a class="product__link" href="https://www.ikea.com.tr/urun/besta-venge-siyah-seffaf-cam-120x42x193-cm-dolap-kombinasyonu-59059461" target="_blank" rel="noopener">ikea.com.tr →</a>
         </article>
+
         <article class="product">
-          <div class="product__meta"><span class="product__store">Vivense</span><span class="product__price">oturma</span></div>
-          <h3>Siyah oturma — sol duvar</h3>
+          <div class="product__meta"><span class="product__store">IKEA</span><span class="product__price">4.499 ₺</span></div>
+          <h3>KALLAX 77×147 venge</h3>
+          <p>BESTÅ’ya sığmayanlar / açık sergi — sol duvar. 202.758.85</p>
+          <a class="product__link" href="https://www.ikea.com.tr/urun/kallax-venge-77x147-cm-acik-raf-unitesi-20275885" target="_blank" rel="noopener">ikea.com.tr →</a>
+        </article>
+
+        <article class="product">
+          <div class="product__meta"><span class="product__store">Vivense</span><span class="product__price">≤160 cm</span></div>
+          <h3>Siyah / antrasit oturma</h3>
+          <p>Sol duvarda BESTÅ ile paylaşım veya tek başına. Kapı yayına girmesin.</p>
           <a class="product__link" href="https://www.vivense.com/ofis-oturma-gruplari.html" target="_blank" rel="noopener">vivense.com →</a>
         </article>
+
+        <article class="product">
+          <div class="product__meta"><span class="product__store">IKEA</span><span class="product__price">~1–5 bin</span></div>
+          <h3>TERTIAL / FORSÅ lamba + KOPPLA priz</h3>
+          <p>Masa üstü sıcak ışık + kablo düzeni.</p>
+          <a class="product__link" href="https://www.ikea.com.tr/urun/fjallbo-siyah-100x36-cm-calisma-masasi-30339735" target="_blank" rel="noopener">IKEA tamamlayıcı →</a>
+        </article>
+
+        <article class="product">
+          <div class="product__meta"><span class="product__store">Trendyol</span><span class="product__price">tekstil</span></div>
+          <h3>Siyah-beyaz stor / tül + tek kırmızı kırlent</h3>
+          <p>Camda kontrol; tek kırmızı nokta (opsiyonel 1903 vurgu).</p>
+          <a class="product__link" href="https://www.trendyol.com/siyah-duvar-rafi-x-r14-c104498" target="_blank" rel="noopener">trendyol.com →</a>
+        </article>
       </div>
+
+      <aside class="budget">
+        <h3>Çekirdek paket (tahmini)</h3>
+        <p>FJÄLLBO 100×36 + MARKUS + BESTÅ 120 ≈ masa+sandalye+depo. Oturma ve tekstil ayrı. Fiyatları sipariş öncesi kontrol et.</p>
+      </aside>
+    </section>
+
+    <section class="section" id="uygulama">
+      <div class="section__head">
+        <h2>Uygulama sırası</h2>
+      </div>
+      <ol class="steps">
+        <li>
+          <strong>Bantla işaretle</strong>
+          Üst: 2 · salon · 5 · kiriş 40×10. Alt: 2 · balkon. Kapı salınım yaylarını yere çiz.
+        </li>
+        <li>
+          <strong>Boşalt &amp; ayır</strong>
+          Günlük / atölye parçası / atılacak. BESTÅ’ya girecekler kutulansın.
+        </li>
+        <li>
+          <strong>Sol duvar</strong>
+          BESTÅ’yı sabitle (devrilme demiri). Oturma varsa salınıma 10 cm pay.
+        </li>
+        <li>
+          <strong>Cam hattı</strong>
+          Stor/tül → masa ofset → sandalye → priz/kablo altta. Petek önü boş.
+        </li>
+        <li>
+          <strong>Kiriş ve kapılar</strong>
+          Kirişe yaslanma. Salon ve balkon önü temiz geçiş.
+        </li>
+      </ol>
+
+      <aside class="keep">
+        <h3>Dokunulmazlar</h3>
+        <p>Salon salınımı · balkon salınımı · kiriş 40×10 çıkıntı · petek önü · sol duvardan kapı 2 cm payı.</p>
+      </aside>
     </section>
   </main>
 
   <footer class="footer">
-    <p>1903 — salon &amp; balkon: sol duvardan 2 cm · kiriş 40×10 çıkıntı · girinti yok</p>
+    <p>1903 ATÖLYE — Beşiktaş · ölçülü kroki · gerçek ürünler</p>
   </footer>
   <script src="main.js"></script>
 </body>
