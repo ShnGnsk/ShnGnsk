@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>1903 — Üst Bakış & İç Tasarım</title>
+  <title>1903 — Çizime Bağlı Tasarım</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -16,158 +16,104 @@
     <nav class="nav">
       <span class="nav__mark">1903</span>
       <div class="nav__links">
-        <a href="#plan">Plan</a>
+        <a href="#cizim">Çizim</a>
         <a href="#ust">Üst bakış</a>
         <a href="#ic">İç</a>
         <a href="#urunler">Ürünler</a>
       </div>
     </nav>
     <div class="hero__content">
-      <p class="hero__eyebrow">Kilitli kroki · üst bakış · iç görünüm · gerçek IKEA</p>
+      <p class="hero__eyebrow">Sadece senin çizimin · eğik duvar yok · uydurma yok</p>
       <h1 class="hero__brand">1903</h1>
-      <p class="hero__lead">2 cm kapı · 5 cm salon–kiriş · kiriş 40×10 · cam ortada · dikdörtgen kutu değil.</p>
+      <p class="hero__lead">4 duvar + kiriş çıkıntısı. Kapı 2 cm’den. Salon–kiriş 5 cm. Cam sağda ortada.</p>
       <div class="hero__cta">
         <a class="btn btn--solid" href="#ust">Üst bakış</a>
-        <a class="btn btn--ghost" href="#urunler">Sipariş listesi</a>
+        <a class="btn btn--ghost" href="#urunler">Ürünler</a>
       </div>
     </div>
   </header>
 
   <main>
-    <section class="section" id="plan">
+    <section class="section" id="cizim">
       <div class="section__head">
-        <h2>Sabit kroki</h2>
-        <p>Tasarım yalnız buna göre.</p>
+        <h2>Çizim (tek kaynak)</h2>
+        <p>Başka geometri yok. Eğik / beşgen duvar yok.</p>
       </div>
-      <div class="sketch-legend">
-        <div class="sketch-legend__item"><strong>ÜST</strong><span>2 cm → Salon → 5 cm → Kiriş sağa 40 / içe 10 → boş duvar</span></div>
-        <div class="sketch-legend__item"><strong>ALT</strong><span>2 cm → Balkon → boş duvar</span></div>
-        <div class="sketch-legend__item"><strong>SAĞ</strong><span>Cam + Petek tam orta</span></div>
-        <div class="sketch-legend__item"><strong>SOL</strong><span>Düz · BESTÅ ortada</span></div>
-      </div>
+      <aside class="keep">
+        <h3>Bağlı kalınanlar</h3>
+        <p>
+          ✔ Kapı <strong>2 cm</strong> boşluktan başlar (salon üst, balkon alt)<br>
+          ✔ Salon ↔ Kiriş <strong>5 cm</strong><br>
+          ✔ Kiriş sağa <strong>40 cm</strong>, içe <strong>10 cm</strong> → sonra boş duvar<br>
+          ✔ Cam+Petek sağ duvarda <strong>orta</strong><br>
+          ✔ Sol duvar düz · tek düzensizlik = kiriş çıkıntısı<br>
+          ✖ Eğik köşe / uydurma duvar yok
+        </p>
+      </aside>
       <figure class="gallery__hero" style="margin:0">
-        <img src="assets/guncel-plan.png" alt="Sabit kroki" width="1536" height="1024" loading="eager" />
-        <figcaption>Kaynak plan — oda dikdörtgen kutu değil (kiriş çıkıntısı)</figcaption>
+        <img src="assets/guncel-plan.png" alt="Çizim kaynak plan" width="1536" height="1024" loading="eager" />
+        <figcaption>Kaynak çizim</figcaption>
       </figure>
     </section>
 
     <section class="section" id="ust">
       <div class="section__head">
-        <h2>Üst bakış — mobilyalı</h2>
-        <p>Gerçek ürün ölçüleriyle yerleşim.</p>
+        <h2>Üst bakış — çizime bağlı</h2>
+        <p>Aynı duvar hatları + gerçek ürünler.</p>
       </div>
       <figure class="gallery__hero" style="margin:0">
-        <img src="assets/tasarim-ust-bakis.png" alt="Üst bakış mobilyalı plan" width="1536" height="1024" loading="lazy" />
+        <img src="assets/cizime-bagli-ust.png" alt="Çizime bağlı üst bakış" width="1536" height="1024" loading="lazy" />
         <figcaption>
-          Sağ: FJÄLLBO 100×36 (petek altı bant) + MARKUS ·
-          Sol: BESTÅ 120×42×193 ·
-          Alt sağ: oturma ≤140 cm
+          FJÄLLBO 100×36 petek altı · MARKUS · BESTÅ sol orta · oturma balkon sağı
         </figcaption>
       </figure>
-
-      <div class="zones" style="margin-top:2rem">
-        <article class="zone">
-          <div class="zone__num">1</div>
-          <h3>FJÄLLBO 100×36 — sağ, petek ALTI</h3>
-          <p>Cam ortada → masa peteğin önüne gelmez. Ortadaki cam/petek bloğunun <strong>alt bandına</strong>. Bant ≥110 cm olmalı.</p>
-        </article>
-        <article class="zone">
-          <div class="zone__num">2</div>
-          <h3>MARKUS — masanın önü</h3>
-          <p>Koyu gri. Kapı salınımına taşmaz.</p>
-        </article>
-        <article class="zone">
-          <div class="zone__num">3</div>
-          <h3>BESTÅ 120×193 — sol ORTA</h3>
-          <p>Salon ve balkon sola açılır → köşeye değil ortaya. Devrilme demiri şart.</p>
-        </article>
-        <article class="zone">
-          <div class="zone__num">4</div>
-          <h3>Oturma ≤140 — alt, balkon SAĞI</h3>
-          <p>Balkon 2 cm’den başlar, salınım sola. Sağdaki boş duvara.</p>
-        </article>
-      </div>
     </section>
 
     <section class="section" id="ic">
       <div class="section__head">
-        <h2>İç görünümler</h2>
-        <p>Aynı plana göre — sipariş edeceğin ürünlerle.</p>
+        <h2>İç — çizime bağlı</h2>
       </div>
-      <div class="gallery">
-        <figure class="gallery__hero">
-          <img src="assets/tasarim-ic-cam.png" alt="İç görünüm cam ve çalışma" width="1536" height="1024" loading="lazy" />
-          <figcaption>Sağ duvar — cam ortada, petek, FJÄLLBO + MARKUS (petek kapanmıyor)</figcaption>
-        </figure>
-        <div class="gallery__pair">
-          <figure>
-            <img src="assets/tasarim-ic-depo.png" alt="İç görünüm sol depo" width="1536" height="1024" loading="lazy" />
-            <figcaption>Sol duvar — BESTÅ 120</figcaption>
-          </figure>
-          <figure>
-            <img src="assets/guncel-plan.png" alt="Plan referans" width="1536" height="1024" loading="lazy" />
-            <figcaption>Plan referansı</figcaption>
-          </figure>
-        </div>
-      </div>
+      <figure class="gallery__hero" style="margin:0">
+        <img src="assets/cizime-bagli-ic.png" alt="Çizime bağlı iç görünüm" width="1536" height="1024" loading="lazy" />
+        <figcaption>Sağda ortada cam+petek · masa petek altında · solda BESTÅ</figcaption>
+      </figure>
     </section>
 
     <section class="section" id="urunler">
       <div class="section__head">
-        <h2>Gerçek ürünler — sipariş</h2>
-        <p>IKEA TR / Vivense · Temmuz 2026 fiyatları değişebilir.</p>
+        <h2>Gerçek ürünler</h2>
       </div>
       <div class="products">
         <article class="product">
           <div class="product__meta"><span class="product__store">MASA</span><span class="product__price">IKEA</span></div>
-          <h3>FJÄLLBO çalışma masası siyah — 100×36×75 cm</h3>
-          <p>Kod <strong>303.397.35</strong> · Sağ duvar, petek altı bant · Önce bantı ölç (≥110 cm)</p>
+          <h3>FJÄLLBO 100×36 siyah</h3>
+          <p>303.397.35 · Sağ duvar, <strong>petek altı</strong> (cam ortada → önüne değil)</p>
           <a class="product__link" href="https://www.ikea.com.tr/urun/fjallbo-siyah-100x36-cm-calisma-masasi-30339735" target="_blank" rel="noopener">ikea.com.tr →</a>
         </article>
         <article class="product">
           <div class="product__meta"><span class="product__store">SANDALYE</span><span class="product__price">11.999 ₺</span></div>
-          <h3>MARKUS vissle koyu gri — orta</h3>
-          <p>Kod <strong>702.611.50</strong></p>
+          <h3>MARKUS koyu gri</h3>
+          <p>702.611.50</p>
           <a class="product__link" href="https://www.ikea.com.tr/urun/markus-vissle-koyu-gri-orta-calisma-sandalyesi-70261150" target="_blank" rel="noopener">ikea.com.tr →</a>
         </article>
         <article class="product">
           <div class="product__meta"><span class="product__store">DEPO</span><span class="product__price">27.500 ₺</span></div>
-          <h3>BESTÅ 120×42×193 — venge-siyah</h3>
-          <p>Kod <strong>590.594.61</strong> · Sol duvar ortası · Sabitle</p>
+          <h3>BESTÅ 120×42×193</h3>
+          <p>590.594.61 · Sol duvar ortası</p>
           <a class="product__link" href="https://www.ikea.com.tr/urun/besta-venge-siyah-seffaf-cam-120x42x193-cm-dolap-kombinasyonu-59059461" target="_blank" rel="noopener">ikea.com.tr →</a>
         </article>
         <article class="product">
-          <div class="product__meta"><span class="product__store">OTURMA</span><span class="product__price">ölçünce</span></div>
-          <h3>Siyah/antrasit ikili — max 140 cm</h3>
-          <p>Alt duvar, balkon sağı · Vivense</p>
-          <a class="product__link" href="https://www.vivense.com/ofis-oturma-gruplari.html" target="_blank" rel="noopener">vivense.com →</a>
-        </article>
-        <article class="product">
-          <div class="product__meta"><span class="product__store">BOYA</span><span class="product__price">Filli Boya</span></div>
-          <h3>Andezit 15 — Momento Max / Silan soft mat</h3>
-          <p>4 duvar · Kiriş aynı veya sadece çıkıntıda mat siyah · Kapılar beyaz</p>
+          <div class="product__meta"><span class="product__store">BOYA</span><span class="product__price">Filli</span></div>
+          <h3>Andezit 15 soft mat</h3>
+          <p>Momento Max/Silan · kapılar beyaz</p>
           <a class="product__link" href="https://www.filliboya.com/renkler" target="_blank" rel="noopener">filliboya.com →</a>
         </article>
-        <article class="product">
-          <div class="product__meta"><span class="product__store">CAM</span><span class="product__price">tekstil</span></div>
-          <h3>Siyah stor + kırık beyaz tül</h3>
-          <p>Cam enini ölç → o ene sipariş</p>
-          <a class="product__link" href="https://www.trendyol.com/" target="_blank" rel="noopener">ölçüyle al →</a>
-        </article>
       </div>
-      <aside class="budget">
-        <h3>Çekirdek sipariş</h3>
-        <p><strong>FJÄLLBO 100×36 + MARKUS + BESTÅ 120</strong> + Andezit 15 boya. Oturma ve stor yerinde cm ile.</p>
-      </aside>
-      <aside class="keep">
-        <h3>Alma</h3>
-        <p>Peteğin önüne 140×70 masa · sol köşeye dolap · forma/armalı zorunlu dekor.</p>
-      </aside>
     </section>
   </main>
 
   <footer class="footer">
-    <p>1903 — üst bakış + iç · gerçek ürün · kilitli kroki</p>
+    <p>1903 — çizime bağlı · eğik duvar yok</p>
   </footer>
   <script src="main.js"></script>
 </body>

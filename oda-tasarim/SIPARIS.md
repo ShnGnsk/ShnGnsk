@@ -1,22 +1,18 @@
-# 1903 — Tasarım + sipariş
+# 1903 — Çizime bağlı
 
-## Plan
+## Çizim
+- 4 duvar + kiriş çıkıntısı (eğik duvar yok)
 - Kapı **2 cm** boşluktan başlar
 - Salon ↔ Kiriş **5 cm**
-- Kiriş sağa **40 cm** / içe **10 cm** → duvar boşluğu
+- Kiriş **40×10** sağa → boş duvar
 - Cam+Petek sağda **orta**
-- Oda dikdörtgen kutu değil
 
-## Üst bakış ürünleri
+## Ürün
 | Yer | Ürün | Kod |
 |-----|------|-----|
-| Sağ, petek altı | FJÄLLBO 100×36 siyah | 303.397.35 |
-| Masa önü | MARKUS koyu gri | 702.611.50 |
-| Sol orta | BESTÅ 120×42×193 | 590.594.61 |
-| Alt, balkon sağı | Oturma ≤140 cm | Vivense |
+| Sağ, petek altı | FJÄLLBO 100×36 | 303.397.35 |
+| Masa önü | MARKUS | 702.611.50 |
+| Sol orta | BESTÅ 120×193 | 590.594.61 |
 | Duvar | Andezit 15 soft mat | Filli Boya |
 
-## Görseller
-- `tasarim-ust-bakis.png` — üst bakış
-- `tasarim-ic-cam.png` — iç / çalışma
-- `tasarim-ic-depo.png` — iç / BESTÅ
+Görseller: `cizime-bagli-ust.png` · `cizime-bagli-ic.png`
