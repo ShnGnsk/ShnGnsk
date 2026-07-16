@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kartal Yuvası — 2.5 m² ölçekli plan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:opsz,wght@9..40,400;9..40,600;9..40,700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg0: #0e0f12;
+      --bg1: #1a1d22;
+      --ink: #f2f2f2;
+      --mute: #9aa0a8;
+      --line: #3a3f48;
+      --accent: #e8e8e8;
+      --eagle: #c8ccd2;
+      --glass: rgba(140, 190, 230, 0.35);
+      --door: #d4d4d4;
+      --warn: #e6b35a;
+      --ok: #7dcea0;
+      --floor: #2a241e;
+      --wall: #e6e6e6;
+      --anthracite: #2b3036;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--ink);
+      font-family: "DM Sans", sans-serif;
+      background:
+        radial-gradient(1200px 600px at 10% -10%, #2a2e36 0%, transparent 55%),
+        radial-gradient(900px 500px at 100% 0%, #1c2430 0%, transparent 50%),
+        linear-gradient(180deg, #121418 0%, #0b0c0f 100%);
+    }
+
+    .wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    .brand {
+      font-family: "Bebas Neue", sans-serif;
+      font-size: clamp(2.8rem, 8vw, 4.5rem);
+      letter-spacing: 0.04em;
+      line-height: 0.95;
+      margin: 0;
+      animation: rise 0.8s ease both;
+    }
+
+    .lead {
+      max-width: 36rem;
+      color: var(--mute);
+      font-size: 1.05rem;
+      line-height: 1.55;
+      margin: 0.75rem 0 1.75rem;
+      animation: rise 0.9s ease both;
+    }
+
+    .stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem 1.2rem;
+      margin-bottom: 1.75rem;
+      animation: rise 1s ease both;
+    }
+
+    .stat {
+      font-size: 0.92rem;
+      color: var(--mute);
+    }
+    .stat b { color: var(--ink); font-weight: 700; }
+
+    .stage {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 1.5rem;
+      align-items: start;
+    }
+
+    @media (max-width: 860px) {
+      .stage { grid-template-columns: 1fr; }
+    }
+
+    .plan-card {
+      background: linear-gradient(160deg, #171a20, #101317 70%);
+      border: 1px solid var(--line);
+      padding: 1.25rem;
+      position: relative;
+      overflow: hidden;
+      animation: rise 1.05s ease both;
+    }
+
+    .plan-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        repeating-linear-gradient(
+          0deg,
+          transparent,
+          transparent 23px,
+          rgba(255,255,255,0.02) 24px
+        ),
+        repeating-linear-gradient(
+          90deg,
+          transparent,
+          transparent 23px,
+          rgba(255,255,255,0.02) 24px
+        );
+      pointer-events: none;
+    }
+
+    .plan-label {
+      font-family: "Bebas Neue", sans-serif;
+      letter-spacing: 0.08em;
+      font-size: 1.35rem;
+      margin: 0 0 0.75rem;
+      position: relative;
+    }
+
+    .canvas-wrap {
+      position: relative;
+      width: 100%;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    svg.plan {
+      width: 100%;
+      height: auto;
+      display: block;
+      filter: drop-shadow(0 18px 40px rgba(0,0,0,0.45));
+    }
+
+    .legend {
+      display: grid;
+      gap: 0.85rem;
+      animation: rise 1.15s ease both;
+    }
+
+    .box {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.02);
+      padding: 1rem 1.1rem;
+    }
+
+    .box h3 {
+      margin: 0 0 0.5rem;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--mute);
+      font-weight: 600;
+    }
+
+    .box p, .box li {
+      margin: 0;
+      color: var(--ink);
+      font-size: 0.95rem;
+      line-height: 1.45;
+    }
+
+    .box ul {
+      margin: 0;
+      padding-left: 1.1rem;
+      color: var(--mute);
+    }
+
+    .box li { margin: 0.25rem 0; color: var(--mute); }
+    .box li strong { color: var(--ink); }
+
+    .pill {
+      display: inline-block;
+      margin-top: 0.55rem;
+      font-size: 0.8rem;
+      color: var(--bg0);
+      background: var(--ok);
+      padding: 0.2rem 0.5rem;
+      font-weight: 700;
+    }
+
+    .pill.warn { background: var(--warn); }
+
+    .dims {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-top: 0.85rem;
+      font-size: 0.85rem;
+      color: var(--mute);
+      position: relative;
+    }
+
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(14px); }
+      to { opacity: 1; transform: none; }
+    }
+
+    .room-fill { fill: var(--floor); }
+    .wall-stroke { stroke: var(--wall); stroke-width: 8; fill: none; stroke-linejoin: miter; }
+    .glass { fill: var(--glass); stroke: #9ec8e8; stroke-width: 2; }
+    .door-leaf { fill: var(--door); stroke: #888; stroke-width: 1; }
+    .door-arc { fill: none; stroke: var(--warn); stroke-width: 1.5; stroke-dasharray: 4 3; }
+    .furn { fill: #1a1a1a; stroke: #666; stroke-width: 1.2; }
+    .tv { fill: var(--anthracite); stroke: #aaa; stroke-width: 1; }
+    .label-svg {
+      fill: #f5f5f5;
+      font-family: "DM Sans", sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+    }
+    .label-mute {
+      fill: #b8bdc6;
+      font-family: "DM Sans", sans-serif;
+      font-size: 10px;
+    }
+    .dim-line { stroke: #8b929c; stroke-width: 1; }
+    .corridor {
+      fill: rgba(125, 206, 160, 0.12);
+      stroke: var(--ok);
+      stroke-width: 1;
+      stroke-dasharray: 3 3;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1 class="brand">KARTAL YUVASI</h1>
+    <p class="lead">
+      2.5 m² gerçek kabuk: 125 × 200 cm. Salon kapısı salona açılır;
+      balkon camı ≈115 cm net. Kanepe ve 160 cm masa bu plana göre elendi.
+    </p>
+
+    <div class="stats">
+      <div class="stat">Alan <b>2.50 m²</b></div>
+      <div class="stat">Genişlik <b>125 cm</b></div>
+      <div class="stat">Derinlik <b>200 cm</b></div>
+      <div class="stat">Kapı <b>80 cm → salon</b></div>
+      <div class="stat">Cam net <b>≈115 × 210 cm</b></div>
+    </div>
+
+    <div class="stage">
+      <section class="plan-card">
+        <h2 class="plan-label">Ölçekli plan · 1 kare ≈ 25 cm</h2>
+        <div class="canvas-wrap">
+          <!--
+            Scale: 4 px = 1 cm → room 125cm = 500px, 200cm = 800px
+            ViewBox padded for labels / door swing into salon
+          -->
+          <svg class="plan" viewBox="0 0 640 980" role="img" aria-label="2.5 metrekare oda ölçekli planı">
+            <!-- Salon zone label -->
+            <text x="320" y="48" text-anchor="middle" class="label-mute">SALON</text>
+
+            <!-- Door swing into salon (arc) -->
+            <path class="door-arc" d="M 205 120 A 80 80 0 0 1 285 40" />
+            <text x="310" y="70" class="label-mute">kapı salınımı (salonda)</text>
+
+            <!-- Door leaf open into salon -->
+            <rect class="door-leaf" x="205" y="40" width="8" height="80" transform="rotate(-55 205 120)" />
+
+            <!-- Room outer -->
+            <g transform="translate(70,120)">
+              <!-- Floor -->
+              <rect class="room-fill" x="0" y="0" width="500" height="800" />
+
+              <!-- Corridor highlight door→glass -->
+              <rect class="corridor" x="20" y="40" width="180" height="720" />
+
+              <!-- Walls -->
+              <rect x="0" y="0" width="500" height="800" class="wall-stroke" />
+
+              <!-- Door opening gap on top wall (salon) — 80cm = 320px, centered-ish with 90cm frame -->
+              <!-- Frame 90cm=360px; leaf 80cm=320px; left jamb start (500-360)/2 = 70px -->
+              <line x1="70" y1="0" x2="430" y2="0" stroke="#0e0f12" stroke-width="10" />
+
+              <!-- Door leaf closed position (in opening) -->
+              <rect class="door-leaf" x="90" y="-6" width="320" height="12" />
+              <text x="250" y="-18" text-anchor="middle" class="label-svg">KAPI 80 cm</text>
+              <text x="250" y="28" text-anchor="middle" class="label-mute">salona açılır</text>
+
+              <!-- Glass wall bottom — clear ~115cm = 460px centered -->
+              <rect class="glass" x="20" y="788" width="460" height="18" />
+              <text x="250" y="830" text-anchor="middle" class="label-svg">CAM BALKON ≈115 cm net</text>
+              <text x="250" y="848" text-anchor="middle" class="label-mute">zebra stor 118–120 cm sipariş</text>
+
+              <!-- Desk on right long wall: 100x45 cm = 400x180 px -->
+              <rect class="furn" x="320" y="200" width="180" height="400" rx="2" />
+              <text x="410" y="380" text-anchor="middle" class="label-svg">MASA</text>
+              <text x="410" y="398" text-anchor="middle" class="label-mute">100 × 45 cm</text>
+
+              <!-- Monitor on desk -->
+              <rect class="tv" x="350" y="250" width="120" height="16" />
+              <text x="410" y="280" text-anchor="middle" class="label-mute">1×27"</text>
+
+              <!-- Chair 55cm deep when pulled = 220px, width ~50cm=200px -->
+              <rect class="furn" x="250" y="320" width="60" height="200" rx="8" />
+              <text x="280" y="430" text-anchor="middle" class="label-mute" transform="rotate(-90 280 430)">sandalye</text>
+
+              <!-- PC under desk -->
+              <rect class="furn" x="350" y="520" width="70" height="50" />
+              <text x="385" y="550" text-anchor="middle" class="label-mute">kasa</text>
+
+              <!-- TV on left wall — thin -->
+              <rect class="tv" x="8" y="260" width="24" height="220" />
+              <text x="55" y="360" class="label-svg">TV</text>
+              <text x="55" y="376" class="label-mute">Vestel</text>
+
+              <!-- Soundbar shelf -->
+              <rect class="furn" x="8" y="490" width="40" height="12" />
+
+              <!-- LED / forma on salon short wall side filler -->
+              <rect class="furn" x="400" y="20" width="80" height="50" rx="2" />
+              <text x="440" y="50" text-anchor="middle" class="label-mute">LED</text>
+
+              <rect class="furn" x="20" y="20" width="50" height="70" rx="2" />
+              <text x="45" y="60" text-anchor="middle" class="label-mute">forma</text>
+
+              <!-- Small rug -->
+              <rect x="40" y="560" width="200" height="160" fill="rgba(200,200,200,0.08)" stroke="#888" stroke-width="1" stroke-dasharray="4 2" />
+              <text x="140" y="645" text-anchor="middle" class="label-mute">halı 80×120</text>
+
+              <!-- Dimension width -->
+              <line class="dim-line" x1="0" y1="870" x2="500" y2="870" />
+              <line class="dim-line" x1="0" y1="862" x2="0" y2="878" />
+              <line class="dim-line" x1="500" y1="862" x2="500" y2="878" />
+              <text x="250" y="892" text-anchor="middle" class="label-svg">125 cm genişlik</text>
+
+              <!-- Dimension depth -->
+              <line class="dim-line" x1="-40" y1="0" x2="-40" y2="800" />
+              <line class="dim-line" x1="-48" y1="0" x2="-32" y2="0" />
+              <line class="dim-line" x1="-48" y1="800" x2="-32" y2="800" />
+              <text x="-55" y="410" text-anchor="middle" class="label-svg" transform="rotate(-90 -55 410)">200 cm derinlik</text>
+            </g>
+
+            <text x="320" y="960" text-anchor="middle" class="label-mute">BALKON</text>
+          </svg>
+        </div>
+        <div class="dims">
+          <span>Ölçek 4 px = 1 cm</span>
+          <span>Alan 1.25 × 2.00 = 2.50 m²</span>
+        </div>
+      </section>
+
+      <aside class="legend">
+        <div class="box">
+          <h3>Kapı</h3>
+          <p>80 cm kanat, kasa ≈90 cm. Salona açılır — oda içinde salınım yok.</p>
+          <span class="pill">35 cm yan dolgu kalır</span>
+        </div>
+        <div class="box">
+          <h3>Cam</h3>
+          <p>Net ≈115 × 210 cm. Sipariş stor: 118–120 cm genişlik. Tercihen sürgülü cam.</p>
+          <span class="pill">≈2.4 m² cam yüzeyi</span>
+        </div>
+        <div class="box">
+          <h3>Sığan mobilya</h3>
+          <ul>
+            <li><strong>Masa</strong> 100×45 cm (sağ duvar)</li>
+            <li><strong>1×27"</strong> monitör</li>
+            <li><strong>Kompakt</strong> sandalye</li>
+            <li><strong>Vestel TV</strong> ince duvar montaj</li>
+          </ul>
+        </div>
+        <div class="box">
+          <h3>Elendi</h3>
+          <ul>
+            <li>3’lü kanepe (171 cm &gt; 125 cm)</li>
+            <li>160 cm masa</li>
+            <li>Çift monitör</li>
+          </ul>
+          <span class="pill warn">önceki plan geçersiz</span>
+        </div>
+        <div class="box">
+          <h3>Dosyalar</h3>
+          <ul>
+            <li><a href="./OLCULER.md" style="color:#cfe0ff">OLCULER.md</a></li>
+            <li><a href="./KONSEPT.md" style="color:#cfe0ff">KONSEPT.md</a></li>
+            <li><a href="./ALISVERIS-LISTESI.md" style="color:#cfe0ff">ALISVERIS-LISTESI.md</a></li>
+            <li><a href="./gorseller/" style="color:#cfe0ff">gorseller/</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+</body>
+</html>
