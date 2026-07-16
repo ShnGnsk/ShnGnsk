@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>1903 Atölye — Çizime Göre Plan</title>
+  <title>1903 — Krokiye Birebir</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -16,367 +16,194 @@
     <nav class="nav">
       <span class="nav__mark">1903</span>
       <div class="nav__links">
-        <a href="#cizim">Çizim</a>
+        <a href="#kroki">Kroki</a>
         <a href="#olcu">Ölçü</a>
         <a href="#yerlesim">Yerleşim</a>
         <a href="#urunler">Ürünler</a>
       </div>
     </nav>
     <div class="hero__content">
-      <p class="hero__eyebrow">Elindeki krokiye kilitli · Beşiktaş 1903</p>
+      <p class="hero__eyebrow">Senin çizimin · ekstra yok · kapı yerleri sabit</p>
       <h1 class="hero__brand">1903</h1>
-      <p class="hero__lead">Alt duvarda salon + balkon kapısı, karşıda cam, solda kiriş ve kuytu. Sığ “10 cm girinti” yorumu iptal.</p>
+      <p class="hero__lead">Altta salon + balkon kapısı. Karşıda cam. Solda yalnızca odaya çıkan kiriş. Dışarı ekstra girinti yok.</p>
       <div class="hero__cta">
-        <a class="btn btn--solid" href="#cizim">Çizime göre plan</a>
-        <a class="btn btn--ghost" href="#yerlesim">Yerleşim</a>
+        <a class="btn btn--solid" href="#kroki">Birebir plan</a>
+        <a class="btn btn--ghost" href="#olcu">Ölçüler</a>
       </div>
     </div>
   </header>
 
   <main>
-    <section class="section" id="cizim">
+    <section class="section" id="kroki">
       <div class="section__head">
-        <h2>Çizime göre geometri</h2>
-        <p>İki kapı aynı duvarda (alt). Cam karşıda. Sol duvarda kiriş çıkıntısı + içeri kuytu. Balkon kapısı köşe bitiminde; hat sağa dönüp devam eder.</p>
+        <h2>Krokiye birebir</h2>
+        <p>Önceki planda yanlışlıkla dışarı girinti eklenmiş ve kapılar kaydırılmıştı. Bu sürüm sadece senin çizimin.</p>
       </div>
 
-      <div class="sketch-legend">
-        <div class="sketch-legend__item"><strong>Alt duvar</strong><span>Sol: Salon kapı · Sağ bitim: Balkon kapı 50 cm · ikisi de içeri açılır</span></div>
-        <div class="sketch-legend__item"><strong>Üst duvar</strong><span>50 + 60 cam + 60 = 170 cm en</span></div>
-        <div class="sketch-legend__item"><strong>Sol duvar</strong><span>Kiriş 40×10 cm + kuytu (derin niş, 75 cm hat) — sığ raf değil</span></div>
-        <div class="sketch-legend__item"><strong>Sağ duvar</strong><span>Düz hat → balkon köşesinde biter → alta döner, 170 cm düz duvar</span></div>
-      </div>
+      <aside class="keep">
+        <h3>Ne düzeltildi</h3>
+        <p>✖ Dışarı / duvar içi uydurma “kuytu niş” kaldırıldı. ✖ Kapılar yan duvara taşınmıyor. ✔ Alt duvar: Salon kapı (sol) + Balkon kapı (sağ). ✔ Sol duvar: odaya doğru <strong>kiriş çıkıntısı</strong>. ✔ Üst: Cam. ✔ Sağ: düz duvar.</p>
+      </aside>
 
       <div class="plan-grid">
         <figure class="plan-card">
           <figcaption>
-            <strong>Kroki şeması</strong>
-            <span>Senin çizimin · kapılar altta</span>
+            <strong>Şema</strong>
+            <span>Senin krokin · birebir</span>
           </figcaption>
           <div class="plan-svg">
-            <svg viewBox="0 0 480 520" role="img" aria-label="Çizime göre kat planı">
-              <!-- Room body -->
-              <path d="M100 60 H340 V420 H100 Z" fill="none" stroke="currentColor" stroke-width="2.5"/>
+            <svg viewBox="0 0 440 480" role="img" aria-label="Krokiye birebir kat planı">
+              <!-- Main rectangle -->
+              <rect x="80" y="50" width="280" height="340" fill="none" stroke="currentColor" stroke-width="2.5"/>
 
-              <!-- TOP: cam wall 50+60+60 -->
-              <rect x="100" y="60" width="70" height="12" fill="#ddd"/>
-              <rect x="170" y="60" width="85" height="12" fill="#7eb8c9"/>
-              <rect x="255" y="60" width="85" height="12" fill="#ddd"/>
-              <text x="220" y="48" text-anchor="middle" class="svg-label">CAM DUVARI 170</text>
-              <text x="135" y="92" text-anchor="middle" class="svg-dim">50</text>
-              <text x="212" y="92" text-anchor="middle" class="svg-dim">60 cam</text>
-              <text x="298" y="92" text-anchor="middle" class="svg-dim">60</text>
-              <rect x="175" y="74" width="75" height="16" fill="#b0b0b0"/>
-              <text x="212" y="86" text-anchor="middle" class="svg-dim">petek</text>
+              <!-- TOP: Cam (offset left of center, as in sketch) -->
+              <rect x="130" y="48" width="90" height="8" fill="none" stroke="currentColor" stroke-width="2"/>
+              <line x1="130" y1="52" x2="220" y2="52" stroke="currentColor" stroke-width="1"/>
+              <text x="175" y="38" text-anchor="middle" class="svg-label">Cam</text>
 
-              <!-- LEFT: kuytu alcove (recess INTO wall = outside main rect) + kiriş protrusion -->
-              <!-- Kuytu: notch to the left of main left wall -->
-              <path d="M100 140 L70 140 L70 250 L100 250" fill="#1a1a1a" stroke="currentColor" stroke-width="2"/>
-              <text x="55" y="200" text-anchor="middle" class="svg-label svg-label--light" transform="rotate(-90 55 200)">KUYTU 75</text>
-              <!-- Kiriş protruding into room -->
-              <rect x="100" y="260" width="14" height="56" fill="#333"/>
-              <text x="130" y="292" class="svg-dim">kiriş 40×10</text>
-              <text x="85" y="320" text-anchor="middle" class="svg-dim">5</text>
+              <!-- LEFT: Kiriş ONLY as protrusion INTO room (to the right) -->
+              <rect x="80" y="160" width="28" height="70" fill="#111" stroke="currentColor" stroke-width="2"/>
+              <text x="130" y="200" class="svg-label">Kiriş</text>
 
-              <!-- BOTTOM: salon door left, balkon door right -->
-              <path d="M100 420 L100 360" stroke="#111" stroke-width="5"/>
-              <path d="M100 420 A55 55 0 0 1 155 420" fill="none" stroke="#888" stroke-dasharray="4 3"/>
-              <text x="145" y="455" text-anchor="middle" class="svg-label">SALON KAPI</text>
-              <text x="145" y="472" text-anchor="middle" class="svg-dim">içeri açılır</text>
+              <!-- RIGHT: straight — nothing -->
+              <text x="380" y="220" class="svg-dim" transform="rotate(90 380 220)">düz duvar</text>
 
-              <path d="M340 420 L340 360" stroke="#111" stroke-width="5"/>
-              <path d="M340 420 A50 50 0 0 0 290 420" fill="none" stroke="#888" stroke-dasharray="4 3"/>
-              <text x="300" y="455" text-anchor="middle" class="svg-label">BALKON 50</text>
-              <text x="300" y="472" text-anchor="middle" class="svg-dim">köşe bitim</text>
+              <!-- BOTTOM: Salon kapı left, Balkon kapı right — both open inward -->
+              <!-- Salon door: gap in bottom wall left -->
+              <line x1="80" y1="390" x2="110" y2="390" stroke="currentColor" stroke-width="2.5"/>
+              <line x1="180" y1="390" x2="260" y2="390" stroke="currentColor" stroke-width="2.5"/>
+              <line x1="330" y1="390" x2="360" y2="390" stroke="currentColor" stroke-width="2.5"/>
+              <!-- door leaves as arcs inward -->
+              <path d="M110 390 L110 320" stroke="currentColor" stroke-width="2"/>
+              <path d="M110 390 A70 70 0 0 1 180 390" fill="none" stroke="#888" stroke-dasharray="4 3"/>
+              <text x="145" y="420" text-anchor="middle" class="svg-label">Salon kapı</text>
 
-              <!-- Bottom flat wall between doors -->
-              <line x1="160" y1="428" x2="285" y2="428" stroke="#8a1f1f" stroke-width="3"/>
-              <text x="220" y="448" text-anchor="middle" class="svg-dim">170 cm düz (kapılar arası / dönüş hattı)</text>
+              <path d="M330 390 L330 320" stroke="currentColor" stroke-width="2"/>
+              <path d="M330 390 A70 70 0 0 0 260 390" fill="none" stroke="#888" stroke-dasharray="4 3"/>
+              <text x="295" y="420" text-anchor="middle" class="svg-label">Balkon kapı</text>
 
-              <!-- Right wall note -->
-              <text x="365" y="200" class="svg-dim" transform="rotate(90 365 200)">SAĞ DUVAR düz → 110 → köşe</text>
-              <text x="385" y="280" class="svg-label" transform="rotate(90 385 280)">sağa dönüş</text>
-
-              <!-- Furniture zones -->
-              <rect x="195" y="110" width="90" height="55" fill="#111"/>
-              <text x="240" y="142" text-anchor="middle" class="svg-label svg-label--light">MASA</text>
-
-              <rect x="72" y="155" width="24" height="80" fill="#444"/>
-              <text x="84" y="200" text-anchor="middle" class="svg-label svg-label--light" transform="rotate(-90 84 200)">DEPO</text>
-
-              <rect x="280" y="200" width="45" height="130" fill="#1f1f1f"/>
-              <text x="302" y="270" text-anchor="middle" class="svg-label svg-label--light" transform="rotate(-90 302 270)">BESTÅ / OTURMA</text>
-
-              <!-- Clear path between doors -->
-              <rect x="170" y="340" width="100" height="70" fill="#8a1f1f" opacity=".12"/>
-              <text x="220" y="380" text-anchor="middle" class="svg-dim">geçiş</text>
+              <text x="220" y="450" text-anchor="middle" class="svg-dim">iki kapı aynı duvarda · içeri açılır</text>
             </svg>
           </div>
         </figure>
 
         <figure class="plan-card plan-card--photo">
           <figcaption>
-            <strong>Ölçülü plan</strong>
-            <span>Çizim + cm birleşimi</span>
+            <strong>Birebir plan görseli</strong>
+            <span>Ekstra niş yok</span>
           </figcaption>
-          <img src="assets/cizime-gore-plan.png" alt="Çizime göre kat planı" width="1536" height="1024" loading="lazy" />
+          <img src="assets/kroki-birebir.png" alt="Krokiye birebir kat planı" width="1536" height="1024" loading="lazy" />
         </figure>
       </div>
-
-      <aside class="keep">
-        <h3>Düzeltmeler (önceki hatalar)</h3>
-        <p>✖ Kapılar karşılıklı yan duvarlarda değildi → <strong>ikisi de alt duvarda</strong>. ✖ Sol “10 cm sığ girinti” → <strong>kiriş + içeri kuytu</strong>. ✔ Balkon kapısı duvar bitiminde; devam <strong>sağa dönerek</strong> 170 cm düz duvar.</p>
-      </aside>
     </section>
 
     <section class="section" id="olcu">
       <div class="section__head">
-        <h2>Ölçüleri çizime oturtma</h2>
-        <p>Kroki yönleri sabit; cm’ler bu duvarlara yapıştırıldı.</p>
-      </div>
-
-      <div class="strip" aria-label="Çevre ölçüsü">
-        <div class="strip__item strip__item--door">
-          <span class="strip__len">alt L</span>
-          <strong>Salon kapı</strong>
-          <em>içeri · en ?</em>
-        </div>
-        <div class="strip__item">
-          <span class="strip__len">5</span>
-          <strong>Duvar</strong>
-          <em>sol hat</em>
-        </div>
-        <div class="strip__item strip__item--beam">
-          <span class="strip__len">40</span>
-          <strong>Kiriş</strong>
-          <em>içeri 10 cm</em>
-        </div>
-        <div class="strip__item strip__item--recess">
-          <span class="strip__len">75</span>
-          <strong>Kuytu</strong>
-          <em>derin niş</em>
-        </div>
-        <div class="strip__item">
-          <span class="strip__len">50</span>
-          <strong>Duvar</strong>
-          <em>cam öncesi</em>
-        </div>
-        <div class="strip__item strip__item--glass">
-          <span class="strip__len">60</span>
-          <strong>Cam</strong>
-          <em>karşı duvar</em>
-        </div>
-        <div class="strip__item">
-          <span class="strip__len">60</span>
-          <strong>Duvar</strong>
-          <em>cam sonrası</em>
-        </div>
-        <div class="strip__item">
-          <span class="strip__len">110</span>
-          <strong>Sağ duvar</strong>
-          <em>köşeye</em>
-        </div>
-        <div class="strip__item strip__item--door">
-          <span class="strip__len">50</span>
-          <strong>Balkon</strong>
-          <em>bitimde</em>
-        </div>
-        <div class="strip__item strip__item--long">
-          <span class="strip__len">170</span>
-          <strong>Dönüş duvarı</strong>
-          <em>sağa / alta</em>
-        </div>
-      </div>
-
-      <div class="totals">
-        <div class="total">
-          <span>Oda eni (cam)</span>
-          <strong>170 cm</strong>
-          <em>50+60+60</em>
-        </div>
-        <div class="total">
-          <span>Kuytu hattı</span>
-          <strong>75 cm</strong>
-          <em>derin niş · depo</em>
-        </div>
-        <div class="total">
-          <span>Balkon kapı</span>
-          <strong>50 cm</strong>
-          <em>sağ alt köşe bitim</em>
-        </div>
-        <div class="total total--warn">
-          <span>Eksik</span>
-          <strong>Salon kapı eni</strong>
-          <em>+ kuytu derinliği cm</em>
-        </div>
+        <h2>Verdiğin ölçüler (kroki üzerine)</h2>
+        <p>Geometri çiziminden; sayılar senin tarifinden. Yeni şekil uydurulmadı.</p>
       </div>
 
       <div class="inventory">
         <article class="inv">
-          <span class="inv__tag">ALT</span>
-          <h3>Salon + Balkon</h3>
-          <p>İki kapı aynı duvarda, köşelerde. İkisi de odaya açılır. Ortadaki geçiş bandı mobilyasız kalır.</p>
+          <span class="inv__tag">ALT SOL</span>
+          <h3>Salon kapı</h3>
+          <p>İçeri açılır. Eni henüz yazılmadı.</p>
         </article>
         <article class="inv">
-          <span class="inv__tag">SOL</span>
-          <h3>Kiriş + Kuytu</h3>
-          <p>Kiriş: 40 cm hat, odaya 10 cm. Kuytu: 75 cm boyunca <strong>içeri gömülü niş</strong> — kablo/kutu/raf buraya. Sığ 10 cm raf modeli yanlıştı.</p>
+          <span class="inv__tag">ALT SAĞ</span>
+          <h3>Balkon kapı</h3>
+          <p>İçeri açılır · <strong>50 cm</strong> · duvar bitiminde / köşede.</p>
         </article>
         <article class="inv">
           <span class="inv__tag">ÜST</span>
-          <h3>Cam 60 + petek</h3>
-          <p>Karşı duvar. Masa camı kapatmaz; petek üstü ince raf.</p>
+          <h3>Cam</h3>
+          <p><strong>60 cm</strong> cam; yanında <strong>50</strong> ve <strong>60</strong> cm duvar → üst hat <strong>170 cm</strong>.</p>
+        </article>
+        <article class="inv">
+          <span class="inv__tag">SOL</span>
+          <h3>Kiriş</h3>
+          <p>Odaya doğru çıkıntı: hat <strong>40 cm</strong>, içeri <strong>10 cm</strong>. Pervaz sonrası <strong>5 cm</strong> duvar. Bu bir girinti değil — kiriş.</p>
+        </article>
+        <article class="inv">
+          <span class="inv__tag">SOL DEVAM</span>
+          <h3>Kiriş sonrası duvar</h3>
+          <p>Sağa / duvar boyunca <strong>75 cm</strong> devam (senin ölçün). Dışarı niş çizilmedi.</p>
         </article>
         <article class="inv">
           <span class="inv__tag">SAĞ</span>
-          <h3>Düz duvar → dönüş</h3>
-          <p>110 cm sonra balkon köşede biter. Devam sağa/alta döner: 170 cm düz — ana mobilya bandı.</p>
+          <h3>Düz duvar</h3>
+          <p><strong>110 cm</strong> sonra balkon köşesi; dönüş sonrası <strong>170 cm</strong> düz duvar (kapılar arası / alt hat).</p>
         </article>
       </div>
     </section>
 
     <section class="section" id="yerlesim">
       <div class="section__head">
-        <h2>Yerleşim (çizime göre)</h2>
-        <p>Kapı salınımları altta; kuytu depo; cam ışık; sağ/dönüş duvarı mobilya.</p>
+        <h2>Yerleşim (bu krokiye göre)</h2>
+        <p>Mobilya, kapı yerlerini ve kirişi bozmadan.</p>
       </div>
 
       <div class="zones">
         <article class="zone">
           <div class="zone__num">01</div>
-          <h3>Kuytu → kapalı depo</h3>
-          <p>Derin niş: etiketli kasalar, kablo, yazıcı. Derinlik ~40–60 cm ise IKEA dar ünite / özel raf; ölçü kesinleşince BESTÅ veya özel gömme.</p>
+          <h3>Cam duvarı → masa</h3>
+          <p>Karşı cam önünde / ofset dar çalışma masası. Alt kapılara sırt.</p>
         </article>
         <article class="zone">
           <div class="zone__num">02</div>
-          <h3>Cam önü → dar masa</h3>
-          <p>FJÄLLBO 100×36 veya 140×70 ofset. Petek önü boş. Alt kapılara sırt dönük çalışma.</p>
+          <h3>Sağ düz duvar → depo veya oturma</h3>
+          <p>BESTÅ 120 veya ≤160 cm oturma. Balkon salınımına değmez.</p>
         </article>
         <article class="zone">
           <div class="zone__num">03</div>
-          <h3>Sağ duvar / 170 dönüş → BESTÅ veya oturma</h3>
-          <p>120 cm BESTÅ veya ≤160 cm kanepe. Alt kapı geçişini kesme.</p>
+          <h3>Kiriş yanı → sığ depolama</h3>
+          <p>Kiriş odaya 10 cm taşar; yanında duvar yüzüne ince raf / askı. Dışarı kutu nişi yok.</p>
         </article>
         <article class="zone">
           <div class="zone__num">04</div>
-          <h3>Alt orta → sadece geçiş</h3>
-          <p>Salon ↔ balkon aksı açık. Ayakkabı/sepet kapı salınımı dışına.</p>
+          <h3>İki kapı arası → geçiş</h3>
+          <p>Salon ↔ balkon aksı açık kalır.</p>
         </article>
-      </div>
-
-      <div class="gallery">
-        <figure class="gallery__hero">
-          <img src="assets/besiktas-room-main.png" alt="1903 konsept" width="1536" height="1024" loading="lazy" />
-          <figcaption>1903 siyah-beyaz konsept — kapılar alta göre yeniden konumlanacak</figcaption>
-        </figure>
-        <div class="gallery__pair">
-          <figure>
-            <img src="assets/besiktas-girinti.png" alt="Kuytu depo" width="1536" height="1024" loading="lazy" />
-            <figcaption>Sol kuytu = derin depo (sığ raf değil)</figcaption>
-          </figure>
-          <figure>
-            <img src="assets/besiktas-cam-petek.png" alt="Cam çalışma" width="1536" height="1024" loading="lazy" />
-            <figcaption>Karşı cam + petek + masa ofset</figcaption>
-          </figure>
-        </div>
       </div>
     </section>
 
     <section class="section" id="urunler">
       <div class="section__head">
-        <h2>Ürünler — çizime uygun</h2>
-        <p>Kuytu derinliği netleşince depo kesinleşir; şimdilik dar/modüler seçenekler.</p>
+        <h2>Ürünler</h2>
+        <p>Aynı Beşiktaş siyah-beyaz paket; yerleşim krokiye göre.</p>
       </div>
-
       <div class="products">
         <article class="product">
-          <div class="product__meta">
-            <span class="product__store">IKEA</span>
-            <span class="product__price">dar masa</span>
-          </div>
+          <div class="product__meta"><span class="product__store">IKEA</span><span class="product__price">dar</span></div>
           <h3>FJÄLLBO 100×36 siyah</h3>
-          <p>Cam duvarına ve dar ene uygun. Kod: 303.397.35</p>
+          <p>Cam duvarına. 303.397.35</p>
           <a class="product__link" href="https://www.ikea.com.tr/urun/fjallbo-siyah-100x36-cm-calisma-masasi-30339735" target="_blank" rel="noopener">ikea.com.tr →</a>
         </article>
         <article class="product">
-          <div class="product__meta">
-            <span class="product__store">IKEA</span>
-            <span class="product__price">11.999 ₺</span>
-          </div>
+          <div class="product__meta"><span class="product__store">IKEA</span><span class="product__price">11.999 ₺</span></div>
           <h3>MARKUS koyu gri</h3>
-          <p>Alt kapı geçişini kesmeyecek şekilde. 702.611.50</p>
+          <p>702.611.50</p>
           <a class="product__link" href="https://www.ikea.com.tr/urun/markus-vissle-koyu-gri-orta-calisma-sandalyesi-70261150" target="_blank" rel="noopener">ikea.com.tr →</a>
         </article>
         <article class="product">
-          <div class="product__meta">
-            <span class="product__store">IKEA</span>
-            <span class="product__price">27.500 ₺</span>
-          </div>
+          <div class="product__meta"><span class="product__store">IKEA</span><span class="product__price">27.500 ₺</span></div>
           <h3>BESTÅ 120×42×193</h3>
-          <p>Sağ duvar veya 170 cm dönüş bandına. Kuytu derinliği 42+ cm ise kuytuya da aday. 590.594.61</p>
+          <p>Sağ düz duvara. 590.594.61</p>
           <a class="product__link" href="https://www.ikea.com.tr/urun/besta-venge-siyah-seffaf-cam-120x42x193-cm-dolap-kombinasyonu-59059461" target="_blank" rel="noopener">ikea.com.tr →</a>
         </article>
         <article class="product">
-          <div class="product__meta">
-            <span class="product__store">IKEA</span>
-            <span class="product__price">4.499 ₺</span>
-          </div>
-          <h3>KALLAX 77×147 venge</h3>
-          <p>Kuytu ~39 cm+ derinse buraya; değilse sağ duvara. 202.758.85</p>
-          <a class="product__link" href="https://www.ikea.com.tr/urun/kallax-venge-77x147-cm-acik-raf-unitesi-20275885" target="_blank" rel="noopener">ikea.com.tr →</a>
-        </article>
-        <article class="product">
-          <div class="product__meta">
-            <span class="product__store">Trendyol</span>
-            <span class="product__price">kuytu</span>
-          </div>
-          <h3>Özel derin raf / gömme</h3>
-          <p>Kuytu derinliğini ölç → ona göre 35–55 cm raf sistemi.</p>
-          <a class="product__link" href="https://www.trendyol.com/siyah-duvar-rafi-x-r14-c104498" target="_blank" rel="noopener">trendyol.com →</a>
-        </article>
-        <article class="product">
-          <div class="product__meta">
-            <span class="product__store">Vivense</span>
-            <span class="product__price">≤160 cm</span>
-          </div>
+          <div class="product__meta"><span class="product__store">Vivense</span><span class="product__price">≤160 cm</span></div>
           <h3>Siyah oturma</h3>
-          <p>Sağ duvar / dönüş bandı. Alt kapı ortasını kapatma.</p>
+          <p>Sağ duvar veya kapılar arası değil.</p>
           <a class="product__link" href="https://www.vivense.com/ofis-oturma-gruplari.html" target="_blank" rel="noopener">vivense.com →</a>
         </article>
       </div>
     </section>
-
-    <section class="section" id="uygulama">
-      <div class="section__head">
-        <h2>Sıradaki ölçüler</h2>
-        <p>Çizim oturdu; iki sayı planı kilitler.</p>
-      </div>
-      <ol class="steps">
-        <li>
-          <strong>Salon kapı eni (cm)</strong>
-          Kanat + salınım yayı.
-        </li>
-        <li>
-          <strong>Kuytu derinliği (cm)</strong>
-          Nişin odaya değil, duvar içine ne kadar girdiği — BESTÅ mı özel raf mı buna bağlı.
-        </li>
-        <li>
-          <strong>Sağ duvar net boy</strong>
-          Cam köşesinden balkon köşesine metre.
-        </li>
-        <li>
-          <strong>Kapılar arası net</strong>
-          Salon kasası ile balkon kasası arası — 170 cm ile doğrula.
-        </li>
-      </ol>
-    </section>
   </main>
 
   <footer class="footer">
-    <p>1903 — çizime göre: altta iki kapı · karşıda cam · solda kiriş + kuytu</p>
-    <p class="footer__note">Sığ 10 cm girinti modeli kaldırıldı. Balkon kapısı duvar bitiminde; devam sağa döner.</p>
+    <p>1903 — krokiye birebir: ekstra girinti yok, kapı yerleri senin çizimin</p>
   </footer>
-
   <script src="main.js"></script>
 </body>
 </html>
