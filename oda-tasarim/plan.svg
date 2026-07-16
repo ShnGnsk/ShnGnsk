@@ -1,60 +1,86 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 560" font-family="Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 580" font-family="Arial, sans-serif">
+  <!-- Olcek: 1 cm = 1.2 px | W=300cm=360px | D=320cm=384px | origin ic kose (80,50) -->
   <defs>
     <pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <line x1="0" y1="0" x2="0" y2="6" stroke="#666" stroke-width="1"/>
     </pattern>
+    <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#8a1f1f"/>
+    </marker>
   </defs>
 
-  <line x1="80" y1="40" x2="80" y2="424" stroke="#111" stroke-width="3"/>
-  <line x1="440" y1="40" x2="440" y2="424" stroke="#111" stroke-width="3"/>
+  <!-- Od a kutusu -->
+  <line x1="80" y1="50" x2="80" y2="434" stroke="#111" stroke-width="3"/>
+  <line x1="440" y1="50" x2="440" y2="434" stroke="#111" stroke-width="3"/>
 
-  <line x1="80" y1="40" x2="82.4" y2="40" stroke="#111" stroke-width="4"/>
-  <text x="78" y="28" font-size="10" fill="#8a1f1f" font-weight="700">2cm</text>
+  <!-- ===== UST: 2 | Salon80 | 5 | Kiris40 saga | bos 173 ===== -->
+  <!-- 2cm -->
+  <line x1="80" y1="50" x2="82.4" y2="50" stroke="#111" stroke-width="5"/>
+  <text x="81" y="38" text-anchor="middle" font-size="11" fill="#8a1f1f" font-weight="700">2</text>
 
-  <rect x="82.4" y="36" width="96" height="10" fill="url(#hatch)" stroke="#111"/>
-  <text x="130" y="28" text-anchor="middle" font-size="11" font-weight="700">Salon Kapisi 80*</text>
-  <path d="M82.4 46 A50 50 0 0 0 132 96" fill="none" stroke="#888" stroke-dasharray="3 2"/>
+  <!-- Salon kapisi 80cm = 96px -->
+  <rect x="82.4" y="45" width="96" height="12" fill="url(#hatch)" stroke="#111"/>
+  <text x="130" y="38" text-anchor="middle" font-size="12" font-weight="700">Salon Kapisi</text>
+  <path d="M82.4 57 A48 48 0 0 0 130 105" fill="none" stroke="#888" stroke-dasharray="3 2"/>
 
-  <line x1="178.4" y1="40" x2="184.4" y2="40" stroke="#111" stroke-width="4"/>
-  <text x="181.4" y="28" text-anchor="middle" font-size="10" fill="#8a1f1f" font-weight="700">5cm</text>
+  <!-- 5cm = 6px -->
+  <line x1="178.4" y1="50" x2="184.4" y2="50" stroke="#111" stroke-width="5"/>
+  <line x1="178.4" y1="22" x2="184.4" y2="22" stroke="#8a1f1f" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="181.4" y="16" text-anchor="middle" font-size="11" fill="#8a1f1f" font-weight="700">5cm</text>
 
-  <rect x="184.4" y="40" width="48" height="12" fill="#111" stroke="#111"/>
-  <text x="208" y="68" text-anchor="middle" font-size="10" font-weight="700">Kiris 40x10</text>
+  <!-- KIRIS: sag a dogru 40cm (=48px), ice 10cm (=12px) -->
+  <rect x="184.4" y="50" width="48" height="12" fill="#111" stroke="#000" stroke-width="1"/>
+  <!-- ok: kiris saga uzar -->
+  <line x1="184.4" y1="78" x2="232.4" y2="78" stroke="#8a1f1f" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="208" y="94" text-anchor="middle" font-size="11" fill="#8a1f1f" font-weight="700">Kiris SAGA 40cm</text>
+  <text x="208" y="108" text-anchor="middle" font-size="10" fill="#333">ice 10cm</text>
 
-  <line x1="232.4" y1="40" x2="440" y2="40" stroke="#111" stroke-width="3"/>
-  <text x="336" y="28" text-anchor="middle" font-size="9" fill="#555">duvar boslugu 173* cm</text>
+  <!-- Kiristen sonra DUVAR BOSLUGU sag kose ye -->
+  <line x1="232.4" y1="50" x2="440" y2="50" stroke="#111" stroke-width="3"/>
+  <text x="336" y="38" text-anchor="middle" font-size="10" fill="#555">duvar boslugu</text>
 
-  <line x1="80" y1="424" x2="82.4" y2="424" stroke="#111" stroke-width="4"/>
-  <text x="78" y="448" font-size="10" fill="#8a1f1f" font-weight="700">2cm</text>
-  <rect x="82.4" y="420" width="96" height="10" fill="url(#hatch)" stroke="#111"/>
-  <text x="130" y="458" text-anchor="middle" font-size="11" font-weight="700">Balkon Kapisi 80*</text>
-  <path d="M178.4 424 A50 50 0 0 0 128 374" fill="none" stroke="#888" stroke-dasharray="3 2"/>
-  <line x1="178.4" y1="424" x2="440" y2="424" stroke="#111" stroke-width="3"/>
+  <!-- ===== ALT: 2 | Balkon80 | bos ===== -->
+  <line x1="80" y1="434" x2="82.4" y2="434" stroke="#111" stroke-width="5"/>
+  <text x="81" y="458" text-anchor="middle" font-size="11" fill="#8a1f1f" font-weight="700">2</text>
+  <rect x="82.4" y="429" width="96" height="12" fill="url(#hatch)" stroke="#111"/>
+  <text x="130" y="468" text-anchor="middle" font-size="12" font-weight="700">Balkon Kapisi</text>
+  <path d="M178.4 434 A48 48 0 0 0 130 386" fill="none" stroke="#888" stroke-dasharray="3 2"/>
+  <line x1="178.4" y1="434" x2="440" y2="434" stroke="#111" stroke-width="3"/>
 
-  <rect x="434" y="184" width="12" height="96" fill="url(#hatch)" stroke="#111"/>
-  <text x="458" y="220" font-size="11" font-weight="700">Cam</text>
-  <text x="458" y="234" font-size="9" fill="#8a1f1f">ORTA</text>
-  <rect x="418" y="196" width="16" height="72" fill="#ccc" stroke="#111"/>
-  <text x="410" y="230" text-anchor="end" font-size="9">Petek</text>
-  <text x="455" y="120" font-size="9" fill="#555">~120* cm</text>
-  <text x="455" y="360" font-size="9" fill="#555">~120* cm</text>
+  <!-- ===== SAG: Cam TAM ORTA ===== -->
+  <!-- D=320cm, cam=80cm -> pay=(320-80)/2=120cm=144px -->
+  <!-- cam baslangic y = 50 + 144 = 194, h = 96 -->
+  <line x1="440" y1="50" x2="440" y2="194" stroke="#111" stroke-width="3"/>
+  <rect x="434" y="194" width="12" height="96" fill="url(#hatch)" stroke="#111"/>
+  <rect x="416" y="206" width="18" height="72" fill="#c8c8c8" stroke="#111"/>
+  <line x1="440" y1="290" x2="440" y2="434" stroke="#111" stroke-width="3"/>
 
-  <rect x="80" y="160" width="50.4" height="144" fill="#1a1a1a" stroke="#000"/>
-  <text x="105" y="240" text-anchor="middle" font-size="9" fill="#fff" transform="rotate(-90 105 240)">BESTA 120x42x193</text>
-  <text x="132" y="155" font-size="8" fill="#8a1f1f">590.594.61</text>
+  <!-- orta isaretleri - esit pay -->
+  <line x1="448" y1="50" x2="448" y2="194" stroke="#8a1f1f" stroke-width="1" stroke-dasharray="2 2"/>
+  <line x1="448" y1="290" x2="448" y2="434" stroke="#8a1f1f" stroke-width="1" stroke-dasharray="2 2"/>
+  <text x="470" y="122" font-size="10" fill="#8a1f1f" font-weight="700">120*</text>
+  <text x="458" y="242" font-size="12" font-weight="700">Cam</text>
+  <text x="458" y="256" font-size="11" fill="#8a1f1f" font-weight="700">ORTA</text>
+  <text x="458" y="270" font-size="9">Petek</text>
+  <text x="470" y="362" font-size="10" fill="#8a1f1f" font-weight="700">120*</text>
 
-  <rect x="396.8" y="292" width="43.2" height="120" fill="#111" stroke="#000"/>
-  <text x="418" y="355" text-anchor="middle" font-size="8" fill="#fff" transform="rotate(-90 418 355)">FJALLBO 100x36</text>
-  <text x="390" y="310" text-anchor="end" font-size="8" fill="#8a1f1f">303.397.35</text>
+  <!-- ===== MOBILYA ===== -->
+  <!-- BESTA sol orta: yukseklik 120cm=144px, y=(320-120)/2*1.2+50 = 170 -->
+  <rect x="80" y="170" width="50.4" height="144" fill="#1a1a1a" stroke="#000"/>
+  <text x="105" y="250" text-anchor="middle" font-size="9" fill="#fff" transform="rotate(-90 105 250)">BESTA 120x42x193</text>
 
-  <circle cx="370" cy="350" r="18" fill="#333" stroke="#000"/>
-  <text x="370" y="354" text-anchor="middle" font-size="7" fill="#fff">MARKUS</text>
+  <!-- FJALLBO petek ALTINDA: cam biter y=290, alt bant 290-434=144px=120cm, masa 100cm=120px -->
+  <rect x="396.8" y="302" width="43.2" height="120" fill="#111" stroke="#000"/>
+  <text x="418" y="365" text-anchor="middle" font-size="8" fill="#fff" transform="rotate(-90 418 365)">FJALLBO 100x36</text>
 
-  <rect x="200" y="328" width="168" height="96" fill="#222" stroke="#000"/>
-  <text x="284" y="380" text-anchor="middle" font-size="9" fill="#fff">Oturma max 140 cm</text>
-  <text x="284" y="394" text-anchor="middle" font-size="8" fill="#aaa">Vivense siyah</text>
+  <circle cx="372" cy="360" r="16" fill="#333" stroke="#000"/>
+  <text x="372" y="364" text-anchor="middle" font-size="7" fill="#fff">MARKUS</text>
 
-  <text x="260" y="490" text-anchor="middle" font-size="11" font-weight="700">OLCEK 1.2 px = 1 cm | * = yerinde dogrula</text>
-  <text x="260" y="508" text-anchor="middle" font-size="10" fill="#555">W=300* cm | D=320* cm | kapi 80* | cam 80* orta</text>
-  <text x="260" y="526" text-anchor="middle" font-size="10" fill="#8a1f1f">SABIT: 2cm kapi | 5cm | kiris 40x10 | cam orta | egik duvar YOK</text>
+  <!-- oturma balkon sagi -->
+  <rect x="200" y="338" width="168" height="96" fill="#222" stroke="#000"/>
+  <text x="284" y="390" text-anchor="middle" font-size="9" fill="#fff">Oturma max 140</text>
+
+  <text x="260" y="500" text-anchor="middle" font-size="12" font-weight="700">Kiris SAGA 40cm + Cam ORTA</text>
+  <text x="260" y="518" text-anchor="middle" font-size="10" fill="#555">2cm kap? | 5cm | kiris 40x10 | sonra bos duvar | * yerinde olc</text>
+  <text x="260" y="536" text-anchor="middle" font-size="10" fill="#8a1f1f">Olcek 1.2px=1cm | W=300* D=320* | egik duvar YOK</text>
 </svg>
