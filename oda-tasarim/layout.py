@@ -153,10 +153,13 @@ def place_furniture(arch: dict) -> tuple[list[Rect], list[str]]:
     # 5) BJK saat sol duvar TV üstü
     items.append(Rect("bjk_saat", 2, tv.y - 15, 10, 10, "item"))
 
-    # çakışma raporu
+    # çakışma raporu (masa×sandalye iç içe oturum — sorun değil)
+    skip_pairs = {frozenset(("masa", "sandalye")), frozenset(("hali",))}
     for i, a in enumerate(items):
         for b in items[i + 1 :]:
             if a.name in ("hali", "bjk_saat") or b.name in ("hali", "bjk_saat"):
+                continue
+            if frozenset((a.name, b.name)) in skip_pairs:
                 continue
             if a.overlaps(b, gap=2):
                 notes.append(f"ÇAKIŞMA: {a.name} × {b.name}")

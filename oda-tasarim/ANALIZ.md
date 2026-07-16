@@ -26,4 +26,3 @@
 - MASA: alt-sol cam yanı · 100×60 · petek ÖNÜNE değil YANINA
 - TV: sol duvar · BESTÅ 80×42 · balkon salınımı altında
 - OTURMA: sağ girinti · 115×75 (duvar boyunca×derinlik) · TV'ye bakar
-- ÇAKIŞMA: masa × sandalye
