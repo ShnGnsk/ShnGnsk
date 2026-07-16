@@ -1,6 +1,11 @@
-# 1903 — Krokiye birebir
+# 1903 — Ölçülü kroki
 
-Senin el çizimine kilitli plan. Ekstra girinti yok; kapılar alt duvarda (salon sol, balkon sağ); solda yalnızca odaya çıkan kiriş; karşıda cam; sağ düz.
+Kaynak: senin cm’li el çizimin.
+
+- Alt: 2 cm · Salon kapı · **170 cm** · Balkon kapı · 5 cm  
+- Sol: **Kiriş 40 cm** (odaya çıkıntı) · 70 / 100 cm  
+- Üst: **Cam** · 50 / 60 cm  
+- Sağ: **120 cm**
 
 ```bash
 cd oda-tasarim && python3 -m http.server 4173
