@@ -1,13 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 550.0 525.0" font-family="Arial,sans-serif">
-<text x="275.0" y="28" text-anchor="middle" font-size="16" font-weight="700">UST DUVAR — Salon kapisi + kiris (cizimden)</text>
-<rect x="50" y="50" width="450.0" height="375.0" fill="#f4f4f4" stroke="#111" stroke-width="3"/>
-<rect x="50" y="50" width="3.0" height="375.0" fill="#ddd" stroke="#111"/>
-<rect x="53.0" y="50" width="135.0" height="375.0" fill="#e8e8e8" stroke="#111" stroke-dasharray="6 3"/>
-<text x="120.5" y="237.5" text-anchor="middle" font-size="14" font-weight="700">Salon Kapisi 90cm</text>
-<rect x="188.0" y="50" width="7.5" height="375.0" fill="#ddd" stroke="#111"/>
-<text x="191.75" y="80" text-anchor="middle" font-size="11" fill="#8a1f1f" font-weight="700">5</text>
-<rect x="195.5" y="50" width="60.0" height="45.0" fill="#111"/>
-<text x="225.5" y="80.0" text-anchor="middle" font-size="12" fill="#fff">Kiris 40x10</text>
-<text x="377.75" y="237.5" text-anchor="middle" font-size="13" fill="#555">duvar boslugu</text>
-<text x="275.0" y="455.0" text-anchor="middle" font-size="12" fill="#555">2 + 90 + 5 + 40 + bos = W=300* · egik duvar YOK</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 572 568" font-family="Arial,sans-serif">
+<text x="286.0" y="30" text-anchor="middle" font-size="16" font-weight="700">ÜST DUVAR — 295 cm düz (kapı yok)</text>
+<rect x="50" y="50" width="472.0" height="408.0" fill="#f4f4f4" stroke="#111" stroke-width="3"/>
+<text x="286.0" y="254.0" text-anchor="middle" font-size="14" fill="#555">duvar boşluğu 295cm · geçiş / dekor</text>
+<text x="286.0" y="493.0" text-anchor="middle" font-size="12" fill="#555">Kapı sağ üstte (bu duvarda değil)</text>
 </svg>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>1903 — Çizim kriterli oda tasarımı</title>
+  <title>1903 — Net kroki tasarım + alışveriş</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -17,104 +17,127 @@
       <span class="nav__mark">1903</span>
       <div class="nav__links">
         <a href="#pano">Tasarım</a>
-        <a href="#duvarlar">Duvarlar</a>
-        <a href="#urunler">Sipariş</a>
+        <a href="#olcu">Ölçü</a>
+        <a href="#alisveris">Alışveriş</a>
       </div>
     </nav>
     <div class="hero__content">
-      <p class="hero__eyebrow">Gerçek oda = senin çizimin · standart kapı · 2’li cam · BJK</p>
+      <p class="hero__eyebrow">295 × 295,5 × 255 · kapı 106 · cam 97 · kiriş 64,5×15</p>
       <h1 class="hero__brand">1903</h1>
-      <p class="hero__lead">Kriterlerin kilidi: kapılar, kiriş, ortada 2’li cam, petek önü boş, Beşiktaş ürünler. AI uydurma foto yok.</p>
+      <p class="hero__lead">Krokindeki net cm’lere kilitli Beşiktaş odası. Doğaçlama yok. TR link + fiyat listesi hazır.</p>
       <div class="hero__cta">
-        <a class="btn btn--solid" href="#pano">Tasarım panosu</a>
+        <a class="btn btn--solid" href="#pano">Panoyu gör</a>
         <a class="btn btn--ghost" href="1903-oda-mobil.zip">Zip indir</a>
       </div>
     </div>
   </header>
 
   <main>
+    <section class="section" id="olcu">
+      <div class="section__head">
+        <h2>Net ölçüler</h2>
+        <p>Detay: <a href="OLCULER.md">OLCULER.md</a></p>
+      </div>
+      <div class="inventory">
+        <article class="inv"><span class="inv__tag">W</span><h3>295 cm</h3><p>107 + cam 97 + 91</p></article>
+        <article class="inv"><span class="inv__tag">D</span><h3>295,5 cm</h3><p>Kapı 106 + kiriş 64,5 + girinti 125</p></article>
+        <article class="inv"><span class="inv__tag">H</span><h3>255 cm</h3><p>Tavan yerden</p></article>
+        <article class="inv"><span class="inv__tag">CAM</span><h3>97 cm</h3><p>Altında petek · önü boş</p></article>
+      </div>
+    </section>
+
     <section class="section" id="pano">
       <div class="section__head">
-        <h2>Tasarım panosu (önce bunu aç)</h2>
-        <p>Kriterler + cm yerleşim + ürün listesi tek görselde.</p>
+        <h2>Tasarım</h2>
       </div>
       <figure class="gallery__hero" style="margin:0">
-        <img src="assets/tasarim-pano.png" alt="1903 tasarim panosu" width="2400" height="3200" loading="eager" />
-        <figcaption><a href="assets/tasarim-pano.png">tasarim-pano.png</a> · <a href="1903-oda-mobil.zip">zip</a></figcaption>
+        <img src="assets/tasarim-pano.png" alt="Tasarim panosu" loading="eager" />
+        <figcaption>Tasarım panosu</figcaption>
       </figure>
       <figure class="gallery__hero">
-        <img src="assets/plan-olcekli.png" alt="cm plan" width="1200" height="1200" loading="lazy" />
-        <figcaption>Ölçekli plan</figcaption>
+        <img src="assets/plan-olcekli.png" alt="Net plan" loading="lazy" />
+        <figcaption>cm plan</figcaption>
       </figure>
       <figure class="gallery__hero">
-        <img src="assets/izometrik.png" alt="izometrik" width="1400" height="1240" loading="lazy" />
-        <figcaption>İzometrik (aynı koordinat)</figcaption>
+        <img src="assets/izometrik.png" alt="Izometrik" loading="lazy" />
+        <figcaption>İzometrik</figcaption>
       </figure>
-    </section>
-
-    <section class="section" id="duvarlar">
-      <div class="section__head">
-        <h2>Dört duvar — çizimden</h2>
+      <div class="gallery__pair">
+        <figure>
+          <img src="assets/gorus-alt.png" alt="Alt duvar cam" loading="lazy" />
+          <figcaption>Alt — cam + masa solu</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/gorus-sag.png" alt="Sag kapi kiris" loading="lazy" />
+          <figcaption>Sağ — kapı + kiriş + girinti</figcaption>
+        </figure>
       </div>
-      <div class="gallery">
-        <figure class="gallery__hero">
+      <div class="gallery__pair">
+        <figure>
+          <img src="assets/gorus-sol.png" alt="Sol TV" loading="lazy" />
+          <figcaption>Sol — balkon + TV</figcaption>
+        </figure>
+        <figure>
           <img src="assets/gorus-ust.png" alt="Ust duvar" loading="lazy" />
-          <figcaption>Üst: 2 + Salon 90 + 5 + Kiriş 40×10 + boş</figcaption>
+          <figcaption>Üst — 295 düz</figcaption>
         </figure>
-        <figure class="gallery__hero">
-          <img src="assets/gorus-alt.png" alt="Alt duvar" loading="lazy" />
-          <figcaption>Alt: 2 + Balkon 90 + oturma ≤130 sağda</figcaption>
-        </figure>
-        <div class="gallery__pair">
-          <figure>
-            <img src="assets/gorus-sol.png" alt="Sol" loading="lazy" />
-            <figcaption>Sol: TV + BJK saat (kapı yok)</figcaption>
-          </figure>
-          <figure>
-            <img src="assets/gorus-sag.png" alt="Sag" loading="lazy" />
-            <figcaption>Sağ: 2’li cam 140 orta · masa üst bant · petek önü boş</figcaption>
-          </figure>
-        </div>
       </div>
     </section>
 
-    <section class="section" id="urunler">
+    <section class="section" id="alisveris">
       <div class="section__head">
-        <h2>Sipariş (kriterlere uyan)</h2>
+        <h2>Alışveriş listesi</h2>
+        <p>Tam tablo: <a href="SIPARIS.md">SIPARIS.md</a> · fiyatlar değişebilir, linkte kontrol et</p>
       </div>
       <div class="products">
         <article class="product">
-          <div class="product__meta"><span class="product__store">1</span><span class="product__price">masa</span></div>
-          <h3>xDrive Rüzgar 100×60 end-on</h3>
-          <p>Sağ üst bant · kısa kenar duvarda · petek önüne değil</p>
+          <div class="product__meta"><span class="product__store">1 BOYA</span><span class="product__price">~2.5–4.5k</span></div>
+          <h3>Filli Boya soft mat — Andezit / antrasit</h3>
+          <a class="product__link" href="https://www.filliboya.com/renkler" target="_blank" rel="noopener">Kartela →</a>
+        </article>
+        <article class="product">
+          <div class="product__meta"><span class="product__store">2 MASA</span><span class="product__price">~6.650₺</span></div>
+          <h3>xDrive Rüzgar 100×60 siyah</h3>
+          <p>Camın solu (107 cm pay)</p>
           <a class="product__link" href="https://www.trendyol.com/xdrive/ruzgar-oyuncu-masasi-siyah-100x60-p-993862707" target="_blank" rel="noopener">Trendyol →</a>
         </article>
         <article class="product">
-          <div class="product__meta"><span class="product__store">2</span><span class="product__price">sandalye</span></div>
+          <div class="product__meta"><span class="product__store">3 SANDALYE</span><span class="product__price">~13–15k</span></div>
           <h3>xDrive Akdeniz siyah</h3>
           <a class="product__link" href="https://www.trendyol.com/xdrive/akdeniz-kumas-profesyonel-oyuncu-koltugu-siyah-siyah-p-140003157" target="_blank" rel="noopener">Trendyol →</a>
         </article>
         <article class="product">
-          <div class="product__meta"><span class="product__store">3</span><span class="product__price">TV sol</span></div>
-          <h3>BESTÅ + 50–55" TV + kitap</h3>
+          <div class="product__meta"><span class="product__store">4 TV ÜNİTE</span><span class="product__price">27.500₺</span></div>
+          <h3>IKEA BESTÅ 120×42×193</h3>
+          <p>590.594.61 · sol duvar</p>
           <a class="product__link" href="https://www.ikea.com.tr/urun/besta-venge-siyah-seffaf-cam-120x42x193-cm-dolap-kombinasyonu-59059461" target="_blank" rel="noopener">IKEA →</a>
         </article>
         <article class="product">
-          <div class="product__meta"><span class="product__store">4</span><span class="product__price">≤130</span></div>
-          <h3>Oturma balkon sağı</h3>
+          <div class="product__meta"><span class="product__store">5 TV</span><span class="product__price">modele göre</span></div>
+          <h3>50–55" siyah</h3>
+          <a class="product__link" href="https://www.trendyol.com/sr?q=55%20inç%20televizyon" target="_blank" rel="noopener">Trendyol →</a>
+        </article>
+        <article class="product">
+          <div class="product__meta"><span class="product__store">6 OTURMA</span><span class="product__price">≤120cm</span></div>
+          <h3>Siyah koltuk — sağ girinti</h3>
           <a class="product__link" href="https://www.vivense.com/ofis-oturma-gruplari.html" target="_blank" rel="noopener">Vivense →</a>
         </article>
         <article class="product">
-          <div class="product__meta"><span class="product__store">5</span><span class="product__price">BJK</span></div>
-          <h3>Saat + yastık + forma</h3>
+          <div class="product__meta"><span class="product__store">7 HALI</span><span class="product__price">~1.5–4k</span></div>
+          <h3>Geometrik S/B</h3>
+          <a class="product__link" href="https://www.trendyol.com/sr?q=geometrik%20halı%20siyah%20beyaz" target="_blank" rel="noopener">Trendyol →</a>
+        </article>
+        <article class="product">
+          <div class="product__meta"><span class="product__store">8 BJK</span><span class="product__price">saat+aksesuar</span></div>
+          <h3>Lisanslı saat, yastık, forma</h3>
           <a class="product__link" href="https://www.trendyol.com/besiktas-duvar-saati-x-b146-c35" target="_blank" rel="noopener">Saat →</a>
+          <a class="product__link" href="https://www.kartalyuvasi.com.tr/" target="_blank" rel="noopener">Kartal Yuvası →</a>
         </article>
       </div>
-      <p><a href="SIPARIS.md">SIPARIS.md</a></p>
     </section>
   </main>
 
-  <footer class="footer"><p>1903 — gerçek oda = çizim kriterleri</p></footer>
+  <footer class="footer"><p>1903 — net kroki · SIPARIS.md</p></footer>
   <script src="main.js"></script>
 </body>
 </html>

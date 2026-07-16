@@ -1,39 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1600" font-family="Arial,sans-serif">
-  <defs>
-    <pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-      <line x1="0" y1="0" x2="0" y2="6" stroke="#666" stroke-width="1"/>
-    </pattern>
-    <pattern id="rug" width="10" height="10" patternUnits="userSpaceOnUse">
-      <rect width="10" height="10" fill="#eaeaea"/>
-      <path d="M0 0L10 10M10 0L0 10" stroke="#222" stroke-width="0.6"/>
-    </pattern>
-  </defs>
-  <rect width="1200" height="1600" fill="#0d0d0d"/>
-  <text x="60" y="70" fill="#fff" font-size="42" font-weight="700" font-family="Georgia,serif">1903</text>
-  <text x="60" y="105" fill="#c8c8c8" font-size="18">Beşiktaş oyuncu odası — çizim kriterlerine kilitli tasarım</text>
-  <text x="60" y="130" fill="#8a1f1f" font-size="14" font-weight="700">AI perspektif YOK · standart kapı 90 · 2li cam 140 · W=300* D=320*</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1680" font-family="Arial,sans-serif">
+<rect width="1200" height="1680" fill="#0d0d0d"/>
+<text x="60" y="70" fill="#fff" font-size="42" font-weight="700" font-family="Georgia,serif">1903</text>
+<text x="60" y="105" fill="#ccc" font-size="18">Net kroki · Beşiktaş oyuncu odası · doğaçlama yok</text>
+<text x="60" y="130" fill="#8a1f1f" font-size="15" font-weight="700">W=295 · D=295.5 · H=255 · Kapı 106 · Balkon 93.5 · Cam 97</text>
 
-  <!-- KRITERLER -->
-  <rect x="60" y="160" width="1080" height="200" fill="#1a1a1a" stroke="#333"/>
-  <text x="80" y="195" fill="#fff" font-size="20" font-weight="700">Senin kriterlerin (değişmez)</text>
-  <text x="80" y="230" fill="#ddd" font-size="15">ÜST: 2cm → Salon Kapısı 90cm → 5cm → Kiriş 40×10 sağa+içe → duvar boşluğu</text>
-  <text x="80" y="258" fill="#ddd" font-size="15">ALT: 2cm → Balkon Kapısı 90cm → duvar boşluğu (oturma burada)</text>
-  <text x="80" y="286" fill="#ddd" font-size="15">SAĞ: 2li cam 140cm + petek ORTADA · bant≈90cm · petek önü boş</text>
-  <text x="80" y="314" fill="#ddd" font-size="15">SOL: düz duvar (kapı yok) · TV + BJK saat · eğik duvar YOK</text>
-  <text x="80" y="342" fill="#aaa" font-size="14">Renk: siyah / beyaz / kırmızı aksan · TR satışı ürünler</text>
+<rect x="60" y="160" width="1080" height="210" fill="#1a1a1a" stroke="#333"/>
+<text x="80" y="195" fill="#fff" font-size="20" font-weight="700">Kroki ölçüleri (kilit)</text>
+<text x="80" y="230" fill="#ddd" font-size="15">ÜST: 295 cm düz duvar</text>
+<text x="80" y="258" fill="#ddd" font-size="15">SAĞ: Kapı 106 + Kiriş 64.5×15 + Girinti 125 = 295.5</text>
+<text x="80" y="286" fill="#ddd" font-size="15">ALT: 107 + Cam 97 (altında petek) + 91 = 295</text>
+<text x="80" y="314" fill="#ddd" font-size="15">SOL: Balkon 93.5 + düz duvar 202</text>
+<text x="80" y="348" fill="#aaa" font-size="14">Yasak: petek önü · kapı salınımı · kiriş hacmi · uydurma eğik duvar</text>
 
-  <!-- MINI PLAN -->
-  <text x="60" y="410" fill="#fff" font-size="20" font-weight="700">Yerleşim (cm plan)</text>
-<rect x="80" y="430" width="255.0" height="272.0" fill="#f7f7f7" stroke="#fff" stroke-width="3"/><rect x="81.7" y="422" width="76.5" height="12" fill="url(#hatch)" stroke="#111"/><text x="119.94999999999999" y="416" text-anchor="middle" fill="#8a1f1f" font-size="12" font-weight="700">Salon 90</text><rect x="81.7" y="698.0" width="76.5" height="12" fill="url(#hatch)" stroke="#111"/><text x="119.94999999999999" y="730.0" text-anchor="middle" fill="#8a1f1f" font-size="12" font-weight="700">Balkon 90</text><rect x="162.45" y="430" width="34.0" height="8.5" fill="#111"/><text x="179.45" y="458" text-anchor="middle" fill="#8a1f1f" font-size="11" font-weight="700">Kiriş 40×10</text><rect x="327.0" y="506.5" width="12" height="119.0" fill="url(#hatch)" stroke="#111"/><rect x="313.0" y="519.25" width="14" height="93.5" fill="#c8c8c8" stroke="#111"/><text x="343.0" y="566.0" fill="#fff" font-size="12" font-weight="700">2li cam</text><rect x="250.0" y="435.1" width="85.0" height="51.0" fill="#1a1a1a" stroke="#8a1f1f"/><text x="292.5" y="460.6" text-anchor="middle" fill="#fff" font-size="10">masa</text><circle cx="284.0" cy="515.85" r="23.8" fill="#333" stroke="#8a1f1f"/><rect x="80.0" y="515.0" width="35.699999999999996" height="102.0" fill="#1a1a1a" stroke="#8a1f1f"/><text x="97.85" y="566.0" text-anchor="middle" fill="#fff" font-size="10">tv</text><rect x="166.7" y="638.25" width="110.5" height="63.75" fill="#1a1a1a" stroke="#8a1f1f"/><text x="221.95" y="670.125" text-anchor="middle" fill="#fff" font-size="10">oturma</text><rect x="122.5" y="472.5" width="119.0" height="102.0" fill="url(#rug)" stroke="#111"/><circle cx="85.1" cy="509.9" r="10" fill="#fff" stroke="#8a1f1f" stroke-width="2"/><text x="85.1" y="513.9" text-anchor="middle" fill="#8a1f1f" font-size="8" font-weight="700">BJK</text><text x="375.0" y="450" fill="#fff" font-size="16" font-weight="700">Mobilya paketi</text><text x="375.0" y="480" fill="#ddd" font-size="14">1 Masa: xDrive 100×60 END-ON</text><text x="375.0" y="502" fill="#ddd" font-size="14">   sağ üst bant · kısa kenar duvarda</text><text x="375.0" y="524" fill="#ddd" font-size="14">2 Sandalye: siyah oyuncu koltuğu</text><text x="375.0" y="546" fill="#ddd" font-size="14">3 PC: siyah kasa (masa üstü)</text><text x="375.0" y="568" fill="#ddd" font-size="14">4 TV ünitesi: sol duvar BESTÅ</text><text x="375.0" y="590" fill="#ddd" font-size="14">5 TV: 50–55"</text><text x="375.0" y="612" fill="#ddd" font-size="14">6 Oturma: ≤130cm balkon sağı</text><text x="375.0" y="634" fill="#ddd" font-size="14">7 Halı: geometrik S/B orta</text><text x="375.0" y="656" fill="#ddd" font-size="14">8 Saat: lisanslı BJK sol duvar</text><text x="375.0" y="678" fill="#ddd" font-size="14">9 Aksesuar: yastık/forma BJK</text><text x="375.0" y="700" fill="#ddd" font-size="14"></text><text x="375.0" y="722" fill="#8a1f1f" font-size="14">YASAK:</text><text x="375.0" y="744" fill="#8a1f1f" font-size="14">· petek önüne masa</text><text x="375.0" y="766" fill="#8a1f1f" font-size="14">· kapı salınımına dolap</text><text x="375.0" y="788" fill="#8a1f1f" font-size="14">· eğik duvar uydurma</text>
-  <rect x="60" y="820" width="1080" height="120" fill="#1a1a1a" stroke="#333"/>
-  <text x="80" y="855" fill="#fff" font-size="18" font-weight="700">Neden böyle?</text>
-  <text x="80" y="885" fill="#ccc" font-size="14">2li cam 140cm → sağ bant ≈90cm → 100cm masa duvara PARALEL sığmaz → kısa kenar duvarda (end-on).</text>
-  <text x="80" y="910" fill="#ccc" font-size="14">Masa üst sağda yer kaplar → TV sol duvarda. Oturma altta TV’ye / odaya bakar (≤130cm).</text>
-  <text x="80" y="935" fill="#aaa" font-size="13">* W ve D yerinde ölç. Dosyalar: plan.svg · gorus-*.svg · SIPARIS.md</text>
+<text x="60" y="405" fill="#fff" font-size="20" font-weight="700">Yerleşim</text>
+<rect x="70" y="420" width="265.5" height="265.95" fill="#f7f7f7" stroke="#fff" stroke-width="3"/>
+<rect x="327.5" y="420" width="10" height="95.4" fill="#999"/><rect x="62" y="420" width="10" height="84.15" fill="#999"/><rect x="322.0" y="515.4" width="13.5" height="58.050000000000004" fill="#111"/><rect x="166.3" y="677.95" width="87.3" height="10" fill="#8ab"/><rect x="73.6" y="630.15" width="90.0" height="54.0" fill="#1a1a1a" stroke="#8a1f1f"/><text x="118.6" y="657.15" text-anchor="middle" fill="#fff" font-size="10">masa</text><circle cx="118.6" cy="598.65" r="19.8" fill="#333" stroke="#8a1f1f"/><rect x="70.0" y="520.35" width="37.800000000000004" height="108.0" fill="#1a1a1a" stroke="#8a1f1f"/><text x="88.9" y="574.35" text-anchor="middle" fill="#fff" font-size="10">tv_BESTA</text><rect x="266.20000000000005" y="577.95" width="67.5" height="103.5" fill="#1a1a1a" stroke="#8a1f1f"/><text x="299.95000000000005" y="629.7" text-anchor="middle" fill="#fff" font-size="10">oturma</text><rect x="119.5" y="510.0" width="126.0" height="108.0" fill="#ddd" stroke="#111"/><circle cx="76.3" cy="511.35" r="9" fill="#fff" stroke="#8a1f1f" stroke-width="2"/><text x="375.5" y="440" fill="#fff" font-size="16" font-weight="700">Alışveriş (TR)</text><text x="375.5" y="470" fill="#ddd" font-size="14">1 Boya Andezit / antrasit soft mat</text><text x="375.5" y="492" fill="#ddd" font-size="14">2 xDrive masa 100x60 ~6650₺</text><text x="375.5" y="514" fill="#ddd" font-size="14">3 xDrive Akdeniz koltuk ~13-15k₺</text><text x="375.5" y="536" fill="#ddd" font-size="14">4 PC siyah kasa</text><text x="375.5" y="558" fill="#ddd" font-size="14">5 IKEA BESTÅ 120 ~27500₺</text><text x="375.5" y="580" fill="#ddd" font-size="14">6 TV 50-55"</text><text x="375.5" y="602" fill="#ddd" font-size="14">7 Oturma ≤120 sağ girinti</text><text x="375.5" y="624" fill="#ddd" font-size="14">8 Halı geometrik S/B</text><text x="375.5" y="646" fill="#ddd" font-size="14">9 BJK lisanslı saat</text><text x="375.5" y="668" fill="#ddd" font-size="14">10 BJK yastık/forma</text><text x="375.5" y="690" fill="#ddd" font-size="14"></text><text x="375.5" y="712" fill="#ddd" font-size="14">Detay + link: SIPARIS.md</text>
+<rect x="60" y="820" width="1080" height="100" fill="#1a1a1a" stroke="#333"/>
+<text x="80" y="855" fill="#fff" font-size="16" font-weight="700">Neden bu yerleşim?</text>
+<text x="80" y="885" fill="#ccc" font-size="14">Cam sol payı 107cm → 100lik masa sığar (petek yanına). Sol uzun duvar → TV. Sağ girinti 125cm → oturma TV'ye bakar.</text>
+<text x="80" y="905" fill="#aaa" font-size="13">Üretim: python3 layout.py &amp;&amp; python3 gorusler.py &amp;&amp; python3 tasarim_pano.py</text>
 
-  <text x="60" y="1000" fill="#fff" font-size="20" font-weight="700">Koordinat özeti (layout.py)</text>
-<text x="80" y="1035" fill="#ddd" font-size="14">masa: 100×60 cm @ (200,6)</text><text x="80" y="1061" fill="#ddd" font-size="14">oyuncu_sandalye: 60×60 cm @ (210,71)</text><text x="80" y="1087" fill="#ddd" font-size="14">tv_BESTA: 42×120 cm @ (0,100)</text><text x="80" y="1113" fill="#ddd" font-size="14">oturma: 130×75 cm @ (102,245)</text><text x="80" y="1139" fill="#ddd" font-size="14">hali: 140×120 cm @ (50,50)</text>
-  <text x="60" y="1280" fill="#8a1f1f" font-size="16" font-weight="700">Sipariş linkleri → SIPARIS.md / index.html</text>
-  <text x="60" y="1320" fill="#888" font-size="13">Üretim: python3 layout.py &amp;&amp; python3 gorusler.py &amp;&amp; python3 tasarim_pano.py</text>
-  <text x="600" y="1550" text-anchor="middle" fill="#444" font-size="12">1903 · çizim kilitli tasarım panosu</text>
-</svg>
+<text x="60" y="960" fill="#fff" font-size="18" font-weight="700">Koordinat</text>
+<text x="80" y="990" fill="#ddd" font-size="14">masa: (4,234) 100×60 cm</text><text x="80" y="1014" fill="#ddd" font-size="14">sandalye: (24,168) 60×60 cm</text><text x="80" y="1038" fill="#ddd" font-size="14">tv_BESTA: (0,112) 42×120 cm</text><text x="80" y="1062" fill="#ddd" font-size="14">oturma: (218,176) 75×115 cm</text><text x="80" y="1086" fill="#ddd" font-size="14">hali: (55,100) 140×120 cm</text><text x="600" y="1640" text-anchor="middle" fill="#444" font-size="12">1903 · net kroki tasarım panosu</text></svg>
