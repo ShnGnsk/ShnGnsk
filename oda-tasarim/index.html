@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>1903 — Standart kapı + 2’li cam</title>
+  <title>1903 — Gerçek Oda Tasarımı</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -16,81 +16,60 @@
     <nav class="nav">
       <span class="nav__mark">1903</span>
       <div class="nav__links">
-        <a href="#algoritma">Algoritma</a>
+        <a href="#tasarim">Tasarım</a>
         <a href="#plan">Plan</a>
         <a href="#urunler">Sipariş</a>
       </div>
     </nav>
     <div class="hero__content">
-      <p class="hero__eyebrow">Standart kapı 90 · 2’li cam 140 · boş alan hesabı</p>
+      <p class="hero__eyebrow">Beşiktaş oyuncu odası · gerçek iç mekân</p>
       <h1 class="hero__brand">1903</h1>
-      <p class="hero__lead">Kapı ve cam netleşti. Daralan sağ banta göre masa kısa kenarı duvarda; TV sol duvarda.</p>
+      <p class="hero__lead">Çizime kilitli yerleşim + odanın gerçek görünümü. Standart kapı 90 · 2’li cam 140.</p>
       <div class="hero__cta">
-        <a class="btn btn--solid" href="#plan">Ölçekli plan</a>
-        <a class="btn btn--ghost" href="ANALIZ.md">Analiz</a>
+        <a class="btn btn--solid" href="#tasarim">Odayı gör</a>
+        <a class="btn btn--ghost" href="1903-oda-mobil.zip">Mobil zip indir</a>
       </div>
     </div>
   </header>
 
   <main>
-    <section class="section" id="algoritma">
+    <section class="section" id="tasarim">
       <div class="section__head">
-        <h2>Güncel kilitler</h2>
-        <p>Çizim sabitleri + senin verdiğin kapı/cam tipi.</p>
+        <h2>Gerçek oda tasarımı</h2>
+        <p>Beşiktaş siyah-beyaz · masa sağ üst (end-on) · TV sol · oturma balkon sağı · petek önü boş.</p>
       </div>
 
-      <div class="inventory">
-        <article class="inv">
-          <span class="inv__tag">KAPI</span>
-          <h3>Standart 90 cm</h3>
-          <p>Salon ve balkon duvar boşluğu (TR standart oda/salon). Salınım buna göre.</p>
-        </article>
-        <article class="inv">
-          <span class="inv__tag">CAM</span>
-          <h3>2’li cam 140 cm</h3>
-          <p>Sağ duvarda ortada. Bant = (D−140)/2 ≈ <strong>90 cm</strong> (D=320* iken).</p>
-        </article>
-        <article class="inv">
-          <span class="inv__tag">SONUÇ</span>
-          <h3>100’lük masa paralel sığmaz</h3>
-          <p>xDrive 100×60 → <strong>kısa kenar duvarda</strong> (60 duvar / 100 oda), petek üst bandı.</p>
-        </article>
-        <article class="inv">
-          <span class="inv__tag">TV</span>
-          <h3>Sol duvar</h3>
-          <p>Masa üst sağı doldurduğu için TV+kitap sola; oturma altta ≤130.</p>
-        </article>
+      <div class="gallery">
+        <figure class="gallery__hero">
+          <img src="assets/oda-genel.png" alt="Oda genel tasarim" width="1536" height="864" loading="eager" />
+          <figcaption>Genel bakış — TV sol, masa sağ üst, koltuk alt, 2’li cam sağda ortada</figcaption>
+        </figure>
+        <div class="gallery__pair">
+          <figure>
+            <img src="assets/oda-balkon.png" alt="Balkondan bakis" width="1536" height="864" loading="lazy" />
+            <figcaption>Balkon kapısından</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/oda-tv.png" alt="TV duvari" width="1536" height="864" loading="lazy" />
+            <figcaption>Sol duvar — TV + BJK saat</figcaption>
+          </figure>
+        </div>
+        <figure class="gallery__hero">
+          <img src="assets/oda-masa.png" alt="Oyuncu masa kosesi" width="1536" height="864" loading="lazy" />
+          <figcaption>Oyuncu masası — petek üstü / petek önü boş</figcaption>
+        </figure>
       </div>
-
-      <aside class="keep">
-        <h3>Çizim (değişmez)</h3>
-        <p>2 cm → salon → 5 cm → kiriş 40×10 sağa · cam+petek sağda orta · eğik duvar yok</p>
-      </aside>
     </section>
 
     <section class="section" id="plan">
       <div class="section__head">
-        <h2>Ölçekli plan</h2>
-        <p><code>python3 layout.py</code> · yeşil boş / kırmızı yasak / siyah ürün</p>
+        <h2>cm plan (yerleşim gerçeği)</h2>
+        <p>Foto atmosfer; sipariş ölçüleri bu plana göre.</p>
       </div>
-
       <figure class="gallery__hero" style="margin:0">
-        <img src="assets/plan-olcekli.png" alt="Standart kapi ve 2li cam yerlesim plani" width="1200" height="1200" loading="eager" />
-        <figcaption>
-          <a href="plan.svg">plan.svg</a> ·
-          <a href="ANALIZ.md">ANALIZ.md</a> ·
-          <a href="SIPARIS.md">SIPARIS.md</a>
-        </figcaption>
+        <img src="assets/plan-olcekli.png" alt="cm plan" width="1200" height="1200" loading="lazy" />
+        <figcaption><a href="plan.svg">plan.svg</a> · <a href="ANALIZ.md">ANALIZ.md</a> · <a href="1903-oda-mobil.zip">zip indir</a></figcaption>
       </figure>
-
-      <div class="plan-svg" style="margin-top:1.5rem;background:#fff;border:1px solid #ddd;padding:1rem;overflow:auto">
-        <object data="plan.svg" type="image/svg+xml" width="100%" style="min-height:520px">SVG</object>
-      </div>
-
-      <aside class="budget">
-        <h3>Kalan *</h3>
-        <p>W ve D yerinde ölç. Cam tam cm 120/150 ise <code>layout.py</code> içinde <code>CAM</code> güncelle → plan yeniden üretilir.</p>
-      </aside>
     </section>
 
     <section class="section" id="urunler">
@@ -99,45 +78,38 @@
       </div>
       <div class="products">
         <article class="product">
-          <div class="product__meta"><span class="product__store">1 MASA</span><span class="product__price">end-on</span></div>
+          <div class="product__meta"><span class="product__store">MASA</span><span class="product__price">end-on</span></div>
           <h3>xDrive Rüzgar 100×60</h3>
-          <p>Petek <strong>üstü</strong> · kısa kenar (60) duvarda · 100 cm odaya</p>
+          <p>Sağ üst · kısa kenar duvarda</p>
           <a class="product__link" href="https://www.trendyol.com/xdrive/ruzgar-oyuncu-masasi-siyah-100x60-p-993862707" target="_blank" rel="noopener">Sipariş →</a>
         </article>
         <article class="product">
-          <div class="product__meta"><span class="product__store">2 SANDALYE</span><span class="product__price">uzun kenar</span></div>
-          <h3>xDrive Akdeniz siyah</h3>
-          <p>Masanın uzun kenarı · petek önüne değil</p>
+          <div class="product__meta"><span class="product__store">SANDALYE</span><span class="product__price">siyah</span></div>
+          <h3>xDrive Akdeniz</h3>
           <a class="product__link" href="https://www.trendyol.com/xdrive/akdeniz-kumas-profesyonel-oyuncu-koltugu-siyah-siyah-p-140003157" target="_blank" rel="noopener">Sipariş →</a>
         </article>
         <article class="product">
-          <div class="product__meta"><span class="product__store">3 TV + KİTAP</span><span class="product__price">sol</span></div>
-          <h3>BESTÅ / TV banko ~120×42</h3>
-          <p>Sol orta · kitap aynı ünitede</p>
+          <div class="product__meta"><span class="product__store">TV</span><span class="product__price">sol</span></div>
+          <h3>BESTÅ + 50–55" TV</h3>
           <a class="product__link" href="https://www.ikea.com.tr/urun/besta-venge-siyah-seffaf-cam-120x42x193-cm-dolap-kombinasyonu-59059461" target="_blank" rel="noopener">IKEA →</a>
         </article>
         <article class="product">
-          <div class="product__meta"><span class="product__store">4 OTURMA</span><span class="product__price">≤130</span></div>
-          <h3>Siyah koltuk ≤130×75</h3>
-          <p>Balkon sağı · 140 ikili alma</p>
+          <div class="product__meta"><span class="product__store">OTURMA</span><span class="product__price">≤130</span></div>
+          <h3>Siyah koltuk</h3>
           <a class="product__link" href="https://www.vivense.com/ofis-oturma-gruplari.html" target="_blank" rel="noopener">Vivense →</a>
         </article>
         <article class="product">
-          <div class="product__meta"><span class="product__store">5 TV</span><span class="product__price">50–55"</span></div>
-          <h3>Siyah çerçeve</h3>
-          <a class="product__link" href="https://www.trendyol.com/sr?q=55%20inç%20televizyon" target="_blank" rel="noopener">Bak →</a>
-        </article>
-        <article class="product">
-          <div class="product__meta"><span class="product__store">6 HALI + BJK</span><span class="product__price">aksesuar</span></div>
-          <h3>Geometrik halı + lisanslı saat</h3>
+          <div class="product__meta"><span class="product__store">BJK</span><span class="product__price">aksesuar</span></div>
+          <h3>Saat + yastık</h3>
           <a class="product__link" href="https://www.trendyol.com/besiktas-duvar-saati-x-b146-c35" target="_blank" rel="noopener">Saat →</a>
         </article>
       </div>
+      <p style="margin-top:1rem"><a href="SIPARIS.md">Tam liste → SIPARIS.md</a></p>
     </section>
   </main>
 
   <footer class="footer">
-    <p>1903 — standart kapı 90 · 2’li cam 140 · algoritma planı</p>
+    <p>1903 — gerçek oda tasarımı + cm plan</p>
   </footer>
   <script src="main.js"></script>
 </body>
