@@ -1,32 +1,21 @@
-# 1903 — Sipariş brifi (krokiye kilitli)
+# 1903 — Sipariş brifi
 
-## Kaynak plan
-`guncel-plan.png`
+## Sabit plan (güncel)
+- **Üst:** `2 cm → Salon Kapısı → 5 cm → Kiriş 40×10 cm` (kiriş kapıya doğru, arada 5 cm)
+- **Alt:** Sol duvar ↔ **Balkon Kapısı = 2 cm**
+- **Sağ:** **Cam + Petek = duvarın tam ortası**
+- **Sol:** düz duvar
 
-- Üst: `2 cm → Salon Kapısı → 5 cm → Kiriş 40×10 cm`
-- Sağ: Cam + Petek
-- Alt: `2 cm → Balkon Kapısı`
-- Sol: düz duvar (kapılar sola açılır → köşe salınımı)
+Plan görseli: `assets/plan-net-orta-cam.png` (= `guncel-plan.png`)
+
+## Masa yeri
+Cam ortada → masa peteğin **önüne değil**, ortadaki cam-petek bloğunun **alt** veya **üst** bandına.  
+Ölç: alt bant ve üst bant cm. ≥110 cm → FJÄLLBO 100×36 (303.397.35).
 
 ## Bugün alınabilir
-| Sıra | Ürün | Kod | Not |
-|------|------|-----|-----|
-| 1 | FJÄLLBO masa 100×36 siyah | 303.397.35 | Petek **üstüne değil**, alt/yan bant. Yanı ≥110 cm ölç. |
-| 2 | MARKUS sandalye koyu gri | 702.611.50 | Masayla |
-| 3 | BESTÅ 120×42×193 venge-siyah | 590.594.61 | Sol duvar **ortası**, salınımlardan uzak |
-
-## Ölçünce al
-- Oturma ≤140 cm — alt duvar, balkonun **sağı**
-- Siyah stor — cam enine göre
-- FJÄLLBO 140×70 — sadece petek yanı ≥155 cm ise
+1. FJÄLLBO 100×36 — 303.397.35  
+2. MARKUS koyu gri — 702.611.50  
+3. BESTÅ 120×42×193 — 590.594.61 (sol duvar ortası)
 
 ## Boya
-- Duvar: Filli Boya **Andezit 15** (veya 10), Momento Max/Silan, soft mat
-- Kiriş: aynı renk (önerilen) veya sadece çıkıntıda mat siyah
-- Kapı/pervaz: beyaz kalsın
-
-## Sakın
-- Peteğin önüne masa
-- Sol köşeye dolap (kapı salınımı)
-- “FJÄLLBO kanepe” (yok)
-- Forma/armalı zorunlu dekor
+Filli Boya Andezit 15 · Momento Max/Silan soft mat · kiriş aynı veya sadece çıkıntıda mat siyah
