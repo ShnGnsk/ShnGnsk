@@ -1,18 +1,22 @@
-# 1903 — Sipariş brifi
+# 1903 — Tasarım + sipariş
 
-## Şekil
-Oda **kare / düz dikdörtgen değil**. Kiriş odaya 10 cm girdiği için iç hat kırılır.
+## Plan
+- Kapı **2 cm** boşluktan başlar
+- Salon ↔ Kiriş **5 cm**
+- Kiriş sağa **40 cm** / içe **10 cm** → duvar boşluğu
+- Cam+Petek sağda **orta**
+- Oda dikdörtgen kutu değil
 
-## Sabitler
-- Kapılar **2 cm** boşluktan sonra başlar (salon üst, balkon alt)
-- Salon Kapısı ↔ Kiriş = **5 cm**
-- Kiriş sağa **40 cm**, içe **10 cm**, sonra **duvar boşluğu**
-- Cam + Petek sağ duvarda **tam ortada**
+## Üst bakış ürünleri
+| Yer | Ürün | Kod |
+|-----|------|-----|
+| Sağ, petek altı | FJÄLLBO 100×36 siyah | 303.397.35 |
+| Masa önü | MARKUS koyu gri | 702.611.50 |
+| Sol orta | BESTÅ 120×42×193 | 590.594.61 |
+| Alt, balkon sağı | Oturma ≤140 cm | Vivense |
+| Duvar | Andezit 15 soft mat | Filli Boya |
 
-Plan: `assets/plan-dikdortgen-degil.png`
-
-## Masa / depo / boya
-- Masa: FJÄLLBO 100×36 — cam-petek ortasının alt/üst bandı (petek önü değil), bant ≥110 cm
-- Sandalye: MARKUS 702.611.50
-- Depo: BESTÅ 120×193 sol duvar ortası
-- Boya: Filli Boya Andezit 15 soft mat
+## Görseller
+- `tasarim-ust-bakis.png` — üst bakış
+- `tasarim-ic-cam.png` — iç / çalışma
+- `tasarim-ic-depo.png` — iç / BESTÅ
