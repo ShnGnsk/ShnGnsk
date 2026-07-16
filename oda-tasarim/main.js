@@ -1,5 +1,5 @@
 const revealTargets = document.querySelectorAll(
-  ".inv, .plan-card, .zone, .gallery figure, .swatch, .steps li, .keep, .render-block"
+  ".inv, .plan-card, .zone, .gallery figure, .swatch, .steps li, .keep, .budget, .product, .concept-grid > div, .arch-map > div"
 );
 
 revealTargets.forEach((el) => el.classList.add("reveal"));
@@ -16,7 +16,7 @@ const observer = new IntersectionObserver(
 );
 
 revealTargets.forEach((el, i) => {
-  el.style.transitionDelay = `${(i % 6) * 45}ms`;
+  el.style.transitionDelay = `${(i % 6) * 40}ms`;
   observer.observe(el);
 });
 

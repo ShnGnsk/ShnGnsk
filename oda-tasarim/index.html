@@ -3,273 +3,369 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Atölye Oda — Mimari Analiz & Yeniden Tasarım</title>
+  <title>1903 Atölye — Beşiktaş Oda Tasarımı</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="hero">
+    <div class="hero__grid" aria-hidden="true"></div>
     <div class="hero__veil"></div>
-    <div class="hero__grain"></div>
     <nav class="nav">
-      <span class="nav__mark">ATÖLYE</span>
+      <span class="nav__mark">1903</span>
       <div class="nav__links">
-        <a href="#analiz">Analiz</a>
+        <a href="#mimari">Mimari</a>
         <a href="#plan">Plan</a>
-        <a href="#tasarim">Tasarım</a>
+        <a href="#urunler">Ürünler</a>
         <a href="#uygulama">Uygulama</a>
       </div>
     </nav>
     <div class="hero__content">
-      <p class="hero__eyebrow">Fotoğraf analizi · Kapı · Cam · Duvar girintileri</p>
-      <h1 class="hero__brand">ATÖLYE</h1>
-      <p class="hero__lead">Dar, işlevsel bir oda: çalışma, dinlenme ve elektronik depolama tek düzende.</p>
+      <p class="hero__eyebrow">Beşiktaş · siyah / beyaz · satılabilir mobilya listesi</p>
+      <h1 class="hero__brand">1903</h1>
+      <p class="hero__lead">Salon kapısı, balkon kapısı, karşı cam + petek ve 40 cm kiriş / 20 cm girintiye göre kurulmuş atölye-oturma odası.</p>
       <div class="hero__cta">
-        <a class="btn btn--solid" href="#plan">Kat planını gör</a>
-        <a class="btn btn--ghost" href="#tasarim">Önerilen düzen</a>
+        <a class="btn btn--solid" href="#plan">Kat planı</a>
+        <a class="btn btn--ghost" href="#urunler">Alışveriş listesi</a>
       </div>
     </div>
   </header>
 
   <main>
-    <section class="section" id="analiz">
+    <section class="section" id="mimari">
       <div class="section__head">
-        <h2>Mimari envanter</h2>
-        <p>Beş açıdan okunan sabitler — mobilya değil, duvar ve açıklıklar.</p>
+        <h2>Düzeltilmiş mimari okuma</h2>
+        <p>Önceki varsayımlar yerine senin tarif ettiğin sabitler — her karar bu dört öğeye kilitli.</p>
+      </div>
+
+      <div class="arch-map" aria-label="Oda yönleri">
+        <div class="arch-map__north">
+          <strong>KARŞI</strong>
+          <span>Cam / pencere</span>
+          <span class="arch-map__sub">Altında petek</span>
+        </div>
+        <div class="arch-map__west">
+          <strong>SOL</strong>
+          <span>Salon kapısı</span>
+          <span class="arch-map__sub">İçeri açılır</span>
+        </div>
+        <div class="arch-map__center">ODA</div>
+        <div class="arch-map__east">
+          <strong>SAĞ</strong>
+          <span>Balkon kapısı</span>
+          <span class="arch-map__sub">İçeri açılır</span>
+        </div>
+        <div class="arch-map__south">
+          <strong>ARKA DUVAR</strong>
+          <span>Oturma bandı</span>
+          <span class="arch-map__sub">Kapı salınımı dışı</span>
+        </div>
       </div>
 
       <div class="inventory">
         <article class="inv">
-          <span class="inv__tag">01</span>
-          <h3>Kapı</h3>
-          <p>Beyaz iç kapı, kemerli panel, gümüş kollu kilit. Giriş aksını sağ tarafta sabitleyen ana açıklık; kapı kanadı içeri açılıyor — mobilya buradan uzak tutulmalı.</p>
+          <span class="inv__tag">SOL</span>
+          <h3>Salon kapısı</h3>
+          <p>Salondan odaya açılan iç kapı. Kanat içeri döner — menteşe tarafına mobilya yaslanmaz; salınım yayı (~80–90 cm) boş kalır.</p>
         </article>
         <article class="inv">
-          <span class="inv__tag">02</span>
-          <h3>Pencere / cam</h3>
-          <p>Sağ duvarda büyük üç bölmeli pencere (üst yatay + iki dikey kanat). Zebra stor + tül perde. Odanın tek güçlü gün ışığı; monitör parlaması için masa pencereye paralel veya 90° olmalı.</p>
+          <span class="inv__tag">SAĞ</span>
+          <h3>Balkon kapısı</h3>
+          <p>Balkondan içeri açılan kapı. Geçiş + salınım için sağ duvar boyunca dar koridor şart. Ağır dolap buraya konmaz.</p>
         </article>
         <article class="inv">
-          <span class="inv__tag">03</span>
-          <h3>Derin duvar girintisi</h3>
-          <p>Sol duvarda ~50–60 cm derinlikte dikey niş. Şu an koyu raflarla dolu. Yerden tavana gömme depolama için en doğru yer — kablo / adaptör / kutu envanteri buraya kapanır.</p>
+          <span class="inv__tag">KARŞI</span>
+          <h3>Cam + petek</h3>
+          <p>Karşı duvarda odaya bakan cam; altında petek. Masa peteğin önüne gelmez (ısı + parlama). Petek üstüne ince raf — ısı boşluğu bırakılarak.</p>
         </article>
         <article class="inv">
-          <span class="inv__tag">04</span>
-          <h3>Çalışma girintisi</h3>
-          <p>Siyah-beyaz şeritli kolon / çıkıntı, masayı iki duvar arasına sıkıştırıyor. TV duvara asılı; masa genişliği sabit — yüzey sadeleşmeli, kasa alta inmeli.</p>
+          <span class="inv__tag">SOL DUVAR</span>
+          <h3>40 cm kiriş → 20 cm girinti</h3>
+          <p>Kiriş ~40 cm; duvar 20 cm derin girinti olarak devam eder. Bu derinliğe yalnızca sığ raf sığar (≈18 cm). 42 cm’lik dolaplar girintiye değil, kiriş yanı düz duvara.</p>
         </article>
-        <article class="inv">
-          <span class="inv__tag">05</span>
-          <h3>Duvar &amp; tavan</h3>
-          <p>Açık gri / kırık beyaz düz boya, klasik kartonpiyer. Mevcut seascape tablo ve pembe kanepe duvarını “oturma bandı” olarak koruyoruz.</p>
-        </article>
-        <article class="inv">
-          <span class="inv__tag">06</span>
-          <h3>Zemin</h3>
-          <p>Kızıl-kahve laminat. Dar koridor hissi var; geçiş yolu kapı → kanepe ortasında açık kalmalı (~70–80 cm).</p>
-        </article>
+      </div>
+    </section>
+
+    <section class="section section--concept">
+      <div class="section__head">
+        <h2>Konsept: Beşiktaş 1903</h2>
+        <p>Kulüp forması değil — semtin ve kartal kimliğinin mimari dili: siyah, beyaz, mat metal, net kontrast, Boğaz ışığı.</p>
+      </div>
+      <div class="concept-grid">
+        <div>
+          <h3>Renk</h3>
+          <p>Mat siyah mobilya, kırık beyaz duvar, antrasit vurgu. Tek kırmızı nokta (opsiyonel): ince şerit veya tek poster — fazlası yok.</p>
+        </div>
+        <div>
+          <h3>Malzeme</h3>
+          <p>Siyah çelik + masif ahşap (FJÄLLBO dili), venge/siyah lake depolama, beyaz tül + siyah stor.</p>
+        </div>
+        <div>
+          <h3>Ruh</h3>
+          <p>Şehir içi atölye: düzenli, sert ama yaşanır. Dağınık elektronik parçalar kapalı kutuda; yüzeyler boş.</p>
+        </div>
+      </div>
+      <div class="swatches" role="list">
+        <div class="swatch" style="--c:#0a0a0a" role="listitem"><span>Siyah</span></div>
+        <div class="swatch" style="--c:#f4f4f4" role="listitem"><span>Beyaz</span></div>
+        <div class="swatch" style="--c:#2b2b2b" role="listitem"><span>Antrasit</span></div>
+        <div class="swatch" style="--c:#6e6e6e" role="listitem"><span>Çelik gri</span></div>
+        <div class="swatch" style="--c:#8a1f1f" role="listitem"><span>Opsiyonel kırmızı</span></div>
+        <div class="swatch" style="--c:#c8c8c8" role="listitem"><span>Petek / metal</span></div>
       </div>
     </section>
 
     <section class="section section--plan" id="plan">
       <div class="section__head">
-        <h2>Mevcut geometri → önerilen plan</h2>
-        <p>Tahmini ölçü: ~3.1 × 4.2 m. Duvar girintileri ve pencere konumu değişmez; eşya katmanları yeniden yazılır.</p>
+        <h2>Kat planı — kapı / cam / girinti</h2>
+        <p>İki kapı içeri açılır; orta eksen geçiş yolu. Masa cam-petek hattına paralel değil, dik veya ofset.</p>
       </div>
 
       <div class="plan-grid">
         <figure class="plan-card">
           <figcaption>
-            <strong>Şimdi</strong>
-            <span>Dağınık katmanlar, çift masa yüzeyi, açık kablo</span>
-          </figcaption>
-          <div class="plan-svg" aria-label="Mevcut kat planı">
-            <svg viewBox="0 0 420 520" role="img">
-              <rect x="40" y="30" width="340" height="460" fill="none" stroke="currentColor" stroke-width="3"/>
-              <!-- back sofa -->
-              <rect x="90" y="50" width="240" height="70" fill="#c4a4a0" opacity=".85"/>
-              <text x="210" y="92" text-anchor="middle" class="svg-label">Kanepe</text>
-              <!-- left deep alcove -->
-              <rect x="40" y="160" width="55" height="180" fill="#2a2a2a" opacity=".9"/>
-              <text x="67" y="255" text-anchor="middle" class="svg-label svg-label--light" transform="rotate(-90 67 255)">Girinti depo</text>
-              <!-- desk alcove -->
-              <rect x="110" y="200" width="150" height="90" fill="#1f1f1f" opacity=".75"/>
-              <text x="185" y="250" text-anchor="middle" class="svg-label svg-label--light">Masa + TV</text>
-              <!-- window wall -->
-              <rect x="370" y="140" width="10" height="200" fill="#7eb8c9"/>
-              <text x="400" y="245" text-anchor="middle" class="svg-label" transform="rotate(90 400 245)">Pencere</text>
-              <!-- dresser clutter -->
-              <rect x="200" y="340" width="110" height="55" fill="#c49a6c"/>
-              <text x="255" y="372" text-anchor="middle" class="svg-label">Şifonyer+yazıcı</text>
-              <!-- white cabinet -->
-              <rect x="320" y="330" width="40" height="90" fill="#ececec" stroke="#bbb"/>
-              <!-- door -->
-              <path d="M300 490 A80 80 0 0 1 380 490" fill="none" stroke="#888" stroke-width="2" stroke-dasharray="4 3"/>
-              <text x="340" y="475" text-anchor="middle" class="svg-label">Kapı</text>
-              <!-- clutter dots -->
-              <circle cx="140" cy="380" r="6" fill="#d96"/><circle cx="160" cy="400" r="5" fill="#999"/><circle cx="180" cy="370" r="7" fill="#b75"/>
-            </svg>
-          </div>
-        </figure>
-
-        <figure class="plan-card plan-card--new">
-          <figcaption>
-            <strong>Sonra</strong>
-            <span>Üç net bölge · açık geçiş · kapalı depolama</span>
+            <strong>Önerilen yerleşim</strong>
+            <span>SVG şema — yönler senin tarifine göre</span>
           </figcaption>
           <div class="plan-svg">
-            <svg viewBox="0 0 420 520" role="img">
-              <rect x="40" y="30" width="340" height="460" fill="none" stroke="currentColor" stroke-width="3"/>
-              <!-- sofa -->
-              <rect x="100" y="55" width="220" height="65" rx="4" fill="#b8928c"/>
-              <text x="210" y="94" text-anchor="middle" class="svg-label">Oturma</text>
-              <!-- deep storage built-in -->
-              <rect x="40" y="150" width="58" height="200" fill="#5c4636"/>
-              <text x="69" y="255" text-anchor="middle" class="svg-label svg-label--light" transform="rotate(-90 69 255)">Gömme depo</text>
-              <!-- clean desk -->
-              <rect x="120" y="195" width="140" height="70" rx="3" fill="#222"/>
-              <text x="190" y="235" text-anchor="middle" class="svg-label svg-label--light">Tek masa</text>
-              <!-- window -->
-              <rect x="370" y="140" width="10" height="200" fill="#6aa8bb"/>
-              <text x="400" y="245" text-anchor="middle" class="svg-label" transform="rotate(90 400 245)">Pencere</text>
-              <!-- printer cabinet -->
-              <rect x="220" y="350" width="90" height="50" rx="3" fill="#c49a6c"/>
-              <text x="265" y="380" text-anchor="middle" class="svg-label">Yazıcı dolabı</text>
-              <!-- slim wardrobe -->
-              <rect x="320" y="330" width="40" height="90" fill="#f3f1ee" stroke="#ccc"/>
+            <svg viewBox="0 0 480 520" role="img" aria-label="Önerilen kat planı">
+              <!-- room -->
+              <rect x="50" y="40" width="380" height="440" fill="none" stroke="currentColor" stroke-width="3"/>
+              <!-- window top -->
+              <rect x="140" y="40" width="200" height="14" fill="#9ec9d6"/>
+              <text x="240" y="32" text-anchor="middle" class="svg-label">CAM</text>
+              <!-- radiator -->
+              <rect x="155" y="58" width="170" height="22" fill="#bdbdbd"/>
+              <text x="240" y="74" text-anchor="middle" class="svg-label">PETEK</text>
+              <!-- radiator shelf -->
+              <rect x="150" y="54" width="180" height="4" fill="#111"/>
+              <!-- left door salon -->
+              <path d="M50 160 L50 250" stroke="#111" stroke-width="6"/>
+              <path d="M50 160 A90 90 0 0 1 140 160" fill="none" stroke="#888" stroke-dasharray="5 4"/>
+              <text x="28" y="210" text-anchor="middle" class="svg-label" transform="rotate(-90 28 210)">SALON KAPISI</text>
+              <!-- left beam + recess -->
+              <rect x="50" y="270" width="40" height="50" fill="#333"/>
+              <text x="70" y="300" text-anchor="middle" class="svg-label svg-label--light">KİRİŞ 40</text>
+              <rect x="50" y="320" width="20" height="140" fill="#1a1a1a"/>
+              <text x="90" y="400" class="svg-label">GİRİNTİ 20cm</text>
+              <!-- right balcony door -->
+              <path d="M430 160 L430 250" stroke="#111" stroke-width="6"/>
+              <path d="M430 160 A90 90 0 0 0 340 160" fill="none" stroke="#888" stroke-dasharray="5 4"/>
+              <text x="458" y="210" text-anchor="middle" class="svg-label" transform="rotate(90 458 210)">BALKON KAPISI</text>
+              <!-- desk perpendicular / offset from window -->
+              <rect x="250" y="120" width="70" height="130" fill="#111"/>
+              <text x="285" y="190" text-anchor="middle" class="svg-label svg-label--light" transform="rotate(-90 285 190)">FJÄLLBO MASA</text>
+              <circle cx="230" cy="185" r="18" fill="#444"/>
+              <text x="230" y="189" text-anchor="middle" class="svg-label svg-label--light">S</text>
+              <!-- BESTA near beam flat wall -->
+              <rect x="80" y="300" width="55" height="120" fill="#1f1f1f"/>
+              <text x="107" y="365" text-anchor="middle" class="svg-label svg-label--light" transform="rotate(-90 107 365)">BESTÅ</text>
+              <!-- sofa back wall -->
+              <rect x="140" y="420" width="200" height="45" fill="#2a2a2a"/>
+              <text x="240" y="447" text-anchor="middle" class="svg-label svg-label--light">OTURMA</text>
               <!-- clear path -->
-              <rect x="150" y="280" width="40" height="160" fill="#8fa88a" opacity=".35"/>
-              <text x="170" y="365" text-anchor="middle" class="svg-label" transform="rotate(-90 170 365)">Geçiş</text>
-              <path d="M300 490 A80 80 0 0 1 380 490" fill="none" stroke="#888" stroke-width="2"/>
-              <text x="340" y="475" text-anchor="middle" class="svg-label">Kapı</text>
+              <rect x="200" y="200" width="36" height="200" fill="#8a1f1f" opacity=".18"/>
+              <text x="218" y="310" text-anchor="middle" class="svg-label" transform="rotate(-90 218 310)">GEÇİŞ</text>
             </svg>
           </div>
         </figure>
-      </div>
 
-      <figure class="render-block">
-        <img src="assets/floor-plan-proposed.png" alt="Önerilen kat planı görseli" width="1536" height="1024" loading="lazy" />
-        <figcaption>Önerilen kat planı — bölgeler etiketlenmiş</figcaption>
-      </figure>
+        <figure class="plan-card plan-card--photo">
+          <figcaption>
+            <strong>Plan görseli</strong>
+            <span>Bölgeler ve kapı salınımları</span>
+          </figcaption>
+          <img src="assets/besiktas-floor-plan.png" alt="Beşiktaş oda kat planı" width="1536" height="1024" loading="lazy" />
+        </figure>
+      </div>
     </section>
 
     <section class="section" id="tasarim">
       <div class="section__head">
-        <h2>Üç bölgeli düzen</h2>
-        <p>Her duvarın bir işi var. İlk bakışta tek kompozisyon; içeride net işlev ayrımı.</p>
+        <h2>Üç hatlı düzen</h2>
+        <p>Her duvarın tek işi var; iki kapı salınımı dokunulmaz.</p>
       </div>
 
       <div class="zones">
         <article class="zone">
-          <div class="zone__num">A</div>
-          <h3>Sol girinti — kapalı atölye deposu</h3>
-          <p>Mevcut açık raflar yerine yerden tavana gömme sistem: altta kapaklı dolap (kablo, adaptör, kutu), ortada etiketli açık raflar, üstte nadir kullanılanlar. Türkçe etiketli siyah kasalar korunur, görünür kaos kaybolur.</p>
-          <ul>
-            <li>Derinlik: girintinin tam ölçüsü (~55 cm)</li>
-            <li>Kapak: mat antrasit veya meşe</li>
-            <li>LED şerit: raf altı, sıcak 2700K</li>
-          </ul>
+          <div class="zone__num">01</div>
+          <h3>Cam–petek hattı → çalışma</h3>
+          <p>Masa peteğin hemen önüne konmaz. FJÄLLBO 140×70, cama dik / ofset; parlama azalır, ısı yolu açık kalır. Petek üstüne siyah ince raf (ısı boşluklu).</p>
         </article>
         <article class="zone">
-          <div class="zone__num">B</div>
-          <h3>Şeritli kolon arası — tek çalışma istasyonu</h3>
-          <p>Masa şeritli kolon ile pencere duvarı arasında kalır. Yüzeyde sadece monitör + klavye + mikrofon. Kasa masa altına. Duvar TV kalır ama monitörün üstündeki görsel gürültü (mantar pano, kablo) kalkar.</p>
-          <ul>
-            <li>Masa: koyu, 120–140 cm, kablo kanalı arkada</li>
-            <li>Pencere: tül + stor — parlamayı kontrol</li>
-            <li>Şeritli kolon rafları: sadece 2 sade raf</li>
-          </ul>
+          <div class="zone__num">02</div>
+          <h3>Sol: kiriş + 20 cm girinti → sığ depo</h3>
+          <p>Girintiye 18 cm derin siyah duvar rafları + etiketli kutular. Kiriş yanı düz duvara BESTÅ (42 cm) — elektronik, yazıcı, kablo burada kapanır.</p>
         </article>
         <article class="zone">
-          <div class="zone__num">C</div>
-          <h3>Arka duvar — sakin oturma</h3>
-          <p>Pembe / gülkurusu kanepe kalır; üstünde tek deniz manzarası tablo. Klavyeler, kablolar ve battaniye yığınları kalkar. Yanında alçak yan sehpa yerine ince duvar rafı veya tek sepet.</p>
-          <ul>
-            <li>Yastık: 2 adet, düşük desen</li>
-            <li>Battaniye: katlanmış, tek renk veya tek desen</li>
-            <li>Zemin: vakum + geçiş yolu boş</li>
-          </ul>
+          <div class="zone__num">03</div>
+          <h3>Arka duvar → oturma</h3>
+          <p>İki kapıdan uzak arka bantta siyah/antrasit oturma. Mevcut gülkurusu kanepe kalacaksa üzerine siyah-beyaz kırlent + tek battaniye ile 1903 diline çekilir.</p>
         </article>
       </div>
 
       <div class="gallery">
         <figure class="gallery__hero">
-          <img src="assets/room-after-main.png" alt="Odanın yeniden tasarlanmış genel görünümü" width="1536" height="1024" loading="lazy" />
-          <figcaption>Genel görünüm — oturma + pencere + temiz masa hattı</figcaption>
+          <img src="assets/besiktas-room-main.png" alt="1903 konsept genel görünüm" width="1536" height="1024" loading="lazy" />
+          <figcaption>Genel görünüm — cam, balkon kapısı, siyah çalışma hattı</figcaption>
         </figure>
         <div class="gallery__pair">
           <figure>
-            <img src="assets/workspace-alcove.png" alt="Çalışma girintisi önerisi" width="1536" height="1024" loading="lazy" />
-            <figcaption>Çalışma girintisi</figcaption>
+            <img src="assets/besiktas-cam-petek.png" alt="Cam ve petek çalışma düzeni" width="1536" height="1024" loading="lazy" />
+            <figcaption>Cam + petek + masa ofseti</figcaption>
           </figure>
           <figure>
-            <img src="assets/storage-alcove.png" alt="Depolama girintisi önerisi" width="1536" height="1024" loading="lazy" />
-            <figcaption>Depolama girintisi + yazıcı dolabı</figcaption>
+            <img src="assets/besiktas-girinti.png" alt="Kiriş ve 20 cm girinti depolama" width="1536" height="1024" loading="lazy" />
+            <figcaption>Salon kapısı · kiriş · 20 cm girinti rafları</figcaption>
           </figure>
         </div>
       </div>
     </section>
 
-    <section class="section section--palette">
+    <section class="section" id="urunler">
       <div class="section__head">
-        <h2>Malzeme &amp; renk</h2>
-        <p>Odada zaten var olan dil: gri duvar, meşe zemin, gülkurusu kanepe, bal rengi ahşap.</p>
+        <h2>İnternette satılan ürün listesi</h2>
+        <p>Fiyatlar Temmuz 2026 IKEA Türkiye / mağaza sitelerinden; stok ve fiyat sipariş öncesi kontrol edilmeli.</p>
       </div>
-      <div class="swatches" role="list">
-        <div class="swatch" style="--c:#d8d4ce" role="listitem"><span>Duvar — sıcak taş gri</span></div>
-        <div class="swatch" style="--c:#b8928c" role="listitem"><span>Kanepe — gülkurusu</span></div>
-        <div class="swatch" style="--c:#8b5e3c" role="listitem"><span>Ahşap — bal / meşe</span></div>
-        <div class="swatch" style="--c:#1f1f1f" role="listitem"><span>Masa / depo — antrasit</span></div>
-        <div class="swatch" style="--c:#6d7f6a" role="listitem"><span>Vurgu — yumuşak zeytin</span></div>
-        <div class="swatch" style="--c:#f2ebe3" role="listitem"><span>Tekstil — kırık beyaz keten</span></div>
+
+      <div class="products">
+        <article class="product">
+          <div class="product__meta">
+            <span class="product__store">IKEA</span>
+            <span class="product__price">14.999 ₺</span>
+          </div>
+          <h3>FJÄLLBO çalışma masası, siyah — 140×70 cm</h3>
+          <p>Metal + masif ahşap, kablo klipsi, alt raf. Cam–petek hattına dik / ofset yerleştirilir. Kod: 905.876.90</p>
+          <a class="product__link" href="https://www.ikea.com.tr/urun/fjallbo-siyah-140x70-cm-calisma-masasi-90587690" target="_blank" rel="noopener">ikea.com.tr →</a>
+        </article>
+
+        <article class="product">
+          <div class="product__meta">
+            <span class="product__store">IKEA</span>
+            <span class="product__price">11.999 ₺</span>
+          </div>
+          <h3>MARKUS çalışma sandalyesi, vissle koyu gri</h3>
+          <p>Baş/kol dayama, senkron eğim, 10 yıl garanti. Siyah-beyaz palete uyumlu antrasit. Kod: 702.611.50</p>
+          <a class="product__link" href="https://www.ikea.com.tr/urun/markus-vissle-koyu-gri-orta-calisma-sandalyesi-70261150" target="_blank" rel="noopener">ikea.com.tr →</a>
+        </article>
+
+        <article class="product">
+          <div class="product__meta">
+            <span class="product__store">IKEA</span>
+            <span class="product__price">27.500 ₺</span>
+          </div>
+          <h3>BESTÅ dolap, venge-siyah — 120×42×193 cm</h3>
+          <p>Kapalı + cam kapak: kablo, adaptör, yazıcı gizlenir. <strong>Girintiye değil</strong> — kiriş yanı düz duvara. Kod: 590.594.61</p>
+          <a class="product__link" href="https://www.ikea.com.tr/urun/besta-venge-siyah-seffaf-cam-120x42x193-cm-dolap-kombinasyonu-59059461" target="_blank" rel="noopener">ikea.com.tr →</a>
+        </article>
+
+        <article class="product">
+          <div class="product__meta">
+            <span class="product__store">IKEA</span>
+            <span class="product__price">4.499 ₺</span>
+          </div>
+          <h3>KALLAX açık raf, venge — 77×147 cm</h3>
+          <p>BESTÅ’ya sığmayan kutular / sergi için. Kapaklı ek ünite ile kısmen kapanır. Kod: 202.758.85</p>
+          <a class="product__link" href="https://www.ikea.com.tr/urun/kallax-venge-77x147-cm-acik-raf-unitesi-20275885" target="_blank" rel="noopener">ikea.com.tr →</a>
+        </article>
+
+        <article class="product">
+          <div class="product__meta">
+            <span class="product__store">IKEA</span>
+            <span class="product__price">~15.500 ₺</span>
+          </div>
+          <h3>BILLY + OXBERG cam kapaklı — siyah meşe</h3>
+          <p>Kitap / vitrin; 28 cm derinlik. Alternatif depolama hattı. Örn. 160×202 cm kombinasyonlar.</p>
+          <a class="product__link" href="https://www.ikea.com.tr/urun/billy-siyah-mese-gorunumlu-160x202-cm-cam-kapakli-kitaplik-49483539" target="_blank" rel="noopener">ikea.com.tr →</a>
+        </article>
+
+        <article class="product">
+          <div class="product__meta">
+            <span class="product__store">Moola / benzeri</span>
+            <span class="product__price">mağazaya göre</span>
+          </div>
+          <h3>Petek üstü siyah dresuar / raf</h3>
+          <p>Cam altı peteğin üstüne; ısı boşluğu bırak. Doğal ahşap + mat siyah ayak modelleri.</p>
+          <a class="product__link" href="https://moola.com.tr/urun/dekoratif-petek-ustu-dresuar-siyah/" target="_blank" rel="noopener">moola.com.tr →</a>
+        </article>
+
+        <article class="product">
+          <div class="product__meta">
+            <span class="product__store">Trendyol</span>
+            <span class="product__price">çeşitli</span>
+          </div>
+          <h3>Siyah duvar rafı — 18 cm derinlik</h3>
+          <p><strong>20 cm girinti için kritik:</strong> 18 cm derin mat siyah yüzer raf. Girintiye flush oturur; kablo kutuları burada.</p>
+          <a class="product__link" href="https://www.trendyol.com/siyah-duvar-rafi-x-r14-c104498" target="_blank" rel="noopener">trendyol.com →</a>
+        </article>
+
+        <article class="product">
+          <div class="product__meta">
+            <span class="product__store">Vivense</span>
+            <span class="product__price">modele göre</span>
+          </div>
+          <h3>Siyah / antrasit ofis kanepe</h3>
+          <p>Arka duvar oturma. Örn. Stone suni deri siyah veya Coupe siyah tekli/ikili. Mevcut pembe kanepe tutulursa siyah-beyaz tekstil ile uyumlanır.</p>
+          <a class="product__link" href="https://www.vivense.com/ofis-oturma-gruplari.html" target="_blank" rel="noopener">vivense.com →</a>
+        </article>
+
+        <article class="product">
+          <div class="product__meta">
+            <span class="product__store">IKEA</span>
+            <span class="product__price">1.299 ₺</span>
+          </div>
+          <h3>TERTIAL / FORSÅ masa lambası</h3>
+          <p>Beyaz veya metal — siyah masa üstünde kontrast. Kablo düzeni için KOPPLA priz şeridi eklenir.</p>
+          <a class="product__link" href="https://www.ikea.com.tr/urun/fjallbo-siyah-140x70-cm-calisma-masasi-90587690" target="_blank" rel="noopener">IKEA tamamlayıcılar →</a>
+        </article>
       </div>
+
+      <aside class="budget">
+        <h3>Çekirdek paket (tahmini)</h3>
+        <p>FJÄLLBO + MARKUS + BESTÅ + KALLAX ≈ <strong>58.997 ₺</strong> · Girinti rafları + petek rafı + tekstil ayrı (~3–8 bin ₺). Fiyatlar değişebilir.</p>
+      </aside>
     </section>
 
     <section class="section" id="uygulama">
       <div class="section__head">
         <h2>Uygulama sırası</h2>
-        <p>Duvar delmeden önce boşalt; sonra sabitle, en sonda dekor.</p>
+        <p>Önce boşalt ve ölç; sonra kapı salınımlarını bantla işaretle.</p>
       </div>
       <ol class="steps">
         <li>
-          <strong>Boşalt &amp; ayır</strong>
-          Her şeyi üç yığına: günlük kullanım, atölye parçası, atılacak/bağış.
+          <strong>Ölç</strong>
+          Salon kapısı salınımı, balkon kapısı salınımı, cam genişliği, petek yüksekliği, kiriş 40 cm, girinti derinliği (20 cm) ve uzunluğu.
         </li>
         <li>
-          <strong>Sol girintiye gömme</strong>
-          Ölçüyü al (genişlik × derinlik × yükseklik). Kapaklı ünite veya raylı kapak; açık raf sayısını 2–3 ile sınırla.
+          <strong>Girinti rafları</strong>
+          18 cm derin siyah rafları girintiye monte et; etiketli kutuları yerleştir. BESTÅ’yı kiriş yanı düz duvara sabitle (devrilme demiri).
         </li>
         <li>
-          <strong>Masa hattını sadeleştir</strong>
-          Tek monitör, kasa altta, kablo kanalı + priz şeridi arkada. TV braketini kontrol et; gereksiz panoları kaldır.
+          <strong>Cam–petek</strong>
+          Petek üstü rafı ısı boşluklu tak. Masayı peteğin önüne değil, ofset / dik konumda kur; MARKUS’u geçişi kapatmayacak şekilde koy.
         </li>
         <li>
-          <strong>Yazıcıyı kapat</strong>
-          Bal rengi şifonyeri yazıcı çekmeceli / kapaklı üniteye dönüştür veya yanına ince dolap koy. Üst raftaki kutu yığınını indir.
+          <strong>Oturma</strong>
+          Arka duvara kanepe; iki kapı yayından uzak. Siyah-beyaz kırlent, tek battaniye.
         </li>
         <li>
-          <strong>Oturma duvarı</strong>
-          Kanepeyi ortala, tabloyu bırak, zemini ve yan köşeyi temizle. Kapı açılımına 15–20 cm pay.
-        </li>
-        <li>
-          <strong>Işık</strong>
-          Pencere: zebra stor gündüz kontrol, tül yumuşaklık. Akşam: raf LED + tek masa lambası (sıcak ton).
+          <strong>Işık &amp; kablo</strong>
+          Beyaz tül + siyah stor. Masa lambası + priz şeridi masa altında. Görünür kablo kalmasın.
         </li>
       </ol>
 
       <aside class="keep">
-        <h3>Korunacaklar</h3>
-        <p>Gülkurusu kanepe · deniz tablo · bal ahşap şifonyer dili · duvar TV · PC kulesi · etiketli siyah kasalar (kapalı rafta).</p>
+        <h3>Dokunulmazlar</h3>
+        <p>Salon kapısı salınımı · balkon kapısı salınımı · petek önü boşluğu · 20 cm girintiye yalnızca sığ raf · BESTÅ girintiye zorlanmaz.</p>
       </aside>
     </section>
   </main>
 
   <footer class="footer">
-    <p>ATÖLYE — fotoğraflardan türetilmiş mimari okuma ve düzen önerisi.</p>
-    <p class="footer__note">Ölçüler fotoğraflardan tahminidir; uygulamadan önce metre ile doğrulayın.</p>
+    <p>1903 ATÖLYE — Beşiktaş konsepti · gerçek ürün linkleri · düzeltilmiş mimari</p>
+    <p class="footer__note">Ölçüler senin tarifine göre; uygulamadan önce metre ile doğrula. Fiyatlar sipariş anındaki güncel tutardır.</p>
   </footer>
 
   <script src="main.js"></script>
